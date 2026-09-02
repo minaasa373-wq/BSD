@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>文豪デザイン講義｜Day1＋Day2 AI・Canva・SEO記事設計</title>
+<style>
+:root{
+  --paper:#f3efe6;
+  --paper2:#e9e2d5;
+  --ink:#17191d;
+  --muted:#67645f;
+  --line:#2c2f35;
+  --wine:#6a222c;
+  --wine2:#3f171e;
+  --navy:#1e2b45;
+  --gold:#b9903c;
+  --ivory:#fffdf7;
+  --shadow:0 18px 40px rgba(20,18,15,.18);
+  --serif:"Yu Mincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  --sans:"Yu Gothic","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:var(--serif);
+  min-height:100vh;
+  background:
+    linear-gradient(rgba(255,255,255,.36),rgba(255,255,255,.36)),
+    radial-gradient(circle at 1px 1px, rgba(35,35,35,.09) 1px, transparent 1px) 0 0/18px 18px,
+    var(--paper);
+}
+body::before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background:
+    linear-gradient(90deg, transparent 0 7%, rgba(106,34,44,.035) 7% 7.35%, transparent 7.35% 92.65%, rgba(30,43,69,.035) 92.65% 93%, transparent 93%);
+}
+.topbar{
+  position:sticky; top:0; z-index:30;
+  background:rgba(22,24,28,.96);
+  color:#fff;
+  border-bottom:4px solid var(--gold);
+  box-shadow:0 8px 24px rgba(0,0,0,.22);
+}
+.topbar-inner{
+  width:min(1540px,calc(100% - 28px));
+  margin:auto;
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand-mark{
+  width:52px;height:52px;
+  display:grid;place-items:center;
+  border:2px solid #fff;
+  outline:1px solid var(--gold);
+  font-weight:900;
+  letter-spacing:.08em;
+  background:
+    linear-gradient(135deg,transparent 0 46%,rgba(255,255,255,.2) 46% 54%,transparent 54%),
+    var(--wine);
+}
+.brand h1{font-size:clamp(20px,2vw,31px);margin:0;letter-spacing:.12em;white-space:nowrap}
+.brand small{display:block;color:#d8d1c5;font-family:var(--sans);letter-spacing:.18em;margin-top:3px}
+.top-ornament{font-family:var(--sans);font-size:12px;letter-spacing:.35em;color:#d8c48f;white-space:nowrap}
+
+.layout{
+  width:min(1540px,calc(100% - 28px));
+  margin:18px auto 34px;
+  display:grid;
+  grid-template-columns:270px minmax(0,1fr) 280px;
+  gap:18px;
+  align-items:start;
+}
+
+.left,.right{
+  position:sticky;
+  top:96px;
+  max-height:calc(100vh - 118px);
+  overflow:auto;
+}
+.panel{
+  background:rgba(255,253,247,.92);
+  border:1px solid #b9ae9d;
+  box-shadow:var(--shadow);
+}
+.left-header{
+  padding:18px 17px 14px;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.08),transparent),
+    var(--wine2);
+  color:#fff;
+  border-bottom:3px solid var(--gold);
+}
+.left-header .kicker{font-family:var(--sans);font-size:11px;letter-spacing:.28em;color:#d6c99f}
+.left-header b{display:block;font-size:27px;margin-top:4px;letter-spacing:.06em}
+.left-header p{font-family:var(--sans);font-size:12px;line-height:1.8;color:#ddd4ca;margin:8px 0 0}
+
+.nav-wrap{padding:12px}
+details.day{
+  border:1px solid #bdb3a4;
+  background:#fffdf8;
+  margin-bottom:10px;
+}
+details.day summary{
+  list-style:none;
+  cursor:pointer;
+  padding:14px 14px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  background:
+    linear-gradient(90deg,rgba(106,34,44,.08),transparent 70%);
+}
+details.day summary::-webkit-details-marker{display:none}
+details.day summary::after{content:"＋";font-family:var(--sans);color:var(--wine);font-weight:900}
+details.day[open] summary::after{content:"−"}
+details.day[open] summary{
+  color:#fff;
+  background:linear-gradient(90deg,var(--wine),var(--wine2));
+}
+.empty-menu{
+  min-height:58px;
+  padding:14px;
+  font-family:var(--sans);
+  font-size:12px;
+  color:#8a837a;
+  border-top:1px dashed #c9c0b4;
+}
+
+.main{
+  min-height:calc(100vh - 130px);
+  position:relative;
+}
+.hero{
+  position:relative;
+  min-height:230px;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.96) 0 67%,rgba(255,255,255,.72) 67%),
+    repeating-linear-gradient(90deg, var(--navy) 0 18px,#f8f6ef 18px 36px);
+  border:1px solid #a99d8d;
+  border-top:7px solid var(--ink);
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+}
+.hero::after{
+  content:"文\A豪\A講\A義";
+  white-space:pre;
+  position:absolute;
+  right:22px;
+  top:23px;
+  font-size:31px;
+  line-height:1.05;
+  font-weight:900;
+  color:var(--ink);
+  writing-mode:vertical-rl;
+  letter-spacing:.05em;
+}
+.hero-copy{padding:38px clamp(24px,4vw,52px) 34px;max-width:74%}
+.hero-kicker{font-family:var(--sans);font-size:12px;letter-spacing:.34em;color:var(--wine);font-weight:900}
+.hero h2{font-size:clamp(30px,4vw,58px);margin:.2em 0 .25em;letter-spacing:.06em}
+.hero p{font-family:var(--sans);color:#6e6961;margin:0;line-height:1.8}
+.hero-rule{width:120px;height:4px;background:var(--gold);margin-top:22px}
+
+.content-shell{
+  min-height:640px;
+  background:rgba(255,253,247,.93);
+  border:1px solid #afa393;
+  box-shadow:var(--shadow);
+  position:relative;
+  padding:28px;
+}
+.content-shell::before{
+  content:"MAIN CONTENT";
+  position:absolute; top:15px; right:18px;
+  font-family:var(--sans);
+  font-size:10px;
+  letter-spacing:.34em;
+  color:#9e9588;
+}
+.content-shell::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  border:1px dashed rgba(80,70,60,.17);
+  pointer-events:none;
+}
+.lesson-content{
+  position:relative;
+  z-index:1;
+  min-height:570px;
+}
+.blank-note{
+  min-height:570px;
+  display:grid;
+  place-items:center;
+  color:#aaa197;
+  font-family:var(--sans);
+  letter-spacing:.12em;
+  text-align:center;
+}
+.blank-note span{font-size:12px;border:1px solid #d0c6b8;padding:10px 16px;background:#fffdf8}
+
+.right .panel{padding-bottom:10px}
+.cast-title{
+  padding:16px 15px 12px;
+  border-bottom:3px solid var(--gold);
+  background:var(--navy);
+  color:#fff;
+}
+.cast-title small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.28em;color:#b8c2d3}
+.cast-title b{font-size:24px;letter-spacing:.12em}
+.cast-list{padding:10px}
+.cast-card{
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:10px;
+  align-items:center;
+  padding:8px;
+  margin-bottom:9px;
+  background:#fff;
+  border:1px solid #b8afa2;
+  position:relative;
+  overflow:hidden;
+}
+.cast-card::after{
+  content:"";
+  position:absolute; right:-16px; top:-16px;
+  width:52px;height:52px;
+  transform:rotate(45deg);
+  background:rgba(106,34,44,.08);
+}
+.cast-card img{
+  width:72px;height:72px;object-fit:cover;
+  border:1px solid #847d74;
+  filter:saturate(.92) contrast(1.02);
+}
+.cast-meta b{display:block;font-size:17px;letter-spacing:.08em}
+.cast-meta span{display:block;margin-top:5px;font-family:var(--sans);font-size:9px;letter-spacing:.16em;color:#77716a;line-height:1.5}
+
+.footer{
+  width:min(1540px,calc(100% - 28px));
+  margin:0 auto 28px;
+  text-align:center;
+  color:#7c756d;
+  font-family:var(--sans);
+  font-size:11px;
+  letter-spacing:.12em;
+}
+
+@media(max-width:1180px){
+  .layout{grid-template-columns:250px 1fr}
+  .right{display:none}
+}
+@media(max-width:820px){
+  .layout{grid-template-columns:1fr}
+  .left{position:relative;top:auto;max-height:none}
+  .hero-copy{max-width:82%}
+  .brand small,.top-ornament{display:none}
+}
+@media(max-width:560px){
+  .topbar-inner{min-height:64px}
+  .brand-mark{width:44px;height:44px}
+  .layout{width:min(100% - 16px,1540px);margin-top:10px}
+  .hero{min-height:210px}
+  .hero-copy{max-width:76%;padding:28px 18px}
+  .hero::after{right:10px;top:16px;font-size:26px}
+  .content-shell{padding:18px}
+}
+
+.bsd-title-only{
+  padding:20px 17px 18px;
+}
+.bsd-title-only b{
+  display:block;
+  margin:0;
+  font-size:24px;
+  line-height:1.45;
+  letter-spacing:.08em;
+}
+.bsd-title-only .bsd-bungo{
+  display:block;
+  text-align:right;
+}
+.bsd-title-only .bsd-stray{
+  display:block;
+  text-align:right;
+}
+
+
+/* ===== Day1 前半：AI超入門 追記 ===== */
+.lesson-content{font-family:var(--sans);line-height:1.9;color:#24262b}
+.lesson-content h3,.lesson-content h4{font-family:var(--serif)}
+.ai-intro{max-width:1040px;margin:0 auto}
+.ai-lead{padding:22px 24px;margin:0 0 22px;border:2px solid var(--wine);background:linear-gradient(135deg,#fffdf8,#f7efe9);box-shadow:0 10px 24px rgba(50,35,30,.08)}
+.ai-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:var(--wine);font-weight:900}
+.ai-lead h3{font-size:clamp(26px,3.2vw,42px);margin:.25em 0 .35em;line-height:1.4}
+.ai-lead p{margin:0;color:#5f5a54}
+.memory-box{margin:18px 0 26px;padding:18px 20px;border-left:7px solid var(--gold);background:#fff9e9;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.lesson-part-title{display:flex;align-items:center;gap:12px;margin:34px 0 18px;padding-bottom:10px;border-bottom:2px solid #c7b9a8}
+.lesson-part-title .num{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;background:var(--ink);color:white;font-weight:900}
+.lesson-card{scroll-margin-top:112px;margin:0 0 34px;padding:22px;background:#fff;border:1px solid #b9ae9d;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.lesson-card figure{margin:0 0 22px}
+.lesson-card figure img{display:block;width:min(100%,900px);height:auto;margin:auto;border:1px solid #9e9282;box-shadow:0 12px 24px rgba(20,18,15,.13);background:#eee}
+.lesson-card figcaption{text-align:center;margin-top:8px;color:#827a70;font-size:11px}
+.lesson-card h3{font-size:clamp(24px,2.8vw,36px);margin:.1em 0 .35em;color:var(--wine2)}
+.lesson-card .plain{font-size:17px;margin:0 0 18px}
+.simple-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0 20px}
+.simple-box{padding:15px 16px;border:1px solid #d4c8b8;background:#fffdf7}
+.simple-box b{display:block;margin-bottom:6px;color:var(--navy);font-size:16px}
+.timeline-lite{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 20px}
+.timeline-lite div{padding:13px;border-top:5px solid var(--navy);background:#f4f5f8}
+.timeline-lite strong{display:block;color:var(--navy)}
+.dialogue{display:grid;gap:10px;margin:18px 0}
+.talk{position:relative;padding:14px 16px 14px 18px;background:#f7f4ed;border:1px solid #cfc4b5;border-left:6px solid var(--wine)}
+.talk:nth-child(even){border-left-color:var(--navy);background:#f3f6fa}
+.talk .speaker{display:block;font-weight:900;margin-bottom:4px;color:var(--wine2);font-family:var(--serif)}
+.talk:nth-child(even) .speaker{color:var(--navy)}
+.workflow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
+.workflow .step{padding:15px 12px;background:#fffaf1;border:1px solid #d7c8ac;text-align:center}
+.workflow .step i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--wine);color:#fff;margin:0 auto 8px;font-style:normal;font-weight:900}
+.workflow .step b{display:block;margin-bottom:4px}
+.goodbad{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.goodbad>div{padding:15px;border:1px solid #cfc5b8;background:#fff}
+.goodbad .bad{border-top:5px solid #777}.goodbad .good{border-top:5px solid var(--gold)}
+.goodbad code{white-space:normal;font-family:var(--sans);font-size:14px;line-height:1.7}
+.rule-list{padding:0;margin:14px 0;list-style:none}
+.rule-list li{padding:9px 10px 9px 36px;margin:5px 0;background:#f8f5ef;position:relative}
+.rule-list li::before{content:'✓';position:absolute;left:12px;color:var(--wine);font-weight:900}
+.beginner-note{padding:14px 16px;margin:16px 0;border:1px dashed #9f8e74;background:#fffaf0}
+.beginner-note b{color:var(--wine2)}
+.video-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0 0}
+.video-links a{display:block;padding:11px 12px;border:1px solid #c9bdad;background:#fff;color:var(--navy);text-decoration:none;font-weight:700}
+.video-links a:hover{text-decoration:underline;background:#f5f6f9}
+.front-menu{display:grid;gap:6px}
+.front-menu a{color:#5e564e;text-decoration:none;display:block;padding:6px 8px;border-left:3px solid transparent}
+.front-menu a:hover{color:var(--wine);border-left-color:var(--wine);background:#f6f0e8}
+@media(max-width:760px){.simple-grid,.timeline-lite,.goodbad,.video-links{grid-template-columns:1fr}.workflow{grid-template-columns:1fr 1fr}.lesson-card{padding:15px}.plain{font-size:16px}}
+@media(max-width:460px){.workflow{grid-template-columns:1fr}}
+
+
+/* ===== 8分割画像：同階層参照 ===== */
+.split-figure{
+  margin:18px auto 24px;
+  text-align:center;
+}
+.split-figure img{
+  display:block;
+  width:min(100%,520px);
+  height:auto;
+  margin:0 auto;
+  border:1px solid #9e9282;
+  box-shadow:0 12px 24px rgba(20,18,15,.13);
+  background:#eee;
+}
+.split-figure figcaption{
+  margin-top:8px;
+  color:#827a70;
+  font-size:11px;
+}
+
+
+/* ===== Day1 後半：AI検索・文章術 ===== */
+.back-half{
+  max-width:1040px;
+  margin:54px auto 0;
+  padding-top:8px;
+  border-top:8px solid var(--navy);
+}
+.back-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f4f7fb,#fffdf8);
+  border:2px solid var(--navy);
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.back-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:var(--navy);
+  font-weight:900;
+}
+.back-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:var(--navy);
+}
+.back-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid var(--navy);
+  background:#eef3f9;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.term-row{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:16px 0 20px;
+}
+.term-box{
+  padding:16px;
+  background:#fffdf7;
+  border:1px solid #c8bdad;
+}
+.term-box b{
+  display:block;
+  margin-bottom:7px;
+  color:var(--navy);
+  font-size:19px;
+}
+.practice-box{
+  padding:16px 18px;
+  margin:16px 0;
+  border:2px dashed var(--gold);
+  background:#fff9e9;
+}
+.practice-box strong{color:var(--wine2)}
+.back-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:var(--navy);
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+@media(max-width:760px){
+  .term-row{grid-template-columns:1fr}
+}
+
+
+/* ===== Day2 前半：AI×Canva超入門 ===== */
+.day2-half{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #5e2c83}
+.day2-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#faf5ff,#fffdf8);border:2px solid #5e2c83;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day2-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#5e2c83;font-weight:900}
+.day2-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#39204f}
+.day2-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #5e2c83;background:#f4ecfa;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.canva-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:18px 0}
+.canva-flow .step{padding:14px 10px;background:#fffaf6;border:1px solid #d3c4dc;text-align:center}
+.canva-flow .step i{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#5e2c83;color:#fff;margin:0 auto 8px;font-style:normal;font-weight:900}
+.canva-flow .step b{display:block;margin-bottom:5px}
+.canva-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#5e2c83;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.canva-tip{margin:14px 0;padding:14px 16px;border:1px dashed #8c70a6;background:#fbf7ff}
+@media(max-width:760px){.canva-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.canva-flow{grid-template-columns:1fr}}
+
+
+/* ===== Day2 後半：SEO検索意図・ペルソナ・構成設計 ===== */
+.day2-back{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #8a4b24}
+.day2-back-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#fff8ef,#fffdf8);border:2px solid #8a4b24;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day2-back-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#8a4b24;font-weight:900}
+.day2-back-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#5a2c16}
+.day2-back-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #8a4b24;background:#fff3e6;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.seo-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#8a4b24;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.query-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0 20px}
+.query-grid .q{padding:13px 10px;background:#fffaf4;border:1px solid #dbc6b5;text-align:center}
+.query-grid .q b{display:block;color:#5a2c16;margin-bottom:5px}
+.article-flow{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:18px 0}
+.article-flow .step{padding:12px 8px;background:#fffaf4;border:1px solid #d8c0ad;text-align:center;font-size:12px}
+.article-flow .step i{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#8a4b24;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.note-method{margin:16px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+.canva-bridge{margin:16px 0;padding:15px 17px;border-left:6px solid #5e2c83;background:#f7f1fb}
+.canva-bridge b{color:#5e2c83}
+@media(max-width:900px){.query-grid{grid-template-columns:1fr 1fr}.article-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.query-grid,.article-flow{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">文</div>
+      <div>
+        <h1>文豪デザイン講義</h1>
+        <small>BUNGO STYLE / DAY1 TEMPLATE</small>
+      </div>
+    </div>
+    <div class="top-ornament">DETECTIVE FILE / 01</div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="left panel" aria-label="授業メニュー">
+    <div class="left-header bsd-title-only">
+      <b><span class="bsd-bungo">文豪</span><span class="bsd-stray">ストレイドッグス</span></b>
+    </div>
+    <div class="nav-wrap">
+      <details class="day">
+        <summary>Day1 前半</summary>
+        <div class="empty-menu front-menu">
+<a href="#ai-01">① AIってなに？</a>
+<a href="#ai-02">② 生成AI・LLM</a>
+<a href="#ai-03">③ ロボットとAI</a>
+<a href="#ai-04">④ 仕事の頼み方4ステップ</a>
+<a href="#ai-05">⑤ まずGemini</a>
+<a href="#ai-06">⑥ 頼み方① 目的・形式</a>
+<a href="#ai-07">⑦ 頼み方② 資料・文脈</a>
+<a href="#ai-08">⑧ 1回でダメでもOK</a>
+</div>
+      </details>
+      <details class="day">
+        <summary>Day1 後半</summary>
+        <div class="empty-menu front-menu">
+<a href="#back-01">① AI時代の検索</a>
+<a href="#back-02">② AIに選ばれる条件</a>
+<a href="#back-03">③ LLMOの現状把握</a>
+<a href="#back-04">④ 独自性・ブランド</a>
+<a href="#back-05">⑤ AI文章の弱点</a>
+<a href="#back-06">⑥ 人間らしいノイズ</a>
+<a href="#back-07">⑦ 一次情報・体験</a>
+<a href="#back-08">⑧ ブログ実践ワーク</a>
+</div>
+      </details>
+      <details class="day">
+        <summary>Day2 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day2-01">① AI×Canvaを始めよう</a>
+          <a href="#day2-02">② まず触ってみる</a>
+          <a href="#day2-03">③ AI→Canvaの流れ</a>
+          <a href="#day2-04">④ 生成AIとCanvaの役割</a>
+          <a href="#day2-05">⑤ 基本用語を超かんたんに</a>
+          <a href="#day2-06">⑥ Canva基本操作</a>
+          <a href="#day2-07">⑦ 図形・フレーム・レイヤー</a>
+          <a href="#day2-08">⑧ 実践ワーク</a>
+        </div>
+      </details>
+      <details class="day">
+        <summary>Day2 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day2b-01">① 検索意図とは？</a>
+          <a href="#day2b-02">② 5種類の検索クエリ</a>
+          <a href="#day2b-03">③ 検索意図の見抜き方</a>
+          <a href="#day2b-04">④ 公開後の改善</a>
+          <a href="#day2b-05">⑤ SEOの注意点</a>
+          <a href="#day2b-06">⑥ AIでペルソナ作成</a>
+          <a href="#day2b-07">⑦ 記事構成の設計</a>
+          <a href="#day2b-08">⑧ 記事づくり実習</a>
+        </div>
+      </details>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="hero-kicker">DAY 1 / FIRST HALF</div>
+        <h2>AIを難しく考えない</h2>
+        <p>PCが得意じゃなくても大丈夫。まずGeminiを触り、AIに仕事を頼む基本だけ覚える。</p>
+        <div class="hero-rule"></div>
+      </div>
+    </section>
+
+    <section class="content-shell">
+      <div class="lesson-content" id="lesson-content">
+        
+<div class="ai-intro">
+  <section class="ai-lead">
+    <div class="eyebrow">DAY1 前半 / 超・初心者向け</div>
+    <h3>AIは「何でも知っている魔法」ではなく、<br>仕事を手伝う“めちゃくちゃ速い助手”</h3>
+    <p>横文字はあと回し。最初に覚えるのは「何ができるか」「どう頼むか」「間違ったらどう直すか」の3つだけです。</p>
+  </section>
+
+  <div class="memory-box">
+    AIは、人間の知的な働きを再現する技術です。<br>
+    生成AIは文章や画像などを作り、ロボット分野にも活用されています。<br>
+    上手に使うには、目的と必要な情報を簡潔に伝えることが重要です。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">1</span><h3>まず「AIって何者？」だけ分かればOK</h3></div>
+
+  <article class="lesson-card" id="ai-01">
+    <h3>① AIってなに？</h3>
+    <figure class="split-figure">
+      <img src="day1_01_ai_basics.png" alt="AIとは何かを説明する初心者向けカード">
+      <figcaption>Day1前半① AIってなに？</figcaption>
+    </figure>
+    <p class="plain"><b>一言なら「人が頭を使ってやる作業を、コンピューターにもやらせる技術」。</b> 難しい数式を覚える必要はありません。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>👁 見る</b>写真の中の人や物を見分ける。</div>
+      <div class="simple-box"><b>👂 聞く</b>声を文字にしたり、言葉を聞き分ける。</div>
+      <div class="simple-box"><b>🧠 考える</b>データから「次はこうなりそう」を予測する。</div>
+      <div class="simple-box"><b>💬 言葉を扱う</b>質問に答える、要約する、翻訳する。</div>
+    </div>
+    <figure class="split-figure">
+      <img src="day1_03_ai_mechanism_uses.png" alt="AIの仕組みと活用分野を説明するカード">
+      <figcaption>Day1前半③ AIの仕組みと活用分野</figcaption>
+    </figure>
+    <p><b>歴史はざっくり3回の波。</b>細かい年号を暗記するより「昔から研究され、今は大量データと高性能PCで一気に実用化が進んだ」と理解すれば十分です。</p>
+    <div class="timeline-lite">
+      <div><strong>1950〜60年代</strong>探索・推論</div>
+      <div><strong>1980年代</strong>専門家の知識を入れる仕組み</div>
+      <div><strong>現在</strong>機械学習・ディープラーニング</div>
+    </div>
+    <figure class="split-figure">
+      <img src="day1_02_ai_history_categories.png" alt="AIの歴史と分類を説明するカード">
+      <figcaption>Day1前半② AIの歴史と分類</figcaption>
+    </figure>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「AIって、人間より全部賢い機械ってことでいいの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「雑すぎんだろ。得意な仕事を高速でやる道具だと思え。今のAIにも苦手は山ほどある。」</div>
+      <div class="talk"><span class="speaker">敦</span>「“万能な頭脳”より、“得意分野を持つ助手”と考えると分かりやすいですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-02">
+    <h3>② 生成AIとLLMってなに？</h3>
+    <figure class="split-figure">
+      <img src="day1_04_ai_services_future.png" alt="代表的なAIサービスと今後を説明するカード">
+      <figcaption>Day1前半④ 代表的なAIサービスとこれから</figcaption>
+    </figure>
+    <p class="plain"><b>生成AIは「新しく作るAI」。</b>文章・画像・動画・音声などを、指示に合わせて作ります。</p>
+    <figure class="split-figure">
+      <img src="day1_05_generative_ai.png" alt="生成AIを説明するカード">
+      <figcaption>Day1前半⑤ 生成AIとは？</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>文章</b>ChatGPTやGeminiで、文章作成・要約・相談。</div>
+      <div class="simple-box"><b>画像</b>文章からイラストや写真風画像を生成。</div>
+      <div class="simple-box"><b>動画・音声</b>映像案、ナレーション、音声生成など。</div>
+      <div class="simple-box"><b>仕事</b>企画の叩き台、メール、調査、翻訳の補助。</div>
+    </div>
+    <p><b>LLM（大規模言語モデル）</b>は、ものすごく大量の文章を学び、「この次にはどんな言葉が来そうか」を予測しながら文章を作る仕組みです。人間のように会話して見えても、<b>自信満々に間違うことがあります。</b></p>
+    <figure class="split-figure">
+      <img src="day1_06_llm.png" alt="LLM（大規模言語モデル）を説明するカード">
+      <figcaption>Day1前半⑥ LLM（大規模言語モデル）とは？</figcaption>
+    </figure>
+    <div class="beginner-note"><b>ここだけ注意：</b>AIの答え＝正解ではありません。住所・金額・法律・医療・契約など重要な内容は、元資料や公式情報で確認します。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">谷崎</span>「じゃあ、“町内会のお知らせを読みやすくして”みたいなお願いもできる？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「できるよ。ただし、人名や日付を勝手に変えてないか最後に確認。そこまでがセットだね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-03">
+    <h3>③ AIはロボットにも使われる</h3>
+    <figure class="split-figure">
+      <img src="day1_07_robot_ai.png" alt="ロボットとAIの進化を説明するカード">
+      <figcaption>Day1前半⑦ ロボットとAIの進化</figcaption>
+    </figure>
+    <p class="plain">チャットAIが「頭」だとしたら、ロボットは<b>AIに目・手・足を付けたもの</b>と考えると簡単です。</p>
+    <ul class="rule-list">
+      <li>カメラで周囲を見る</li>
+      <li>AIが「何があるか」「次に何をするか」を判断する</li>
+      <li>モーターやロボットアームを動かす</li>
+      <li>人の動きを見て、作業をまねる研究も進んでいる</li>
+    </ul>
+    <p>ただし、<b>柔らかい物を壊さず持つ、予想外の状況に対応する</b>といった、人なら何気なくできることはまだ難しい部分があります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「つまり、ロボットがAIそのものなんじゃなくて……」</div>
+      <div class="talk"><span class="speaker">森</span>「AIが判断役、ロボットが現実世界で動く役、と分ければ理解しやすいね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-04">
+    <h3>④ AIに仕事を頼む基本は4ステップ</h3>
+    <p class="plain"><b>難しいプロンプト術より、普通の仕事の頼み方でOK。</b></p>
+    <div class="workflow">
+      <div class="step"><i>1</i><b>目的</b>何をしてほしい？</div>
+      <div class="step"><i>2</i><b>材料</b>何を見てほしい？</div>
+      <div class="step"><i>3</i><b>条件</b>誰向け・長さ・形式は？</div>
+      <div class="step"><i>4</i><b>修正</b>違う所だけ直してもらう</div>
+    </div>
+    <div class="goodbad">
+      <div class="bad"><b>△ 伝わりにくい</b><br><code>「これ、いい感じにして」</code></div>
+      <div class="good"><b>◎ 伝わりやすい</b><br><code>「この文章を、70代の人にも分かる言葉で、300字以内に短くして」</code></div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「察してくれ、で通じないの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「人間相手でも通じねぇよ。目的と材料と条件を言え。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">2</span><h3>次は実際にGeminiへ頼んでみる</h3></div>
+
+  <article class="lesson-card" id="ai-05">
+    <h3>⑤ AIを難しく考えず、まずGeminiを使ってみる</h3>
+    <p class="plain"><b>最初の練習は「要約」がいちばん簡単。</b>文章や資料を渡して「小学生にも分かるように3行でまとめて」と頼むだけです。</p>
+    <ul class="rule-list">
+      <li>分からない言葉を聞く</li>
+      <li>長い文章・動画・PDFの内容を短くする</li>
+      <li>アイデアを10個出してもらう</li>
+      <li>文章を読みやすく直してもらう</li>
+      <li>画像や資料の叩き台を作る</li>
+    </ul>
+    <div class="beginner-note"><b>料金や機能名は変わることがあります。</b> この教材では「まず無料で触って、必要になってから有料機能を見る」で十分です。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「何から試せばいいか迷ったら？」</div>
+      <div class="talk"><span class="speaker">谷崎</span>「今読んでる文章を貼って、“3行で要約して”でいいよ。最初から大仕事を任せなくていい。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-06">
+    <h3>⑥ 頼み方①「何を・誰向けに・どんな形で」</h3>
+    <p class="plain">AIへの指示は作文ではありません。<b>3つ言えば、かなり伝わります。</b></p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>何をしてほしい？</b>要約／文章作成／比較／アイデア出し。</div>
+      <div class="simple-box"><b>誰向け？</b>初心者／お客様／子ども／高齢者。</div>
+      <div class="simple-box"><b>どんな形？</b>3行／箇条書き／表／メール文。</div>
+      <div class="simple-box"><b>どんな雰囲気？</b>やさしく／短く／堅すぎない。</div>
+    </div>
+    <div class="goodbad">
+      <div class="bad"><b>例1</b><br><code>「AIについて説明して」</code></div>
+      <div class="good"><b>例2</b><br><code>「AIを初めて使う70代向けに、専門用語なしで、5つの箇条書きで説明して」</code></div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「“誰に読ませるか”を言うだけで、言葉の難しさはかなり変えられるよ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「じゃあ僕向けなら、“働きたくない人にも分かるように”？」</div>
+      <div class="talk"><span class="speaker">中也</span>「そこは“初心者向け”で十分だ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-07">
+    <h3>⑦ 頼み方②「必要な資料だけ渡す」＝文脈</h3>
+    <figure class="split-figure">
+      <img src="day1_08_context.png" alt="AIが長い会話でズレる原因と文脈を説明するカード">
+      <figcaption>Day1前半⑧ AIがポンコツになる原因は「文脈」</figcaption>
+    </figure>
+    <p class="plain"><b>文脈（コンテキスト）とは、AIが仕事をするための“机の上の資料”。</b>多ければ多いほど良いわけではありません。</p>
+    <ul class="rule-list">
+      <li>今回使う文章・画像・URLだけ渡す</li>
+      <li>絶対に守ってほしい条件は最初か最後にもう一度書く</li>
+      <li>長い会話になったら「ここまでの決定事項をまとめて」と頼む</li>
+      <li>話題が大きく変わったら新しいチャットにする</li>
+      <li>古い資料や間違った情報を混ぜない</li>
+    </ul>
+    <p>AIが長い会話で急にズレるときは、AIの“頭が悪くなった”というより、<b>必要な情報が埋もれた／余計な情報が増えた</b>可能性を疑います。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「カルテを全部机に積めば診断しやすくなる、とは限らない。必要な情報を選ぶのも仕事だよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「AIも同じで、“今回必要な資料”を絞った方が迷いにくいんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="ai-08">
+    <h3>⑧ 1回でダメでもOK。会話しながら直す</h3>
+    <p class="plain"><b>AIは「一発で完璧な答えを出させるゲーム」ではありません。</b>違うところを短く伝えて、2回・3回と直せばOKです。</p>
+    <div class="workflow">
+      <div class="step"><i>1</i><b>まず頼む</b>ざっくりでいい</div>
+      <div class="step"><i>2</i><b>見る</b>良い・悪いを判断</div>
+      <div class="step"><i>3</i><b>直す</b>「ここを短く」</div>
+      <div class="step"><i>4</i><b>確定</b>最後は人が確認</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「1回で微妙だった。AI、使えないね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「お前が“何が微妙か”言ってねぇからだ。『長い』『固い』『この部分だけ残せ』って言え。」</div>
+      <div class="talk"><span class="speaker">敦</span>「AIは答えを受け取るだけじゃなく、会話しながら形にしていく道具なんですね。」</div>
+    </div>
+    <div class="memory-box">今日のゴール：<br>「AIを難しく考えず、まずGeminiを使ってみる。そしてAIに上手に仕事を頼む基本を覚える」</div>
+  </article>
+
+  <section class="lesson-card" id="reference-videos">
+    <h3>参考動画（Day1 前半）</h3>
+    <p>元の学習用リンク。内容を確認したいときに開けます。</p>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=WJ1R3D0ntf8&amp;list=PLRGykKPf7PeY&amp;index=1" target="_blank" rel="noopener">参考動画 1</a>
+      <a href="https://www.youtube.com/watch?v=KUNBWh9rprI&amp;list=PLRGykKPf7PeY&amp;index=2" target="_blank" rel="noopener">参考動画 2</a>
+      <a href="https://www.youtube.com/watch?v=YYx0zrIYS2o&amp;list=PLRGykKPf7PeY&amp;index=3" target="_blank" rel="noopener">参考動画 3</a>
+      <a href="https://www.youtube.com/watch?v=xDUEAyWdivM&amp;list=PLRGykKPf7PeY&amp;index=4" target="_blank" rel="noopener">参考動画 4</a>
+      <a href="https://www.youtube.com/watch?v=kUlLciVdrvA&amp;list=PLRGykKPf7PeY&amp;index=5" target="_blank" rel="noopener">参考動画 5</a>
+      <a href="https://www.youtube.com/watch?v=HWT9-I-drIo&amp;list=PLRGykKPf7PeY&amp;index=6" target="_blank" rel="noopener">参考動画 6</a>
+    </div>
+  </section>
+
+<section class="back-half" id="day1-back">
+  <section class="back-lead">
+    <div class="eyebrow">DAY1 後半 / AI検索と人間らしい文章</div>
+    <h3>検索で1位を取るだけじゃない。<br>これからは「AIに選ばれる情報」を作る。</h3>
+    <p>難しい横文字はあと回し。まずは「AIに見つけてもらう」「信じてもらう」「自分にしか書けないことを入れる」の3つだけ覚えます。</p>
+  </section>
+
+  <div class="back-memory">
+    これからは、SEOだけでなく「AIに選ばれる情報設計」が重要です。<br>
+    その決め手は、一次情報・独自性・人間らしさです。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">3</span><h3>AIに見つけてもらう情報の作り方</h3></div>
+
+  <article class="lesson-card" id="back-01">
+    <span class="back-tag">まずここだけ</span>
+    <h3>① 検索のゴールが変わってきている</h3>
+    <figure class="split-figure">
+      <img src="day1_09_ai_search_change.png" alt="AI時代の検索と発信の変化">
+      <figcaption>Day1後半① AI時代の検索と発信の変化</figcaption>
+    </figure>
+    <p class="plain"><b>昔：</b>Googleで上の方に出る → 人がサイトを開く。<br>
+    <b>これから：</b>ChatGPTやPerplexityなどのAIが、質問に対して情報をまとめて紹介する場面が増えます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🔍 従来の検索</b>検索 → サイトを開く → 読む。</div>
+      <div class="simple-box"><b>🤖 AI検索</b>質問 → AIがまとめる → その場で答えを読む。</div>
+      <div class="simple-box"><b>📉 ゼロクリック</b>サイトを開かず答えだけ受け取ることが増える。</div>
+      <div class="simple-box"><b>🧱 SEOはまだ必要</b>AI以前の土台として、検索に読まれる状態は今後も大切。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「じゃあGoogleで1位なら、もう勝ちってことじゃないの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「そこで思考停止すんな。これからは“AIが誰を紹介するか”まで考えろって話だ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「検索順位だけじゃなく、“AIの答えの中に入る”ことも目標になるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="back-02">
+    <span class="back-tag">横文字は料理で覚える</span>
+    <h3>② SEO・AEO・GEOは何が違う？</h3>
+    <figure class="split-figure">
+      <img src="day1_10_ai_selected_points.png" alt="AIに選ばれるためのポイント">
+      <figcaption>Day1後半② AIに選ばれるためのポイント</figcaption>
+    </figure>
+    <div class="term-row">
+      <div class="term-box"><b>SEO</b>グルメサイトのランキングで上位に入る。</div>
+      <div class="term-box"><b>AEO</b>「駅前でおすすめの店は？」という質問の答えに店名が出る。</div>
+      <div class="term-box"><b>GEO</b>コンシェルジュに「この店がいいですよ」と直接おすすめされる。</div>
+    </div>
+    <p><b>AEO</b>は、結論を先に書く・FAQを置く・日付や書き手を見せるなど、AIが「答え」を抜き出しやすくする考え方。<br>
+    <b>GEO</b>は、AIに「この人・この会社・この情報は信頼できる」と理解・推薦してもらうための考え方です。</p>
+    <div class="beginner-note"><b>暗記しなくてOK：</b> SEO＝見つかる、AEO＝答えに入る、GEO＝おすすめされる。まずはこの3行で十分。</div>
+  </article>
+
+  <article class="lesson-card" id="back-03">
+    <span class="back-tag">いきなり記事を増やさない</span>
+    <h3>③ LLMO対策は「今どう見られているか」を知るところから</h3>
+    <figure class="split-figure">
+      <img src="day1_11_llmo_audit.png" alt="LLMO対策の現状把握">
+      <figcaption>Day1後半③ LLMO対策は現状把握から</figcaption>
+    </figure>
+    <p class="plain"><b>LLMO</b>は、ChatGPTやGeminiなどのAIに、自分・会社・サービスを正しく理解してもらうための取り組み、と考えれば十分です。</p>
+    <ul class="rule-list">
+      <li>自社名・サービス名をAIで検索し、正しく説明されるか確認する</li>
+      <li>「おすすめ」「比較」の質問で、自社が候補に入るか見る</li>
+      <li>価格・住所・電話番号・サービス内容など古い情報がないか確認する</li>
+      <li>重要ページが検索エンジンに登録され、本文が読める状態か確認する</li>
+      <li>AIが引用しているメディアやサイトを記録する</li>
+    </ul>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「治療を始める前に診察をするだろう？ LLMOも同じだよ。まず“今どう見えているか”を診る。」</div>
+      <div class="talk"><span class="speaker">敦</span>「記事を100本増やす前に、現在地の確認が先なんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="back-04">
+    <span class="back-tag">AI時代の一番大事な材料</span>
+    <h3>④ 一次情報・独自性・外からの評価を増やす</h3>
+    <figure class="split-figure">
+      <img src="day1_12_uniqueness_brand.png" alt="独自性とブランド発信の重要性">
+      <figcaption>Day1後半④ 差別化のカギは独自性</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🧠 一次情報</b>自分でやった体験、実績、数字、検証結果、失敗と改善。</div>
+      <div class="simple-box"><b>💎 独自性</b>「誰でも書ける話」ではなく、自分だから言える内容。</div>
+      <div class="simple-box"><b>🏷️ 明確な説明</b>誰に何を提供し、何が強みで、競合と何が違うかを書く。</div>
+      <div class="simple-box"><b>🌐 外部評価</b>メディア、SNS、UGC、サイテーション、PRなど自然な言及。</div>
+    </div>
+    <p>「業界の未来を担う」「最高のサービスです」だけではAIにも人にも伝わりにくいです。<b>数字・事例・具体的な強み</b>に置き換えます。</p>
+    <div class="goodbad">
+      <div class="bad"><b>△ 曖昧</b><br><code>「お客様に寄り添う高品質なサービスです」</code></div>
+      <div class="good"><b>◎ 具体的</b><br><code>「○○業界で20件を支援。平均△日で初回案を提出。失敗した施策と改善結果も公開」</code></div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「“すごいです”って自分で言うだけじゃ弱ぇ。何をやって、どうなったか出せ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「つまり黒歴史も一次情報？」</div>
+      <div class="talk"><span class="speaker">中也</span>「改善まで書けるなら、むしろ強ぇよ。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">4</span><h3>AIでブログを書いて「人間らしい文章」に直してみる</h3></div>
+
+  <article class="lesson-card" id="back-05">
+    <span class="back-tag">実践①</span>
+    <h3>⑤ AI文章は“平均的でまっすぐ”になりやすい</h3>
+    <figure class="split-figure">
+      <img src="day1_13_ai_writing_average.png" alt="AI文章が平均的になりやすいことの説明">
+      <figcaption>Day1後半⑤ AI文章の弱点を知る</figcaption>
+    </figure>
+    <p class="plain">生成AIは、目的にまっすぐ答えようとするので、<b>きれいだけど平坦・どこかで見た文章</b>になりやすいことがあります。</p>
+    <div class="practice-box">
+      <strong>まずやる：</strong><br>
+      Geminiなどに「初心者向けに、○○について800字のブログを書いて」と頼み、最初の文章を保存します。<br>
+      この“普通の文章”が比較用のスタート地点です。
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「整ってはいる。でも“この人が書いた”感じが薄い文章はあるね。」</div>
+      <div class="talk"><span class="speaker">谷崎</span>「悪い文章というより、まだ“本人の材料”が入ってない状態なんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="back-06">
+    <span class="back-tag">実践②</span>
+    <h3>⑥ 良いノイズを足すと文章の印象が変わる</h3>
+    <figure class="split-figure">
+      <img src="day1_14_human_noise.png" alt="AI文章に人間らしいノイズを加える方法">
+      <figcaption>Day1後半⑥ 良いAIコンテンツには“ノイズ”が必要</figcaption>
+    </figure>
+    <p class="plain">ここでいう<b>ノイズ</b>は、邪魔な文章ではありません。人間が自然に持つ「ゆらぎ・癖・寄り道」です。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🎨 比喩・言い換え</b>同じ言葉を連発せず、たとえ話で幅を出す。</div>
+      <div class="simple-box"><b>😅 失敗談</b>うまくいかなかった経験と、そこから変えたことを書く。</div>
+      <div class="simple-box"><b>🌊 少しの脱線</b>本題を壊さない程度に、感情や気づきを入れる。</div>
+      <div class="simple-box"><b>🗣️ 本人の言葉</b>「自分はこう感じた」を材料としてAIに渡す。</div>
+    </div>
+    <div class="practice-box">
+      <strong>指示を1つだけ追加：</strong><br>
+      「同じ内容のまま、私が実際に失敗した話を1つ入れ、少しだけ脱線し、比喩を1つ使って書き直して」
+    </div>
+  </article>
+
+  <article class="lesson-card" id="back-07">
+    <span class="back-tag">実践③</span>
+    <h3>⑦ “人間っぽく偽装”するのではなく、本物の体験を入れる</h3>
+    <figure class="split-figure">
+      <img src="day1_15_firsthand_experience.png" alt="本人の体験がAI時代の差別化になることの説明">
+      <figcaption>Day1後半⑦ 人間の体験が一番の差別化になる</figcaption>
+    </figure>
+    <p>AIに架空の武勇伝を作らせるのではなく、<b>自分のメモ・数字・感想・失敗・迷ったこと</b>を渡します。これが一次情報になります。</p>
+    <ul class="rule-list">
+      <li>「最初はこう思っていた」を書く</li>
+      <li>「実際にやったら、ここで失敗した」を書く</li>
+      <li>数字や期間があれば入れる</li>
+      <li>「だから次はこう変えた」で終える</li>
+      <li>普段から小さな気づきをメモしておく</li>
+    </ul>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「完璧な成功談じゃなくてもいいんですね。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「むしろ失敗の方が、私は得意だけど？」</div>
+      <div class="talk"><span class="speaker">中也</span>「お前の場合は量が多すぎる。読者に役立つ失敗だけ選べ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="back-08">
+    <span class="back-tag">実践④ / 今日のワーク</span>
+    <h3>⑧ AIでブログを作り、指示で文章がどう変わるか体験する</h3>
+    <figure class="split-figure">
+      <img src="day1_16_blog_workflow.png" alt="AIブログ作成の実践ワークフロー">
+      <figcaption>Day1後半⑧ ワークフロー：実践して体験しよう</figcaption>
+    </figure>
+    <div class="workflow">
+      <div class="step"><i>1</i><b>テーマ</b>自分が少し知っている話を選ぶ</div>
+      <div class="step"><i>2</i><b>AIで下書き</b>まず普通に書かせる</div>
+      <div class="step"><i>3</i><b>ノイズ追加</b>体験・失敗・比喩・脱線を足す</div>
+      <div class="step"><i>4</i><b>比較・改善</b>最初と最後を読み比べる</div>
+    </div>
+    <div class="practice-box">
+      <strong>今日の練習：</strong><br>
+      AIでブログを作り、指示の加え方で文章の印象がどう変わるかを体験します。<br>
+      失敗談や脱線、比喩を加えて「人間らしい文章」に改善します。
+    </div>
+    <div class="goodbad">
+      <div class="bad"><b>1回目</b><br><code>「○○について初心者向けのブログを書いて」</code></div>
+      <div class="good"><b>2回目以降</b><br><code>「私の失敗談を入れて」「少し脱線して」「この比喩を使って」「もっと私の口調に寄せて」</code></div>
+    </div>
+    <p><b>5回・10回と直して構いません。</b> 一発で完成させるより、比較しながら「自分らしい」を見つける方が、この練習では大事です。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「最初から名文を書かせるんじゃないんだ？」</div>
+      <div class="talk"><span class="speaker">中也</span>「下書きはAIにやらせろ。そこから“お前にしかない材料”を足すんだよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「AIが作者ではなく、下書きと編集を手伝う相棒になるんですね。」</div>
+    </div>
+    <div class="back-memory">
+      今日のゴール：<br>
+      「これからは、SEOだけでなく『AIに選ばれる情報設計』が重要。<br>
+      その決め手は、一次情報・独自性・人間らしさ。」
+    </div>
+  </article>
+
+  <section class="lesson-card" id="reference-videos-back">
+    <h3>参考動画（Day1 後半）</h3>
+    <p>今回の学習元として渡された3本です。</p>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=1ccEtYoDAPI&amp;list=PLQrIQC5Hj1h0&amp;index=1" target="_blank" rel="noopener">参考動画 1</a>
+      <a href="https://www.youtube.com/watch?v=RPiwE5sRLmY&amp;list=PLQrIQC5Hj1h0&amp;index=2" target="_blank" rel="noopener">参考動画 2</a>
+      <a href="https://www.youtube.com/watch?v=n1m4Z_wzIJU&amp;list=PLQrIQC5Hj1h0&amp;index=3" target="_blank" rel="noopener">参考動画 3</a>
+    </div>
+  </section>
+</section>
+
+</div>
+
+
+<section class="day2-half" id="day2-front">
+  <section class="day2-lead">
+    <div class="eyebrow">DAY2 前半 / AI×CANVA 超・初心者向け</div>
+    <h3>難しい理論は後回し。<br>今日は「触る → 作る → 保存する」まで行く。</h3>
+    <p>PCが苦手でも大丈夫。Canvaは「白紙から全部作るソフト」ではなく、テンプレートや素材を使って組み立てる道具です。AIはその前段で文章・画像・案出しを手伝います。</p>
+  </section>
+  <div class="day2-memory">AI初心者向けの生成AI活用と、Canvaの基本操作から図形・フレーム・レイヤーまでを実践的に学びます。<br>どちらも、難しい理論より「まず触って覚える」ことを重視します。</div>
+  <div class="lesson-part-title"><span class="num">5</span><h3>まずAIとCanvaを“怖くない道具”にする</h3></div>
+
+  <article class="lesson-card" id="day2-01">
+    <span class="canva-tag">Day2前半①</span><h3>AI×Canvaを始めよう</h3>
+    <figure class="split-figure"><img src="day2_01_ai_canva_intro.png" alt="AIとCanvaを初心者向けに紹介するカード"><figcaption>Day2前半① AI×Canvaを始めよう</figcaption></figure>
+    <p class="plain"><b>今日のゴールは「デザインのプロになる」ではありません。</b> 自分で1つ作って、保存できればまず合格です。</p>
+    <div class="dialogue"><div class="talk"><span class="speaker">太宰</span>「Canvaって、センスがないと触っちゃいけない感じしない？」</div><div class="talk"><span class="speaker">中也</span>「勝手に難しくすんな。テンプレ選んで文字と写真を替えるだけでも立派な制作だ。」</div><div class="talk"><span class="speaker">敦</span>「最初から白紙で作らなくていい、って分かるだけでかなり安心しますね。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-02">
+    <span class="canva-tag">Day2前半②</span><h3>こんな人ほど「まず触る」でOK</h3>
+    <figure class="split-figure"><img src="day2_02_beginner_targets.png" alt="Canva初心者に向けた対象者説明"><figcaption>Day2前半② アナログ人間でも大丈夫</figcaption></figure>
+    <div class="simple-grid"><div class="simple-box"><b>💻 PCが苦手</b>クリック・ドラッグ・文字入力ができれば始められる。</div><div class="simple-box"><b>🎨 センスに自信なし</b>テンプレートを土台にして、差し替えるだけでいい。</div><div class="simple-box"><b>🤖 AI初心者</b>まずは「文章を3行にして」など小さいお願いから。</div><div class="simple-box"><b>🧓 操作を覚えにくい</b>同じ手順を何回か繰り返す方が早い。</div></div>
+    <div class="dialogue"><div class="talk"><span class="speaker">与謝野</span>「覚えてから使うんじゃない。使いながら覚えるんだよ。」</div><div class="talk"><span class="speaker">谷崎</span>「失敗しても自動保存されるので、壊す心配をしすぎなくて大丈夫ですね。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-03">
+    <span class="canva-tag">Day2前半③</span><h3>AI→Canvaの基本ワークフロー</h3>
+    <figure class="split-figure"><img src="day2_03_ai_canva_workflow.png" alt="生成AIからCanvaへつなぐ基本ワークフロー"><figcaption>Day2前半③ AIとCanvaのワークフロー</figcaption></figure>
+    <div class="canva-flow"><div class="step"><i>1</i><b>目的</b>何を作るか決める</div><div class="step"><i>2</i><b>AI</b>文章・案・画像を作る</div><div class="step"><i>3</i><b>Canva</b>サイズとテンプレを選ぶ</div><div class="step"><i>4</i><b>編集</b>素材・文字・写真を配置</div><div class="step"><i>5</i><b>保存</b>ダウンロードする</div></div>
+    <div class="dialogue"><div class="talk"><span class="speaker">森</span>「AIに全部デザインさせるのではなく、案を出す役と整える役を分けると分かりやすいね。」</div><div class="talk"><span class="speaker">敦</span>「AIが下ごしらえ、Canvaが盛り付け、みたいな感じですね。」</div><div class="talk"><span class="speaker">中也</span>「その例えなら覚えやすいな。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-04">
+    <span class="canva-tag">Day2前半④</span><h3>生成AIとCanvaの役割を分ける</h3>
+    <figure class="split-figure"><img src="day2_04_ai_canva_basics.png" alt="生成AIとCanvaの基本役割を説明するカード"><figcaption>Day2前半④ 生成AIとCanvaの基本</figcaption></figure>
+    <div class="simple-grid"><div class="simple-box"><b>🤖 生成AI</b>文章、要約、アイデア、画像案など「材料」を作る。</div><div class="simple-box"><b>🎨 Canva</b>テンプレート、素材、文字、写真を組み合わせて見た目を整える。</div></div>
+    <div class="canva-tip"><b>迷ったら：</b>AIに「Instagram投稿用に、見出し・本文・画像案を考えて」と頼み、その内容をCanvaに移すだけでも立派な練習です。</div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">6</span><h3>Canvaの基本操作を“手で覚える”</h3></div>
+
+  <article class="lesson-card" id="day2-05">
+    <span class="canva-tag">Day2前半⑤</span><h3>専門用語は、かんたんな言葉に置き換える</h3>
+    <figure class="split-figure"><img src="day2_05_ai_terms_simple.png" alt="生成AI、LLM、ロボットAIなどの基本用語"><figcaption>Day2前半⑤ AI初心者でも分かる基本用語</figcaption></figure>
+    <div class="simple-grid"><div class="simple-box"><b>生成AI</b>文章・画像・動画などを新しく作るAI。</div><div class="simple-box"><b>LLM</b>文章をたくさん学習して、次の言葉を予測する仕組み。</div><div class="simple-box"><b>テンプレート</b>完成形に近い“ひな形”。最初から配置ができている。</div><div class="simple-box"><b>素材</b>写真・イラスト・図形・アイコンなど、デザインに置く部品。</div></div>
+    <div class="dialogue"><div class="talk"><span class="speaker">太宰</span>「横文字を全部覚えてから始める必要は？」</div><div class="talk"><span class="speaker">中也</span>「ねぇ。分からん言葉が出た時に聞け。先に手を動かせ。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-06">
+    <span class="canva-tag">Day2前半⑥</span><h3>Canvaの基本操作：最初はこの順番</h3>
+    <figure class="split-figure"><img src="day2_06_canva_basic_operations.png" alt="Canvaの基本操作を説明するカード"><figcaption>Day2前半⑥ Canvaの基本操作</figcaption></figure>
+    <div class="canva-flow"><div class="step"><i>1</i><b>開く</b>ブラウザ版・アプリ版から開始</div><div class="step"><i>2</i><b>作成</b>用途・サイズを選ぶ</div><div class="step"><i>3</i><b>テンプレ</b>近い雰囲気を選ぶ</div><div class="step"><i>4</i><b>編集</b>文字・写真・素材を替える</div><div class="step"><i>5</i><b>保存</b>共有→ダウンロード</div></div>
+    <ul class="rule-list"><li>文字は「テキスト」から追加</li><li>写真は「アップロード」から追加</li><li>素材検索で写真・イラスト・背景を探す</li><li>写真は背景として設定して全面配置できる</li><li>ダブルクリックや切り抜きで写真位置を調整する</li><li>文字色・フォント・影・袋文字などを変えられる</li><li>ズームで作業画面の拡大縮小ができる</li><li>完成したら「共有」→「ダウンロード」で保存</li></ul>
+    <div class="dialogue"><div class="talk"><span class="speaker">谷崎</span>「テンプレートは“完成品を盗む”んじゃなくて、配置の見本を借りる感覚ですね。」</div><div class="talk"><span class="speaker">与謝野</span>「王冠マークが付いた素材は有料の場合がある。無料版なら王冠なしを選べばいいよ。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-07">
+    <span class="canva-tag">Day2前半⑦</span><h3>図形・フレーム・レイヤーを覚えると一気に楽になる</h3>
+    <figure class="split-figure"><img src="day2_07_canva_new_features.png" alt="Canvaの図形、フレーム、レイヤーなど便利機能"><figcaption>Day2前半⑦ Canvaの便利機能・新しい使い方</figcaption></figure>
+    <div class="simple-grid"><div class="simple-box"><b>◼️ 図形</b>四角・丸など。縦横比を自由に変えやすく、グラデーションや縁取りも使える。</div><div class="simple-box"><b>🖼️ フレーム</b>写真を入れる“枠”。写真を重ねると自動ではめ込める。</div><div class="simple-box"><b>🔲 グリッド</b>画面を分割し、複数写真をきれいに並べる。</div><div class="simple-box"><b>🧱 レイヤー</b>素材の前後関係。後ろに隠れた物を前へ出せる。</div><div class="simple-box"><b>🔗 グループ化</b>複数パーツを1つの塊としてまとめて動かす。</div><div class="simple-box"><b>📱 モックアップ</b>スマホやTシャツなどに自分のデザインをはめ込む。</div></div>
+    <p><b>クイックフロー</b>は図形同士を矢印でつないで図解を作る時に便利。邪魔な時は無効にできます。</p>
+    <p><b>整理も機能のうち。</b> デザインには名前を付け、用途ごとにフォルダーへまとめると「どこ行った？」が激減します。</p>
+    <div class="dialogue"><div class="talk"><span class="speaker">森</span>「レイヤーは机の上に紙を重ねるのと同じだよ。上の紙ほど手前に見える。」</div><div class="talk"><span class="speaker">太宰</span>「それなら分かる。私の書類は全部一番下だけど。」</div><div class="talk"><span class="speaker">中也</span>「整理しろ。」</div></div>
+  </article>
+
+  <article class="lesson-card" id="day2-08">
+    <span class="canva-tag">Day2前半⑧ / 今日のワーク</span><h3>AI×Canvaで1個作って終わる</h3>
+    <figure class="split-figure"><img src="day2_08_ai_canva_summary.png" alt="AIとCanvaでできることのまとめ"><figcaption>Day2前半⑧ AI×Canvaまとめ</figcaption></figure>
+    <div class="canva-flow"><div class="step"><i>1</i><b>テーマ</b>投稿内容を決める</div><div class="step"><i>2</i><b>AI</b>見出しと本文案を出す</div><div class="step"><i>3</i><b>Canva</b>テンプレを選ぶ</div><div class="step"><i>4</i><b>編集</b>文字・写真・図形を替える</div><div class="step"><i>5</i><b>保存</b>PNG等でダウンロード</div></div>
+    <div class="canva-tip"><b>今日の実践：</b><br>① Geminiなどで「SNS投稿の見出しを3案」と頼む。<br>② Canvaでテンプレートを1つ選ぶ。<br>③ 文字を差し替える。<br>④ 写真か図形を1つ入れる。<br>⑤ ダウンロードして完成。</div>
+    <div class="dialogue"><div class="talk"><span class="speaker">敦</span>「全部の機能を覚えてなくても、1個完成させればいいんですね。」</div><div class="talk"><span class="speaker">中也</span>「そうだ。触らずに覚えようとする方が無理だ。」</div><div class="talk"><span class="speaker">太宰</span>「じゃあ失敗しても？」</div><div class="talk"><span class="speaker">与謝野</span>「直せばいい。Day1で覚えたでしょ。」</div></div>
+    <div class="day2-memory">Day2前半の結論：<br>「AIで材料を作り、Canvaで見せ方を整える。<br>どちらも、難しく考えるより“まず触って1個完成させる”のが最短。」</div>
+  </article>
+
+  <section class="lesson-card" id="day2-reference-videos"><h3>参考動画（Day2 前半）</h3><div class="video-links"><a href="https://www.youtube.com/watch?v=gUav9YFHp0o&amp;list=PLEViRUu8Roi8&amp;index=1" target="_blank" rel="noopener">Canva 基礎講座 1</a><a href="https://www.youtube.com/watch?v=dN-eEOkJI90&amp;list=PLEViRUu8Roi8&amp;index=2" target="_blank" rel="noopener">Canva 基礎講座 2</a><a href="https://www.youtube.com/watch?v=yvVNNgWqKgY&amp;list=PLEViRUu8Roi8&amp;index=3" target="_blank" rel="noopener">Canva 基礎講座 3</a></div></section>
+</section>
+
+
+<section class="day2-back" id="day2-back">
+  <section class="day2-back-lead">
+    <div class="eyebrow">DAY2 後半 / SEO記事づくり 超・初心者向け</div>
+    <h3>記事を書く前に、<br>「検索する人は何を知りたい？」から考える。</h3>
+    <p>SEOはキーワードをたくさん入れるゲームではありません。検索した人の悩みを想像し、誰に・何を・どの順番で届けるかを先に設計します。</p>
+  </section>
+
+  <div class="day2-back-memory">
+    今日の中心：<br>
+    「検索意図 → ペルソナ → 情報収集 → 構成設計 → AIで下書き → 自分で仕上げ → 公開」<br>
+    この順番を覚えれば、いきなり本文を書いて迷子になるのを減らせます。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">7</span><h3>まず「検索する人の気持ち」を読む</h3></div>
+
+  <article class="lesson-card" id="day2b-01">
+    <span class="seo-tag">Day2後半①</span>
+    <h3>SEOで一番大事なのは「検索意図」</h3>
+    <figure class="split-figure"><img src="day2_09_search_intent.png" alt="SEOで検索意図を理解する初心者向けカード"><figcaption>Day2後半① SEOで一番大事なのは検索意図</figcaption></figure>
+    <p class="plain"><b>検索意図＝「その言葉を検索した本当の理由」。</b> キーワードの表面だけでなく、「この人は結局どうしたいの？」まで考えます。</p>
+    <div class="goodbad"><div class="bad"><b>表面だけ</b><br><code>「東京 気温」→ 気温の数字だけ書く</code></div><div class="good"><b>一歩深く</b><br><code>「明日の服装を決めたいのかも」→ 気温＋服装の目安まで考える</code></div></div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「検索された言葉を、そのまま説明すればいいんじゃないの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「そこだけ見てるからズレるんだよ。“なぜ検索したか”まで想像しろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「キーワードじゃなくて、その向こう側にいる人を見るんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day2b-02">
+    <span class="seo-tag">Day2後半②</span>
+    <h3>検索クエリは、ざっくり5種類</h3>
+    <figure class="split-figure"><img src="day2_10_query_types.png" alt="5種類の検索クエリを説明するカード"><figcaption>Day2後半② 検索クエリは5種類</figcaption></figure>
+    <div class="query-grid">
+      <div class="q"><b>情報</b>知りたい<br>例：SEOとは</div>
+      <div class="q"><b>購入・予約</b>行動したい<br>例：SEOツール 購入</div>
+      <div class="q"><b>比較</b>選びたい<br>例：SEOツール 比較</div>
+      <div class="q"><b>地域</b>近くを探す<br>例：SEO会社 東京</div>
+      <div class="q"><b>特定サイト</b>そこへ行きたい<br>例：Search Console ログイン</div>
+    </div>
+    <p>目的が違えば、作るページも変わります。<b>知りたい人には解説、比較したい人には比較、買いたい人には商品・申込ページ。</b> 全部を1記事に押し込む必要はありません。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「薬を探している人と、病気の意味を知りたい人に、同じ説明をしても仕方がないだろう？」</div>
+      <div class="talk"><span class="speaker">敦</span>「検索も“何をしたい人か”で必要な内容が変わるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day2b-03">
+    <span class="seo-tag">Day2後半③</span>
+    <h3>検索意図を見抜く方法は2つ</h3>
+    <figure class="split-figure"><img src="day2_11_search_intent_analysis.png" alt="検索意図を見抜く方法を説明するカード"><figcaption>Day2後半③ 検索意図を見抜く2つの方法</figcaption></figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🔍 ① 上位記事を見る</b>タイトル・見出し・共通して書かれている内容を見る。</div>
+      <div class="simple-box"><b>🧠 ② 人の背景を想像する</b>どんな状況で、何に困り、読んだ後どうなりたいか考える。</div>
+    </div>
+    <p><b>上位記事の丸写しはしません。</b> 「なぜこの見出しが必要なのか」「読者は次に何を知りたいか」を考える材料にします。</p>
+    <div class="beginner-note"><b>例：「犬 しつけ」</b><br>トイレ、吠え癖、散歩、子犬、集合住宅など、人によって困りごとは違います。同じ言葉でも答えが1つとは限りません。</div>
+  </article>
+
+  <article class="lesson-card" id="day2b-04">
+    <span class="seo-tag">Day2後半④</span>
+    <h3>公開したら、数字で答え合わせ</h3>
+    <figure class="split-figure"><img src="day2_12_data_improvement.png" alt="SEO記事公開後のデータ改善を説明するカード"><figcaption>Day2後半④ 公開後はデータで答え合わせ</figcaption></figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>アクセス数</b>どれくらい読まれている？</div>
+      <div class="simple-box"><b>検索順位</b>狙った検索で出ている？</div>
+      <div class="simple-box"><b>クリック率</b>検索結果で選ばれている？</div>
+      <div class="simple-box"><b>滞在・行動</b>すぐ離れていない？ 次の行動につながった？</div>
+    </div>
+    <p>GoogleアナリティクスやSearch Consoleなどを使い、<b>公開 → 確認 → 修正</b>を繰り返します。SEO記事は「出したら終了」ではありません。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「公開した。お疲れさま。解散。」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「そこからが経過観察だよ。数字を見て、効いてなければ直す。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day2b-05">
+    <span class="seo-tag">Day2後半⑤</span>
+    <h3>SEOで忘れない3つの注意</h3>
+    <figure class="split-figure"><img src="day2_13_seo_cautions.png" alt="SEOで注意することを初心者向けに説明するカード"><figcaption>Day2後半⑤ SEOで注意すること</figcaption></figure>
+    <ul class="rule-list">
+      <li>検索エンジンの仕組みは変わる。昔の必勝法を永久ルールだと思わない</li>
+      <li>検索意図は1つとは限らない。複数の読者パターンを考える</li>
+      <li>検索意図に合うだけでなく、独自性・専門性・自分の体験を足す</li>
+    </ul>
+    <p><b>AIに丸投げした平均的な記事だけでは弱くなりやすい。</b> Day1で学んだ一次情報や本人の言葉を、ここでも使います。</p>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">8</span><h3>ペルソナと構成を作ってからAIに書かせる</h3></div>
+
+  <article class="lesson-card" id="day2b-06">
+    <span class="seo-tag">Day2後半⑥</span>
+    <h3>生成AIで「読者役」を作る＝ペルソナ</h3>
+    <figure class="split-figure"><img src="day2_14_ai_persona.png" alt="生成AIでSEOペルソナを作る方法"><figcaption>Day2後半⑥ SEOペルソナを生成AIで作る</figcaption></figure>
+    <p class="plain">ペルソナは「30代・女性」のようなプロフィール表ではなく、<b>何に悩み、何を知り、最後にどうなりたい人か</b>まで考えた読者像です。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>材料に使えるもの</b>Search Consoleの検索語、アクセスデータ、広告の検索語。</div>
+      <div class="simple-box"><b>さらに強い材料</b>SNSの生の声、競合記事、実際の質問や問い合わせ。</div>
+    </div>
+    <p>AIに何も渡さず「ペルソナを作って」だけだと、一般的で薄くなりがちです。<b>実際のデータを材料として渡し、3パターンくらい作る</b>と比較しやすくなります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「ペルソナは答えなんですか？」</div>
+      <div class="talk"><span class="speaker">森</span>「いや、仮説だよ。記事を読ませて反応を想像し、最後は実際の数字で確かめる。」</div>
+    </div>
+    <div class="canva-bridge"><b>Canvaの使いどころ：</b>前半で覚えた図形・フレーム・グループ化を使えば、ペルソナ3人を“読者カード”として並べて見える化できます。</div>
+  </article>
+
+  <article class="lesson-card" id="day2b-07">
+    <span class="seo-tag">Day2後半⑦</span>
+    <h3>本文より先に「記事の設計図」を作る</h3>
+    <figure class="split-figure"><img src="day2_15_article_structure.png" alt="SEO記事の構成設計を説明するカード"><figcaption>Day2後半⑦ 記事構成の設計図を作る</figcaption></figure>
+    <p class="plain"><b>構成＝H2・H3などの見出しを先に並べた設計図。</b> いきなり本文を書くより、脱線・重複・説明不足を減らせます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>キーワード</b>何の検索で読まれたい？</div>
+      <div class="simple-box"><b>検索意図</b>読者は何を知りたい？</div>
+      <div class="simple-box"><b>想定読者</b>誰に、どこまで簡単に説明する？</div>
+      <div class="simple-box"><b>見出し</b>どの順番なら迷わず理解できる？</div>
+    </div>
+    <ul class="rule-list">
+      <li>見出しだけ読んでも話の流れが分かるか</li>
+      <li>検索意図に答えているか</li>
+      <li>初心者に難しすぎないか</li>
+      <li>同じ説明を何度もしていないか</li>
+      <li>各見出しに「何を書くか」を1〜2行メモする</li>
+    </ul>
+    <div class="canva-bridge"><b>Canvaの使いどころ：</b>クイックフローや図形を使って「検索意図 → ペルソナ → H2 → H3」を矢印でつなぐと、文章を書く前に全体像を確認できます。</div>
+  </article>
+
+  <article class="lesson-card" id="day2b-08">
+    <span class="seo-tag">Day2後半⑧ / 今日の実習</span>
+    <h3>記事づくりの流れを7ステップで覚える</h3>
+    <figure class="split-figure"><img src="day2_16_article_workflow.png" alt="SEO記事づくりの全体ワークフロー"><figcaption>Day2後半⑧ 記事づくりの全体ワークフロー</figcaption></figure>
+    <div class="article-flow">
+      <div class="step"><i>1</i><b>検索意図</b>何を知りたい？</div>
+      <div class="step"><i>2</i><b>ペルソナ</b>誰が読む？</div>
+      <div class="step"><i>3</i><b>情報収集</b>何が必要？</div>
+      <div class="step"><i>4</i><b>構成設計</b>順番を決める</div>
+      <div class="step"><i>5</i><b>AI下書き</b>文章化する</div>
+      <div class="step"><i>6</i><b>自分で仕上げ</b>体験・独自性</div>
+      <div class="step"><i>7</i><b>公開・改善</b>数字で確認</div>
+    </div>
+    <div class="note-method"><b>実習で大事：</b><br>AIとのチャットが長くなると「どこで何を決めた？」が分からなくなります。<br>「検索意図」「ペルソナ」「採用した見出し」「直した理由」だけでも、ノートに短く残しながら進めます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「全部AIに“いい記事書いて”で終わらせちゃダメ？」</div>
+      <div class="talk"><span class="speaker">中也</span>「Day1から何を聞いてたんだ。順番に材料を決めて渡せ。最後は自分で仕上げろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「検索意図と読者像を先に決めるから、AIの下書きもズレにくくなるんですね。」</div>
+      <div class="talk"><span class="speaker">谷崎</span>「途中の決定をノートに残しておけば、AIとの会話が長くなっても戻れます。」</div>
+    </div>
+    <div class="day2-back-memory">今日のゴール：<br>記事を書く前に「何を書くか」「誰に届けるか」「読者は何を知りたいか」を整理する。<br>検索意図 → ペルソナ → 情報収集 → 構成設計 → AIで下書き → 自分で仕上げ → 公開、の流れを理解する。</div>
+  </article>
+
+  <section class="lesson-card" id="day2-back-reference">
+    <h3>参考動画（Day2 後半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=SvvCedvCXhg&amp;list=PLTRmOlTOO6Js&amp;index=1" target="_blank" rel="noopener">検索意図の理解</a>
+      <a href="https://www.youtube.com/watch?v=vyM5Sn0lMQc&amp;list=PLTRmOlTOO6Js&amp;index=2" target="_blank" rel="noopener">SEOペルソナと生成AI</a>
+      <a href="https://www.youtube.com/watch?v=wI2srZXxeHY&amp;list=PLTRmOlTOO6Js&amp;index=3" target="_blank" rel="noopener">SEO記事の構成設計</a>
+    </div>
+  </section>
+</section>
+
+      </div>
+    </section>
+  </main>
+
+  <aside class="right" aria-label="登場人物">
+    <div class="panel">
+      <div class="cast-title">
+        <small>CHARACTER FILE</small>
+        <b>登場人物</b>
+      </div>
+      <div class="cast-list">
+        
+      <article class="cast-card">
+        <img src="atsushi_nakajima.png" alt="中島 敦">
+        <div class="cast-meta">
+          <b>中島 敦</b>
+          <span>ATSUSHI NAKAJIMA</span>
+        </div>
+      </article>
+      <article class="cast-card">
+        <img src="osamu_dazai.png" alt="太宰 治">
+        <div class="cast-meta">
+          <b>太宰 治</b>
+          <span>OSAMU DAZAI</span>
+        </div>
+      </article>
+      <article class="cast-card">
+        <img src="junichiro_tanizaki.png" alt="谷崎 潤一郎">
+        <div class="cast-meta">
+          <b>谷崎 潤一郎</b>
+          <span>JUNICHIRO TANIZAKI</span>
+        </div>
+      </article>
+      <article class="cast-card">
+        <img src="akiko_yosano.png" alt="与謝野 晶子">
+        <div class="cast-meta">
+          <b>与謝野 晶子</b>
+          <span>AKIKO YOSANO</span>
+        </div>
+      </article>
+      <article class="cast-card">
+        <img src="ogai_mori.png" alt="森 鴎外">
+        <div class="cast-meta">
+          <b>森 鴎外</b>
+          <span>OGAI MORI</span>
+        </div>
+      </article>
+      <article class="cast-card">
+        <img src="chuya_nakahara.png" alt="中原 中也">
+        <div class="cast-meta">
+          <b>中原 中也</b>
+          <span>CHUYA NAKAHARA</span>
+        </div>
+      </article>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<div class="footer">DAY1 TEMPLATE / BUNGO-INSPIRED TAISHO MODERN UI</div>
+</body>
+</html>
