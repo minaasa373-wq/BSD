@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day1＋Day2 AI・Canva・SEO記事設計</title>
+<title>文豪デザイン講義｜Day1〜Day3 AI・Canva・SEO・note・Notion・ブログ集客</title>
 <style>
 :root{
   --paper:#f3efe6;
@@ -477,6 +477,225 @@ details.day[open] summary{
 @media(max-width:900px){.query-grid{grid-template-columns:1fr 1fr}.article-flow{grid-template-columns:1fr 1fr}}
 @media(max-width:480px){.query-grid,.article-flow{grid-template-columns:1fr}}
 
+
+/* ===== Day3 前半：note × Notion 超初心者向け ===== */
+.day3-half{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #173866;
+}
+.day3-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f3f7fc,#fffdf8);
+  border:2px solid #173866;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day3-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#173866;
+  font-weight:900;
+}
+.day3-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#173866;
+}
+.day3-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #9b2f2f;
+  background:#fff4ed;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day3-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#173866;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.note-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.note-flow .step,
+.day3-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:13px;
+}
+.note-flow .step i,
+.day3-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#173866;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day3-flow{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.notion-box{
+  margin:14px 0;
+  padding:15px 17px;
+  border-left:6px solid #111;
+  background:#f7f7f7;
+}
+.note-box{
+  margin:14px 0;
+  padding:15px 17px;
+  border-left:6px solid #173866;
+  background:#f1f6fc;
+}
+.research-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.research-three>div{
+  padding:15px;
+  background:#fffaf4;
+  border:1px solid #d6c8b9;
+}
+.research-three b{
+  display:block;
+  margin-bottom:6px;
+  color:#6a222c;
+}
+@media(max-width:820px){
+  .note-flow{grid-template-columns:1fr 1fr}
+  .day3-flow{grid-template-columns:1fr 1fr}
+  .research-three{grid-template-columns:1fr}
+}
+@media(max-width:460px){
+  .note-flow,.day3-flow{grid-template-columns:1fr}
+}
+
+
+/* ===== Day3 後半：note・Notion活用＋ブログ集客 ===== */
+.day3-back{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #79262b;
+}
+.day3-back-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#fff6f2,#f4f8fd);
+  border:2px solid #79262b;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day3-back-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#79262b;
+  font-weight:900;
+}
+.day3-back-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#3f171e;
+}
+.day3b-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#79262b;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day3b-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #173866;
+  background:#eef4fb;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.control-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.control-grid>div{
+  padding:14px;
+  background:#fffaf4;
+  border:1px solid #d5c6b7;
+}
+.control-grid b{
+  display:block;
+  margin-bottom:5px;
+  color:#173866;
+}
+.graduate-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.graduate-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.graduate-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#79262b;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.asset-box{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #b9903c;
+  background:#fff9e9;
+}
+.platform-note{
+  margin:14px 0;
+  padding:14px 16px;
+  border:1px dashed #897b6c;
+  background:#faf8f4;
+}
+@media(max-width:820px){
+  .control-grid{grid-template-columns:1fr 1fr}
+  .graduate-flow{grid-template-columns:1fr 1fr}
+}
+@media(max-width:460px){
+  .control-grid,.graduate-flow{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -551,6 +770,33 @@ details.day[open] summary{
           <a href="#day2b-08">⑧ 記事づくり実習</a>
         </div>
       </details>
+      <details class="day">
+        <summary>Day3 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day3-01">① noteってなに？</a>
+          <a href="#day3-02">② note初期設定</a>
+          <a href="#day3-03">③ 売れる前にリサーチ</a>
+          <a href="#day3-04">④ 投稿・有料記事設定</a>
+          <a href="#day3-05">⑤ Notionってなに？</a>
+          <a href="#day3-06">⑥ DBとプロパティ</a>
+          <a href="#day3-07">⑦ フィルター・ビュー</a>
+          <a href="#day3-08">⑧ Day3実習ワーク</a>
+        </div>
+      </details>
+      <details class="day">
+        <summary>Day3 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day3b-01">① note運用ワークフロー</a>
+          <a href="#day3b-02">② note設定と投稿</a>
+          <a href="#day3b-03">③ Notionの様々な機能</a>
+          <a href="#day3b-04">④ ブログの効果</a>
+          <a href="#day3b-05">⑤ 実習の全体像</a>
+          <a href="#day3b-06">⑥ noteリサーチ</a>
+          <a href="#day3b-07">⑦ 記事作成・有料設定</a>
+          <a href="#day3b-08">⑧ 自力集客を育てる</a>
+        </div>
+      </details>
+
     </div>
   </aside>
 
@@ -1217,6 +1463,444 @@ details.day[open] summary{
       <a href="https://www.youtube.com/watch?v=SvvCedvCXhg&amp;list=PLTRmOlTOO6Js&amp;index=1" target="_blank" rel="noopener">検索意図の理解</a>
       <a href="https://www.youtube.com/watch?v=vyM5Sn0lMQc&amp;list=PLTRmOlTOO6Js&amp;index=2" target="_blank" rel="noopener">SEOペルソナと生成AI</a>
       <a href="https://www.youtube.com/watch?v=wI2srZXxeHY&amp;list=PLTRmOlTOO6Js&amp;index=3" target="_blank" rel="noopener">SEO記事の構成設計</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day3-half" id="day3-front">
+  <section class="day3-lead">
+    <div class="eyebrow">DAY3 前半 / note × Notion 超・初心者向け</div>
+    <h3>今日は「発信する場所」と<br>「整理する場所」を1つずつ覚える。</h3>
+    <p>noteは記事を書いて届ける場所。Notionはアイデア・下書き・タスクを整理する場所。全部の機能を覚える必要はありません。まず1記事を作り、必要な情報をNotionに残すところまで体験します。</p>
+  </section>
+
+  <div class="day3-memory">
+    今日の実習：<br>
+    「何を書くか」「誰に届けるか」を決める → noteのアカウント作成 → プロフィール設定 → 他の記事をリサーチ → 記事投稿 → 有料記事の設定・確認。<br>
+    作業中のメモや記事案はNotionで整理します。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">9</span><h3>noteは「書く・届ける・販売する」場所</h3></div>
+
+  <article class="lesson-card" id="day3-01">
+    <span class="day3-tag">Day3前半①</span>
+    <h3>noteってなに？</h3>
+    <figure class="split-figure">
+      <img src="day3_01_note_basics.png" alt="noteの基本を初心者向けに説明するカード">
+      <figcaption>Day3前半① noteってなに？</figcaption>
+    </figure>
+    <p class="plain"><b>noteは「ブログ＋お店」くらいに考えると簡単。</b> 文章・画像・音声・動画などを発信でき、内容によっては有料で販売できます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>📝 発信</b>文章や画像を投稿して読者に届ける。</div>
+      <div class="simple-box"><b>💰 販売</b>記事の途中から有料部分に設定できる。</div>
+      <div class="simple-box"><b>📱 手軽</b>スマホやPCから投稿できる。</div>
+      <div class="simple-box"><b>👥 読者がいる</b>ゼロから自分だけでサイトを作るより始めやすい。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「ブログを作るのに、サーバーとか難しい設定はいらないの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「最初はnoteのアカウントを作ればいい。余計なこと考える前に1本書け。」</div>
+      <div class="talk"><span class="speaker">敦</span>「“発信する場所を借りる”感覚なら分かりやすいですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-02">
+    <span class="day3-tag">Day3前半②</span>
+    <h3>noteの初期設定は「読まれる入口」を作る</h3>
+    <figure class="split-figure">
+      <img src="day3_02_note_initial_setup.png" alt="noteの初期設定を説明するカード">
+      <figcaption>Day3前半② noteの初期設定</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>① 登録</b>メールアドレスなどでアカウントを作る。</div>
+      <div class="simple-box"><b>② note ID</b>読みやすい・入力しやすい・覚えやすい名前にする。</div>
+      <div class="simple-box"><b>③ プロフィール</b>「誰向け／何を発信／どんな未来」の3行で考える。</div>
+      <div class="simple-box"><b>④ SNS連携</b>XやThreadsなど、使っている発信先とつなぐ。</div>
+    </div>
+    <div class="note-box"><b>名前とアイコン：</b>ほかのSNSでも活動しているなら、名前・アイコンを近づけると「あの人だ」と覚えてもらいやすくなります。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「プロフィールで格好つけすぎなくていい。誰に、何を届ける人なのかが分かれば十分だよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「自己紹介を長文で書かなくてもいいんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-03">
+    <span class="day3-tag">Day3前半③</span>
+    <h3>記事を書く前に「売れている型」を観察する</h3>
+    <figure class="split-figure">
+      <img src="day3_03_note_research.png" alt="noteで売れている記事をリサーチする方法">
+      <figcaption>Day3前半③ 売れる前にリサーチ</figcaption>
+    </figure>
+    <p class="plain"><b>いきなり自己流で書くより、まず観察。</b> 他の人の記事を見て「読んでみたいと思った理由」を探します。</p>
+    <div class="research-three">
+      <div><b>🖼️ サムネイル</b>何が目に入り、どんな雰囲気で、文字量はどれくらい？</div>
+      <div><b>🧲 タイトル</b>悩み・数字・メリット・意外性のどれで興味を引いている？</div>
+      <div><b>📖 無料部分</b>最初に何を伝え、どこで「続きが読みたい」と思わせている？</div>
+    </div>
+    <ul class="rule-list">
+      <li>note内検索で近いテーマの記事を探す</li>
+      <li>有料記事も見て、無料部分の構成を観察する</li>
+      <li>参考になるクリエイターを5人ほど見つける</li>
+      <li>丸写しではなく「型」を学ぶ</li>
+    </ul>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">谷崎</span>「真似するって、文章をコピーすることじゃないんですね。」</div>
+      <div class="talk"><span class="speaker">森</span>「そう。“なぜ読んでしまったのか”を観察する。それがリサーチだよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-04">
+    <span class="day3-tag">Day3前半④</span>
+    <h3>note投稿は5ステップで進める</h3>
+    <figure class="split-figure">
+      <img src="day3_04_note_post_workflow.png" alt="note投稿と有料記事設定のワークフロー">
+      <figcaption>Day3前半④ note投稿ワークフロー</figcaption>
+    </figure>
+    <div class="note-flow">
+      <div class="step"><i>1</i><b>サムネ</b>目を止める画像</div>
+      <div class="step"><i>2</i><b>タイトル</b>読む理由を作る</div>
+      <div class="step"><i>3</i><b>本文</b>見出し・太字・画像</div>
+      <div class="step"><i>4</i><b>有料設定</b>切り替え位置・価格</div>
+      <div class="step"><i>5</i><b>公開</b>最終確認して投稿</div>
+    </div>
+    <p><b>売上は無料部分の見せ方に大きく左右されます。</b> 読者の悩みを代弁し、読むメリットを示し、「この続きが知りたい」というところで有料部分へつなげます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>有料に切り替える例</b>問題提起の後／解決策の核心に入る直前／一番知りたい答えの入口。</div>
+      <div class="simple-box"><b>価格の目安として紹介</b>初心者は980〜1,980円程度から始め、内容や実績に合わせて調整する考え方。</div>
+      <div class="simple-box"><b>ハッシュタグ</b>3〜5個程度を目安に、記事と関係するものを付ける。</div>
+      <div class="simple-box"><b>AIの使い方</b>構成・導入・見出しをAIで作る → 自分の経験を足す → AIで整える。</div>
+    </div>
+    <div class="beginner-note"><b>初心者は一気に全部やらなくてOK：</b>まず単発記事を1本。マガジンやメンバーシップは、記事が増えてから考えても遅くありません。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「AIに全部書かせて、そのまま売れば楽じゃない？」</div>
+      <div class="talk"><span class="speaker">中也</span>「Day1でやっただろ。AIは叩き台。自分の経験と具体例を入れて仕上げろ。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">10</span><h3>Notionは「情報をためて、あとで取り出す」場所</h3></div>
+
+  <article class="lesson-card" id="day3-05">
+    <span class="day3-tag">Day3前半⑤</span>
+    <h3>Notionってなに？</h3>
+    <figure class="split-figure">
+      <img src="day3_05_notion_basics.png" alt="Notionのページとデータベースを説明するカード">
+      <figcaption>Day3前半⑤ Notionってなに？</figcaption>
+    </figure>
+    <p class="plain"><b>最初は「ページ」と「データベース」の2つだけ覚えればOK。</b></p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>📄 ページ</b>普通の紙のノート。文章・チェックリスト・メモを書く。</div>
+      <div class="simple-box"><b>🗃️ データベース</b>情報入りの引き出し。1件ずつページとして保存し、あとで絞り込める。</div>
+    </div>
+    <div class="notion-box"><b>Day3での使い方：</b>「記事アイデア」「リサーチした記事」「下書き」「公開済み記事」を1か所にまとめておくと、AIとのやり取りが長くなっても迷いにくくなります。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「普通のメモ帳と何が違うんですか？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「後から“公開済みだけ”“今週やることだけ”と取り出せる。それがデータベースの強みだよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-06">
+    <span class="day3-tag">Day3前半⑥</span>
+    <h3>プロパティを付けると、あとで探しやすい</h3>
+    <figure class="split-figure">
+      <img src="day3_06_notion_properties.png" alt="Notionのプロパティで情報を整理する方法">
+      <figcaption>Day3前半⑥ Notionの整理術</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>✅ ステータス</b>未着手／進行中／完了。</div>
+      <div class="simple-box"><b>📅 日付</b>締め切り・公開予定日。</div>
+      <div class="simple-box"><b>🏷️ 選択</b>note／SNS／仕事／家事など分類。</div>
+      <div class="simple-box"><b>💰 数値</b>金額・回数・売上など。</div>
+    </div>
+    <p><b>似た情報は1つのデータベースにまとめ、ラベルで分ける。</b> ただし、タスク管理と家計簿のように入れる情報そのものが違う場合は、別データベースに分けます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「同じ棚に置ける物はまとめる。薬品と昼食を同じ棚に入れない。考え方はそれだけだよ。」</div>
+      <div class="talk"><span class="speaker">中也</span>「その例えは妙に怖ぇけど、まあ分かりやすいな。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-07">
+    <span class="day3-tag">Day3前半⑦</span>
+    <h3>同じ情報を「見たい形」に切り替える</h3>
+    <figure class="split-figure">
+      <img src="day3_07_notion_views_layout.png" alt="Notionのフィルター、ビュー、レイアウトを説明するカード">
+      <figcaption>Day3前半⑦ フィルター・ビュー・レイアウト</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🔍 フィルター</b>「note記事だけ」「未完了だけ」など必要な情報だけ表示。</div>
+      <div class="simple-box"><b>👀 ビュー</b>同じ中身を表・カレンダー・ギャラリーなど別の見せ方にする。</div>
+      <div class="simple-box"><b>▶ トグル</b>長い説明を閉じて、必要な時だけ開く。</div>
+      <div class="simple-box"><b>🧱 レイアウト</b>2〜4列、コールアウト、アイコンなどで見やすく整える。</div>
+    </div>
+    <p>ホームページを1つ作り、よく使うページやデータベースへの入口にすると迷いにくくなります。<b>最初から完璧なNotionを作る必要はありません。</b></p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「Notion、機能が多すぎて全部触りたくない。」</div>
+      <div class="talk"><span class="speaker">谷崎</span>「大丈夫です。最初は表だけ。必要になった時にカレンダーやフィルターを足せば十分です。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3-08">
+    <span class="day3-tag">Day3前半⑧ / 今日の実習</span>
+    <h3>noteを始めて、Notionで整理する</h3>
+    <figure class="split-figure">
+      <img src="day3_08_day3_workflow.png" alt="noteとNotionを使うDay3実習ワークフロー">
+      <figcaption>Day3前半⑧ 実習ワークフロー</figcaption>
+    </figure>
+
+    <div class="day3-flow">
+      <div class="step"><i>1</i><b>テーマ</b>何を書く？</div>
+      <div class="step"><i>2</i><b>読者</b>誰に届ける？</div>
+      <div class="step"><i>3</i><b>note登録</b>アカウント作成</div>
+      <div class="step"><i>4</i><b>プロフィール</b>3行で設定</div>
+      <div class="step"><i>5</i><b>リサーチ</b>サムネ・タイトル・無料部</div>
+      <div class="step"><i>6</i><b>下書き</b>AIも使って作る</div>
+      <div class="step"><i>7</i><b>有料設定</b>位置・価格・確認</div>
+      <div class="step"><i>8</i><b>Notion</b>要点を整理</div>
+    </div>
+
+    <div class="practice-box">
+      <strong>実習のポイント：</strong><br>
+      ① noteのアカウントを作る。<br>
+      ② プロフィールを設定する。<br>
+      ③ 他の人のnoteを見て「サムネ・タイトル・無料部分」をメモする。<br>
+      ④ テスト記事を1本作る。<br>
+      ⑤ 有料部分の切り替え位置と価格設定を確認する。<br>
+      ⑥ 決めたこと・参考にした記事・次に直すことをNotionへ残す。
+    </div>
+
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「今日は“売る”ことより、一通り操作して流れを覚えるのが目的なんですね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「そうだ。設定画面で固まって何も出さねぇより、まず1本通してみろ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「そして忘れる前にNotionへ？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「要点だけ残す。次に同じことをやる自分への説明書だね。」</div>
+    </div>
+
+    <div class="day3-memory">
+      Day3前半のゴール：<br>
+      noteのアカウント作成からプロフィール設定、リサーチ、記事投稿、有料記事の設定・確認までを一通り体験する。<br>
+      あわせて、作業の要点をNotionで整理できるようになる。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day3-reference-videos">
+    <h3>参考動画（Day3 前半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=H8RAocgpAz8&amp;list=PLLWPr7ihoxjQ&amp;index=1" target="_blank" rel="noopener">noteの始め方・運用</a>
+      <a href="https://www.youtube.com/watch?v=Ahk4Y2m_u3w&amp;list=PLLWPr7ihoxjQ&amp;index=2" target="_blank" rel="noopener">Notion初心者向け基本操作</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day3-back" id="day3-back">
+  <section class="day3-back-lead">
+    <div class="eyebrow">DAY3 後半 / note・Notion活用＋ブログ集客</div>
+    <h3>「書く場所」「整理する場所」「集客する仕組み」を、<br>ひとつの流れとしてつなげる。</h3>
+    <p>PCが苦手でも、全部の機能を暗記する必要はありません。noteで発信し、Notionで整理し、ブログを少しずつ育てる。今日はこの流れを実際の作業として覚えます。</p>
+  </section>
+
+  <div class="day3b-memory">
+    Day3後半の考え方：<br>
+    note＝発信と販売。Notion＝自分の管理基地。ブログ＝長く働く集客資産。<br>
+    いきなり広告を全部やめるのではなく、「自分でお客様を呼べる場所」を少しずつ育てます。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">11</span><h3>note・Notionを「使える道具」にする</h3></div>
+
+  <article class="lesson-card" id="day3b-01">
+    <span class="day3b-tag">Day3後半①</span>
+    <h3>note運用は「リサーチ → 作る → 公開 → 改善」</h3>
+    <figure class="split-figure">
+      <img src="day3_09_note_workflow.png" alt="note記事作成の基本ワークフロー">
+      <figcaption>Day3後半① note作成の流れ</figcaption>
+    </figure>
+    <p class="plain"><b>noteは、思いついた瞬間に本文を書き始めなくてOK。</b> 先に「何を書くか」「誰に届けるか」を決めると迷いにくくなります。</p>
+    <div class="graduate-flow">
+      <div class="step"><i>1</i><b>リサーチ</b>他の記事を見る</div>
+      <div class="step"><i>2</i><b>構成</b>見出しを決める</div>
+      <div class="step"><i>3</i><b>下書き</b>AIも補助に使う</div>
+      <div class="step"><i>4</i><b>設定</b>無料・有料を決める</div>
+      <div class="step"><i>5</i><b>公開・改善</b>反応を見て直す</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「思いついたら、その勢いで2000字書けばいいんじゃない？」</div>
+      <div class="talk"><span class="speaker">中也</span>「途中で迷子になる未来が見える。先に読者と見出しを決めろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「AIは“本文を全部任せる人”じゃなくて、構成や下書きを手伝う人なんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-02">
+    <span class="day3b-tag">Day3後半②</span>
+    <h3>noteは「入口 → 本文 → 有料部分」を整える</h3>
+    <figure class="split-figure">
+      <img src="day3_10_note_setup_posting.png" alt="noteの基本設定と記事投稿のポイント">
+      <figcaption>Day3後半② noteの設定と投稿</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>👤 入口</b>ID・名前・アイコン・プロフィールを分かりやすくする。</div>
+      <div class="simple-box"><b>🖼️ 見た目</b>サムネイルとタイトルで「何の記事か」を伝える。</div>
+      <div class="simple-box"><b>📖 無料部分</b>悩み・読むメリット・記事の流れを見せる。</div>
+      <div class="simple-box"><b>💰 有料部分</b>一番知りたい内容へ入る手前などで切り替える。</div>
+    </div>
+    <p>前半で体験したアカウント作成・プロフィール設定・記事投稿を、今度は<b>「読者からどう見えるか」</b>を考えながら整えます。</p>
+    <div class="platform-note"><b>注意：</b>noteの画面・料金・機能名はアップデートで変わることがあります。教材では操作の名前より「プロフィールを整える」「無料と有料の境目を確認する」といった考え方を覚えます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「設定項目を全部埋める競争じゃないよ。読者が迷わない入口を作ればいい。」</div>
+      <div class="talk"><span class="speaker">谷崎</span>「まず1本投稿して、必要になった機能を後から覚える方が楽ですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-03">
+    <span class="day3b-tag">Day3後半③</span>
+    <h3>Notionは「自分だけのコントロールセンター」</h3>
+    <figure class="split-figure">
+      <img src="day3_11_notion_features.png" alt="Notionの使い方と様々な機能">
+      <figcaption>Day3後半③ Notionの使い方と様々な機能</figcaption>
+    </figure>
+    <div class="control-grid">
+      <div><b>🧱 ブロック</b>文字・見出し・画像・リストなど、ページを作る部品。</div>
+      <div><b>📄 ページ</b>メモや資料を書く1枚のノート。中にサブページも作れる。</div>
+      <div><b>🗃️ データベース</b>タスクや記事案を一覧で管理し、条件で取り出せる。</div>
+      <div><b>🏠 ワークスペース</b>ページやデータベース全部を置く、自分の作業場所。</div>
+    </div>
+    <ul class="rule-list">
+      <li>「/」で見出し・トグル・コールアウトなどを呼び出す</li>
+      <li>URLを貼ってリンクや動画をまとめる</li>
+      <li>2列レイアウトでメモとリンク集を並べる</li>
+      <li>ステータス・期限・カテゴリーなどのプロパティを付ける</li>
+      <li>テーブル・ボード・カレンダー・ギャラリーなどビューを切り替える</li>
+      <li>よく使うページはお気に入りにする</li>
+      <li>テンプレートはコピーして、自分用に少しずつ直す</li>
+    </ul>
+    <div class="asset-box"><b>AI機能も「基礎が分かるほど頼みやすい」：</b>ページ、データベース、プロパティの意味が分かれば、「記事管理DBを作って」「公開日とステータスを追加して」のように具体的に頼めます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「Notionは最初から豪邸を建てる必要はないよ。まず机と引き出しを1つずつ置けばいい。」</div>
+      <div class="talk"><span class="speaker">敦</span>「ページが机、データベースが整理できる引き出し……くらいから始めればいいんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-04">
+    <span class="day3b-tag">Day3後半④</span>
+    <h3>ブログは「広告を止めても残る集客資産」を育てる</h3>
+    <figure class="split-figure">
+      <img src="day3_12_blog_effect_hotpepper.png" alt="ブログ集客の効果とホットペッパー依存からの移行">
+      <figcaption>Day3後半④ ブログの効果と自力集客</figcaption>
+    </figure>
+    <p class="plain">ホットペッパーのような集客媒体は便利ですが、<b>掲載を止めた時に新規客も止まるなら、集客の入口を1つに頼りすぎている</b>と考えます。</p>
+    <div class="goodbad">
+      <div class="bad"><b>広告・媒体だけ</b><br>すぐに人を呼びやすい一方、掲載や広告を止めると入口も弱くなりやすい。</div>
+      <div class="good"><b>ブログ・ホームページを育てる</b><br>時間はかかるが、過去記事が検索から見つかり続ける「自分の資産」になりうる。</div>
+    </div>
+    <p>特に1人サロンのような仕事では、単に人数を増やすより、<b>考え方・人柄・得意分野を読んで「この人にお願いしたい」と来てくれる人</b>を増やす考え方が大切です。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「今日いきなり広告を全部切れ、って話じゃねぇぞ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「珍しく安全運転だね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「次の更新日までに、自分の入口を育てる。段階的にやれってことだ。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">12</span><h3>実際に「1本作る」ところまでやる</h3></div>
+
+  <article class="lesson-card" id="day3b-05">
+    <span class="day3b-tag">Day3後半⑤ / 実習①</span>
+    <h3>最初に「何を書くか」「誰に届けるか」を決める</h3>
+    <figure class="split-figure">
+      <img src="day3_13_note_practice_flow.png" alt="note入門の実践ワークフロー">
+      <figcaption>Day3後半⑤ note実習の全体像</figcaption>
+    </figure>
+    <div class="day3-flow">
+      <div class="step"><i>1</i><b>テーマ</b>何を書く？</div>
+      <div class="step"><i>2</i><b>読者</b>誰に届ける？</div>
+      <div class="step"><i>3</i><b>登録</b>noteを準備</div>
+      <div class="step"><i>4</i><b>投稿</b>1本作ってみる</div>
+    </div>
+    <p>テーマは難しく考えず、<b>過去の自分が困ったこと・人に説明できること・実際に試したこと</b>から選びます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「壮大な人生哲学を書こうかな。」</div>
+      <div class="talk"><span class="speaker">敦</span>「最初はもっと小さくていいんじゃ……。“初心者がCanvaで最初につまずいた3つ”とか。」</div>
+      <div class="talk"><span class="speaker">中也</span>「敦の方が分かってんじゃねぇか。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-06">
+    <span class="day3b-tag">Day3後半⑥ / 実習②</span>
+    <h3>他の人のnoteを3か所だけ見る</h3>
+    <figure class="split-figure">
+      <img src="day3_14_note_research_points.png" alt="他のnoteをリサーチするときのポイント">
+      <figcaption>Day3後半⑥ サムネ・タイトル・無料部分をリサーチ</figcaption>
+    </figure>
+    <div class="research-three">
+      <div><b>🖼️ サムネイル</b>何が目を引く？ 文字は多い？ 写真？ イラスト？</div>
+      <div><b>🧲 タイトル</b>どんな言葉や数字で「読みたい」と思わせている？</div>
+      <div><b>📖 無料部分</b>悩み・実績・メリット・目次をどんな順番で見せている？</div>
+    </div>
+    <p><b>目的はコピーではなく観察。</b> 「自分がなぜ続きを読みたくなったのか」をメモして、自分の記事に使える型だけ借ります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「良い例を観察して、理由を言葉にする。これは文章でもデザインでも同じだね。」</div>
+      <div class="talk"><span class="speaker">敦</span>「“売れてるから真似する”じゃなく、“なぜ伝わるか”を見るんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-07">
+    <span class="day3b-tag">Day3後半⑦ / 実習③</span>
+    <h3>サムネ → タイトル → 本文 → 有料設定 → 確認</h3>
+    <figure class="split-figure">
+      <img src="day3_15_note_article_steps.png" alt="note記事を作成して有料記事設定を確認する手順">
+      <figcaption>Day3後半⑦ 記事作成・有料設定を体験</figcaption>
+    </figure>
+    <div class="note-flow">
+      <div class="step"><i>1</i><b>サムネ</b>記事の顔</div>
+      <div class="step"><i>2</i><b>タイトル</b>読む理由</div>
+      <div class="step"><i>3</i><b>本文</b>見出しで整理</div>
+      <div class="step"><i>4</i><b>有料設定</b>境目と価格</div>
+      <div class="step"><i>5</i><b>確認</b>公開前チェック</div>
+    </div>
+    <div class="practice-box">
+      <strong>AIを使うなら：</strong><br>
+      「このテーマで初心者向けの見出しを5つ」→「導入文を300字」→ 自分の経験を追加 →「文章を読みやすく整えて」。<br>
+      1回で全部頼むより、工程を分ける方が自分の意図を残しやすくなります。
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「AIがきれいに書いても、あなたの経験まで勝手に作らせないこと。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「そこはDay1から何度も怒られてるところだね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day3b-08">
+    <span class="day3b-tag">Day3後半⑧ / 実習④</span>
+    <h3>Notionに残し、ブログを「次も使える資産」にする</h3>
+    <figure class="split-figure">
+      <img src="day3_16_blog_self_attraction.png" alt="ブログによる自力集客を育てるロードマップ">
+      <figcaption>Day3後半⑧ 自力集客を少しずつ育てる</figcaption>
+    </figure>
+    <div class="graduate-flow">
+      <div class="step"><i>1</i><b>悩みを探す</b>誰の何を解決？</div>
+      <div class="step"><i>2</i><b>記事を書く</b>自分の経験を入れる</div>
+      <div class="step"><i>3</i><b>SNS共有</b>読んでもらう</div>
+      <div class="step"><i>4</i><b>記録</b>反応をNotionへ</div>
+      <div class="step"><i>5</i><b>改善</b>次の記事へ活かす</div>
+    </div>
+    <div class="asset-box">
+      <b>Notionに残すと楽になるもの：</b><br>
+      記事URL／テーマ／想定読者／参考にした記事／使ったサムネ／公開日／反応／次に直したいこと。
+    </div>
+    <p>ブログ集客はすぐ結果が出る方法ではありません。だからこそ、<b>次の広告・媒体更新日を目標日にして、半年・1年かけて自力集客の比率を上げる</b>ような進め方が現実的です。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「1記事で卒業、ではないんですね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「当たり前だ。コツコツ積んで、“広告しか入口がない状態”を少しずつ変えるんだよ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「地味だけど、後から働き続けてくれるなら悪くないね。」</div>
+    </div>
+    <div class="day3b-memory">
+      Day3後半のゴール：<br>
+      noteの設定・投稿・有料記事確認を一通り体験し、他の記事をリサーチする。<br>
+      Notionで作業を整理しながら、ブログを「自分でお客様を呼ぶための長期資産」として育てる考え方を理解する。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day3-back-reference">
+    <h3>参考動画（Day3 後半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=4rpNZ1qbZco&amp;list=PLX42x-kM0ed4&amp;index=1" target="_blank" rel="noopener">Notionの基本・活用</a>
+      <a href="https://www.youtube.com/watch?v=pS-DZ66hTlY&amp;list=PLX42x-kM0ed4&amp;index=2" target="_blank" rel="noopener">ブログ集客と自力集客</a>
     </div>
   </section>
 </section>
