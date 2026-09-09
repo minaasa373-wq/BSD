@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day1〜Day3 AI・Canva・SEO・note・Notion・ブログ集客</title>
+<title>文豪デザイン講義｜Day1〜Day5 AI・Canva・SEO・note・Notion・ブログ集客</title>
 <style>
 :root{
   --paper:#f3efe6;
@@ -696,6 +696,193 @@ details.day[open] summary{
   .control-grid,.graduate-flow{grid-template-columns:1fr}
 }
 
+
+/* ===== Day4 前半：SEOキーワード選定・SEOロジック ===== */
+.day4-half{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #123d72;
+}
+.day4-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f1f6fc,#fffaf3);
+  border:2px solid #123d72;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day4-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#123d72;
+  font-weight:900;
+}
+.day4-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#123d72;
+}
+.day4-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #8a262d;
+  background:#fff3ee;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day4-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#123d72;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.keyword-types{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.keyword-types>div{
+  padding:15px;
+  border:1px solid #d1c4b6;
+  background:#fffaf4;
+}
+.keyword-types b{
+  display:block;
+  color:#123d72;
+  margin-bottom:6px;
+  font-size:17px;
+}
+.keyword-flow{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:8px;
+  margin:18px 0;
+}
+.keyword-flow .step,
+.day4-practice-flow .step{
+  padding:12px 8px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.keyword-flow .step i,
+.day4-practice-flow .step i{
+  display:grid;
+  place-items:center;
+  width:31px;height:31px;
+  border-radius:50%;
+  background:#123d72;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day4-practice-flow{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.seo-logic{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.seo-logic>div{
+  padding:15px;
+  border-top:5px solid #123d72;
+  background:#f6f8fb;
+}
+.seo-logic b{
+  display:block;
+  margin-bottom:6px;
+  color:#123d72;
+}
+.quick-check{
+  margin:15px 0;
+  padding:15px 17px;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.role-box{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a262d;
+  background:#fff3ee;
+}
+@media(max-width:860px){
+  .keyword-types,.seo-logic{grid-template-columns:1fr}
+  .keyword-flow{grid-template-columns:1fr 1fr}
+  .day4-practice-flow{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .keyword-flow,.day4-practice-flow{grid-template-columns:1fr}
+}
+
+
+/* ===== Day4 後半：Google Trends・ラッコキーワード・SEO分析 ===== */
+.day4-back{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #7a242b}
+.day4-back-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#fff4ef,#f2f7fc);border:2px solid #7a242b;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day4-back-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#7a242b;font-weight:900}
+.day4-back-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#4b171d}
+.day4b-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#7a242b;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day4b-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #123d72;background:#eef4fb;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.day4b-note{margin:15px 0;padding:15px 17px;border-left:6px solid #123d72;background:#f2f6fb}
+.day4b-doc{margin:15px 0;padding:15px 17px;border-left:6px solid #3b7d3f;background:#f2f8f2}
+
+
+
+/* ===== Day5 前半：記事構成・SEOタイトル・PREP ===== */
+.day5-half{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #67408d}
+.day5-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#faf5ff,#fffdf8);border:2px solid #67408d;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day5-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#67408d;font-weight:900}
+.day5-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#4a2e65}
+.day5-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #67408d;background:#f6effb;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.day5-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#67408d;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day5-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}
+.day5-flow .step{padding:13px 9px;background:#fffaf3;border:1px solid #d8c7b7;text-align:center;font-size:12px}
+.day5-flow .step i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#67408d;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.day5-title-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day5-title-grid>div{padding:14px;background:#fffaf4;border:1px solid #d5c6b7}
+.day5-title-grid b{display:block;margin-bottom:5px;color:#4a2e65}
+.prep-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.prep-row>div{padding:14px;border-top:5px solid #67408d;background:#f8f4fb}
+.prep-row b{display:block;margin-bottom:6px;color:#4a2e65}
+.day5-note{margin:15px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+@media(max-width:820px){.day5-flow,.day5-title-grid,.prep-row{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.day5-flow,.day5-title-grid,.prep-row{grid-template-columns:1fr}}
+
+
+/* ===== Day5 後半：人に選ばれ、AIにも引用されるタイトル・見出し設計 ===== */
+.day5-back{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #304c76}
+.day5-back-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#f1f6fc,#fff8f1);border:2px solid #304c76;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day5-back-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#304c76;font-weight:900}
+.day5-back-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#203757}
+.day5b-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#304c76;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day5b-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #8a2f34;background:#fff3ee;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.day5b-role-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day5b-role-grid>div{padding:15px;background:#fffaf4;border:1px solid #d6c8b9}
+.day5b-role-grid b{display:block;margin-bottom:6px;color:#203757}
+.day5b-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:18px 0}
+.day5b-flow .step{padding:12px 8px;background:#fffaf3;border:1px solid #d8c7b7;text-align:center;font-size:12px}
+.day5b-flow .step i{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:#304c76;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.day5b-ai{margin:15px 0;padding:15px 17px;border-left:6px solid #304c76;background:#f2f6fb}
+.day5b-human{margin:15px 0;padding:15px 17px;border-left:6px solid #8a2f34;background:#fff3ee}
+.day5b-check{margin:15px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+.day5b-qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day5b-qa>div{padding:15px;background:#f8fafc;border-top:5px solid #304c76}
+.day5b-qa b{display:block;margin-bottom:6px;color:#203757}
+@media(max-width:820px){.day5b-role-grid,.day5b-qa{grid-template-columns:1fr}.day5b-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.day5b-flow{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -796,6 +983,62 @@ details.day[open] summary{
           <a href="#day3b-08">⑧ 自力集客を育てる</a>
         </div>
       </details>
+      <details class="day">
+        <summary>Day4 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day4-01">① キーワード選定とは？</a>
+          <a href="#day4-02">② ビッグ・ミドル・ロングテール</a>
+          <a href="#day4-03">③ 選定の6ステップ</a>
+          <a href="#day4-04">④ SEOロジックと競合分析</a>
+          <a href="#day4-05">⑤ 実習ワークフロー</a>
+          <a href="#day4-06">⑥ 検索意図と競合を見る</a>
+          <a href="#day4-07">⑦ 1ページ1キーワード</a>
+          <a href="#day4-08">⑧ SEOを小さく育てる</a>
+        </div>
+      </details>
+      <details class="day">
+        <summary>Day4 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day4b-01">① Google Trendsで今を知る</a>
+          <a href="#day4b-02">② ラッコキーワードで深掘り</a>
+          <a href="#day4b-03">③ 勝てるキーワードを探す</a>
+          <a href="#day4b-04">④ SEO分析ツールを組み合わせる</a>
+          <a href="#day4b-05">⑤ Trends実習</a>
+          <a href="#day4b-06">⑥ キーワード候補を絞る</a>
+          <a href="#day4b-07">⑦ Geminiでテーマ案を作る</a>
+          <a href="#day4b-08">⑧ Googleドキュメントへ保存</a>
+        </div>
+      </details>
+      <details class="day">
+        <summary>Day5 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day5-01">① 記事構成案ってなに？</a>
+          <a href="#day5-02">② 検索意図リサーチ</a>
+          <a href="#day5-03">③ 具体例と独自性</a>
+          <a href="#day5-04">④ H2・H3とPREP法</a>
+          <a href="#day5-05">⑤ SEOタイトルの基本</a>
+          <a href="#day5-06">⑥ クリックされる題名</a>
+          <a href="#day5-07">⑦ タイトルNGと注意点</a>
+          <a href="#day5-08">⑧ AI実習ワークフロー</a>
+        </div>
+      </details>
+      <details class="day">
+        <summary>Day5 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day5b-01">① タイトルと見出しの役割</a>
+          <a href="#day5b-02">② タイトルは設計で作る</a>
+          <a href="#day5b-03">③ 見出しは記事の設計図</a>
+          <a href="#day5b-04">④ AIに引用される見出し</a>
+          <a href="#day5b-05">⑤ 曖昧タイトルを具体化</a>
+          <a href="#day5b-06">⑥ 読者の状況とメリット</a>
+          <a href="#day5b-07">⑦ 1見出し1テーマ</a>
+          <a href="#day5b-08">⑧ 実践ワークフロー</a>
+        </div>
+      </details>
+
+
+
+
 
     </div>
   </aside>
@@ -1901,6 +2144,720 @@ details.day[open] summary{
     <div class="video-links">
       <a href="https://www.youtube.com/watch?v=4rpNZ1qbZco&amp;list=PLX42x-kM0ed4&amp;index=1" target="_blank" rel="noopener">Notionの基本・活用</a>
       <a href="https://www.youtube.com/watch?v=pS-DZ66hTlY&amp;list=PLX42x-kM0ed4&amp;index=2" target="_blank" rel="noopener">ブログ集客と自力集客</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day4-half" id="day4-front">
+  <section class="day4-lead">
+    <div class="eyebrow">DAY4 前半 / SEOキーワード選定 超・初心者向け</div>
+    <h3>記事を書く前に、<br>「どの言葉で勝つか」を決める。</h3>
+    <p>SEOは、思いついたテーマを片っ端から書くゲームではありません。検索される言葉の中から、読者の悩みと自分のサイトの実力に合うキーワードを選び、勝ちやすい場所から記事を積み上げます。</p>
+  </section>
+
+  <div class="day4-memory">
+    SEOのキーワード選定は、検索される言葉の中から「自分が勝てるキーワード」を見つける作業。<br>
+    検索ボリューム・検索意図・競合の強さ・サイトの実力を見て、最初はミドルやロングテールなど狙いやすい言葉から始める。<br>
+    「何を書くか」より先に「どのキーワードなら勝てるか」を考えるのがDay4前半の中心です。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">13</span><h3>まず「検索される言葉」と「勝てる場所」を探す</h3></div>
+
+  <article class="lesson-card" id="day4-01">
+    <span class="day4-tag">Day4前半①</span>
+    <h3>キーワード選定ってなに？</h3>
+    <figure class="split-figure">
+      <img src="day4_01_keyword_selection_basics.png" alt="SEOキーワード選定の基本を説明するカード">
+      <figcaption>Day4前半① キーワード選定ってなに？</figcaption>
+    </figure>
+    <p class="plain"><b>一言なら「Googleで、どの言葉を入口にして読者を呼ぶか決める作業」。</b> 文章が上手でも、誰も検索しない言葉や強すぎる言葉ばかり狙うと、読まれるまでが大変です。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>📚 Googleという図書館</b>検索される言葉に合わせて「この棚に置いてください」と記事のテーマをはっきりさせる。</div>
+      <div class="simple-box"><b>📈 検索ボリューム</b>その言葉がどれくらい検索されるかを見る目安。</div>
+      <div class="simple-box"><b>🧠 検索意図</b>その言葉で検索した人が、本当は何を知りたい・解決したいのか考える。</div>
+      <div class="simple-box"><b>🏆 勝てる場所</b>検索数だけでなく、競合と自分のサイトの強さを比べて選ぶ。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「好きなことを書いて、Googleがいい感じに読者を連れてきてくれないの？」</div>
+      <div class="talk"><span class="speaker">中也</span>「店の看板も出さずに客が来ると思うな。まず“何の店か”を検索する言葉で決めるんだよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「記事を書く前に、入口の看板を決める感じですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-02">
+    <span class="day4-tag">Day4前半②</span>
+    <h3>ビッグ・ミドル・ロングテールをざっくり分ける</h3>
+    <figure class="split-figure">
+      <img src="day4_02_keyword_types_volume.png" alt="ビッグ、ミドル、ロングテールキーワードの違い">
+      <figcaption>Day4前半② キーワードの種類と検索数</figcaption>
+    </figure>
+    <div class="keyword-types">
+      <div><b>🏔️ ビッグ</b>動画で紹介された目安では検索数1万以上。例「ダイエット」「旅行」。人は多いが強いサイトも多い。</div>
+      <div><b>⛰️ ミドル</b>目安は1000〜1万。例「置き換えダイエット」。大きすぎず小さすぎず、現実的な候補になりやすい。</div>
+      <div><b>🔎 ロングテール</b>目安は1000以下。例「酵素ドリンク ダイエット 効果」。具体的で、悩みや行動が見えやすい。</div>
+    </div>
+    <p><b>「検索数が多い＝良いキーワード」ではありません。</b> 立ち上げ直後のサイトなら、まずミドルやロングテールで小さく勝ち、記事と評価を積み上げる考え方が基本です。</p>
+    <div class="beginner-note"><b>数字は絶対ルールではなく目安：</b>教材では「検索数・競合・検索意図・サイトの強さを一緒に見る」という考え方を覚えます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「検索される回数が多い言葉を選べばいいと思ってました。」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「人が多い場所ほど競争相手も多い。初心者は“勝てる広さ”から始めた方がいいよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-03">
+    <span class="day4-tag">Day4前半③</span>
+    <h3>キーワード選定は6ステップで進める</h3>
+    <figure class="split-figure">
+      <img src="day4_03_keyword_selection_6steps.png" alt="SEOキーワード選定の6ステップ">
+      <figcaption>Day4前半③ 勝てるキーワードの選び方</figcaption>
+    </figure>
+    <div class="keyword-flow">
+      <div class="step"><i>1</i><b>テーマ・目的</b>何のサイト？何を届ける？</div>
+      <div class="step"><i>2</i><b>読者</b>誰の悩みを解く？</div>
+      <div class="step"><i>3</i><b>軸KW</b>中心の言葉を決める</div>
+      <div class="step"><i>4</i><b>関連語</b>候補を広げる</div>
+      <div class="step"><i>5</i><b>分類</b>検索数・競合・意図を見る</div>
+      <div class="step"><i>6</i><b>決定</b>狙う言葉を絞る</div>
+    </div>
+    <p>「SEO記事を書いて」とAIにいきなり頼む前に、<b>テーマ・読者・キーワード候補</b>を先に決めます。順番があるだけで、初心者でもかなり迷いにくくなります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「設計せずに本文を書くのは、地図なしで目的地へ向かうようなものだね。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「気合いで着く可能性は？」</div>
+      <div class="talk"><span class="speaker">中也</span>「その無駄な気合いを6ステップに使え。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-04">
+    <span class="day4-tag">Day4前半④</span>
+    <h3>SEOロジックは「サイト全体」と「記事単体」で考える</h3>
+    <figure class="split-figure">
+      <img src="day4_04_seo_logic_competitor_analysis.png" alt="SEOの考え方と競合分析を説明するカード">
+      <figcaption>Day4前半④ SEOロジックと競合分析</figcaption>
+    </figure>
+    <p class="plain">動画の説明を初心者向けに言い換えると、SEOではざっくり<b>「サイト全体の積み上げ」「外からの評価」「そのキーワードへの答えとして適切か」</b>を考えます。</p>
+    <div class="seo-logic">
+      <div><b>① サイト全体の評価</b>記事の蓄積、内部リンク、オリジナル性など、サイト全体が育っているか。</div>
+      <div><b>② 外部からの評価</b>被リンクや外部での言及など、他の場所から評価・参照されているか。</div>
+      <div><b>③ キーワードへの適切さ</b>その検索意図に対して、記事がちゃんと答えになっているか。</div>
+    </div>
+    <p><b>SEOは相対評価。</b>「自分の記事が良いか」だけではなく、今の上位記事と比べて「何が足りないか」「何なら自分が足せるか」を見ます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「僕が100点だと思えば100点では？」</div>
+      <div class="talk"><span class="speaker">中也</span>「検索結果はお前の自己採点表じゃねぇ。上にいる相手と比べろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「だから競合分析が必要なんですね。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">14</span><h3>競合を見て「勝てる理由」を作る実習</h3></div>
+
+  <article class="lesson-card" id="day4-05">
+    <span class="day4-tag">Day4前半⑤ / 実習①</span>
+    <h3>Day4実習：キーワードから記事設計までつなげる</h3>
+    <figure class="split-figure">
+      <img src="day4_05_practice_workflow.png" alt="SEOキーワード選定から記事設計までの実習ワークフロー">
+      <figcaption>Day4前半⑤ 実習ワークフロー</figcaption>
+    </figure>
+    <div class="day4-practice-flow">
+      <div class="step"><i>1</i><b>テーマ・読者</b>誰に何を届ける？</div>
+      <div class="step"><i>2</i><b>候補を出す</b>軸KW＋関連語</div>
+      <div class="step"><i>3</i><b>勝てるか見る</b>検索意図・競合・検索数</div>
+      <div class="step"><i>4</i><b>構成へ</b>見出し→記事にする</div>
+    </div>
+    <div class="quick-check">
+      <b>今日の作業メモに残すもの：</b><br>
+      ①選んだキーワード　②なぜ狙うか　③想定読者　④検索意図　⑤競合の強み　⑥自分が足す独自情報。<br>
+      AIとの会話が長くなっても、この6つが残っていれば戻りやすくなります。
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「いきなり記事を書くんじゃなく、判断理由までメモするんですね。」</div>
+      <div class="talk"><span class="speaker">森</span>「理由が残れば、3か月後に見直す時も“なぜ選んだか”を検証できるからね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-06">
+    <span class="day4-tag">Day4前半⑥ / 実習②</span>
+    <h3>競合は全文より、まず「見出し」を見る</h3>
+    <figure class="split-figure">
+      <img src="day4_06_search_intent_competitors.png" alt="検索意図と競合分析の見方">
+      <figcaption>Day4前半⑥ 検索意図と競合を見る</figcaption>
+    </figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🧠 検索意図</b>検索した人は何に困り、何を知ったら満足する？</div>
+      <div class="simple-box"><b>📑 上位の見出し</b>何を、どんな順番で答えている？</div>
+      <div class="simple-box"><b>🕳️ 不足点</b>まだ浅い説明、足りない具体例、分かりにくい部分は？</div>
+      <div class="simple-box"><b>💡 独自性</b>自分の経験・数字・検証・図解・具体例を何で足せる？</div>
+    </div>
+    <p>上位記事を全部読むと時間がかかります。まずタイトル・目次・H2/H3を見て、<b>「この検索では何を答えるのが普通なのか」</b>をつかみます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「競合を丸写しするんじゃない。共通して必要な情報を見つけて、その上に自分の価値を足すんだよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「見出しだけでも、検索する人が求めている話の流れが見えてくるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-07">
+    <span class="day4-tag">Day4前半⑦ / 実習③</span>
+    <h3>初心者は「1ページ1キーワード」で役割を整理する</h3>
+    <figure class="split-figure">
+      <img src="day4_07_one_page_one_keyword.png" alt="1ページ1キーワードのSEO設計">
+      <figcaption>Day4前半⑦ 1ページ1キーワード設計</figcaption>
+    </figure>
+    <p class="plain">似た記事を何本も作り、同じキーワードを奪い合うと、どのページを評価すればよいか分かりにくくなることがあります。教材ではこれを<b>カニバリゼーション</b>として注意します。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🎯 1ページ1キーワード</b>初心者向けの基本ルールとして、各ページの主役を1つ決める。</div>
+      <div class="simple-box"><b>🧩 記事の役割</b>集客／教育／購入など、そのページの仕事も決める。</div>
+      <div class="simple-box"><b>⚠️ 重複チェック</b>似たテーマの記事がすでにないか確認する。</div>
+      <div class="simple-box"><b>🔁 定期見直し</b>順位・流入キーワードを見て、3か月程度を目安に再確認する。</div>
+    </div>
+    <div class="role-box"><b>検索ボリューム0について：</b>教材では基本的に避ける考え方。ただし新しい造語や教育目的など、アクセス以外の役割がある記事は別です。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「似た記事を10本書けば、10倍強くなる？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「同じ役割ばかりなら、むしろ整理した方がいいこともあるよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4-08">
+    <span class="day4-tag">Day4前半⑧ / 実習④</span>
+    <h3>SEOは「小さく勝つ → 評価を積む → 次へ」で育てる</h3>
+    <figure class="split-figure">
+      <img src="day4_08_seo_growth.png" alt="勝てるキーワードからSEOサイトを育てる流れ">
+      <figcaption>Day4前半⑧ SEOの育ち方</figcaption>
+    </figure>
+    <div class="day4-practice-flow">
+      <div class="step"><i>1</i><b>勝てるKW</b>狙いやすい言葉を選ぶ</div>
+      <div class="step"><i>2</i><b>記事公開</b>検索意図に答える</div>
+      <div class="step"><i>3</i><b>評価を積む</b>アクセス・内部リンク・言及</div>
+      <div class="step"><i>4</i><b>次へ</b>少し強いKWへ挑戦</div>
+    </div>
+    <p>動画で紹介された「3→2→1」のイメージは、<b>まず記事単位で勝つ → アクセスや外部評価が積み上がる → サイト全体が強くなる</b>という育て方です。</p>
+    <p><b>全部のSEO指標を毎回細かく調べると続きません。</b> 日常運用では「検索意図に合うか」「競合に勝てる理由があるか」「自分のサイトで現実的か」を短時間で判断できる形に落とすことが大切です。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「最初から“ダイエット”で1位を取ろうとすんな。小さい勝ちを拾って足場を作れ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「記事を書く量より、“勝てる場所を選んで積み上げる”方が大事なんですね。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「つまり無謀な正面突破より、勝てるところから？」</div>
+      <div class="talk"><span class="speaker">中也</span>「SEOでは珍しく理解が早ぇじゃねぇか。」</div>
+    </div>
+    <div class="day4-memory">
+      Day4前半のゴール：<br>
+      検索ボリューム・検索意図・競合・サイトの実力を見ながら「自分が勝てるキーワード」を選ぶ。<br>
+      1ページ1キーワードを基本に役割を整理し、競合記事の見出しを確認して、検索意図に合った独自性のある記事設計へつなげる。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day4-reference-videos">
+    <h3>参考動画（Day4 前半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=Vt4PaDYSzA4&amp;list=PLcBP_53DDjMY&amp;index=1" target="_blank" rel="noopener">SEOキーワード選定の基本</a>
+      <a href="https://www.youtube.com/watch?v=ykmgIpFmcHQ&amp;list=PLcBP_53DDjMY&amp;index=2" target="_blank" rel="noopener">勝てるキーワードの考え方</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day4-back" id="day4-back">
+  <section class="day4-back-lead">
+    <div class="eyebrow">DAY4 後半 / Google Trends × ラッコキーワード × SEO分析</div>
+    <h3>検索されている言葉を調べて、<br>「次に何を書くか」を決める。</h3>
+    <p>今回は、難しいSEO理論を暗記する回ではありません。検索されている言葉を見て、候補を集め、AIに整理を手伝ってもらい、次の記事テーマを決める実習です。</p>
+  </section>
+
+  <div class="day4b-memory">
+    第4回後半は、Google Trendsで検索されているキーワードや関連語を調べ、自分が書く記事テーマを決める実習。<br>
+    調べたキーワードをGeminiに渡してテーマ案を出してもらい、最後にGoogleドキュメントへ保存します。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">15</span><h3>検索ニーズを調べる</h3></div>
+
+  <article class="lesson-card" id="day4b-01">
+    <span class="day4b-tag">Day4後半①</span>
+    <h3>Google Trendsで「今、何が検索されている？」を見る</h3>
+    <figure class="split-figure"><img src="day4_09_google_trends.png" alt="Google Trendsの初心者向け説明"><figcaption>Day4後半① Google Trendsで今を知る</figcaption></figure>
+    <p class="plain"><b>Google Trendsは、検索の人気がどう動いているかを見る道具。</b> 気になる言葉を入れて、伸びているか、季節で変わるか、関連する言葉は何かを確認します。</p>
+    <div class="workflow">
+      <div class="step"><i>1</i><b>入力</b>気になる言葉</div>
+      <div class="step"><i>2</i><b>確認</b>グラフを見る</div>
+      <div class="step"><i>3</i><b>関連語</b>ヒントを探す</div>
+      <div class="step"><i>4</i><b>メモ</b>候補を残す</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「自分が書きたいことだけ書けばいいんじゃない？」</div>
+      <div class="talk"><span class="speaker">中也</span>「読者が探してなきゃ届かねぇ。まず“今、何が検索されてるか”を見ろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「書きたいことと、検索されていることが重なる場所を探すんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-02">
+    <span class="day4b-tag">Day4後半②</span>
+    <h3>ラッコキーワードで「その次に知りたいこと」を探す</h3>
+    <figure class="split-figure"><img src="day4_10_rakko_keyword_research.png" alt="ラッコキーワードで関連語を調べる説明"><figcaption>Day4後半② ラッコキーワードで深掘り</figcaption></figure>
+    <p class="plain"><b>1つのキーワードから、関連語・サジェスト・質問・再検索語を広げる。</b> これで読者が何に困っているかが見えやすくなります。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>サジェスト</b>一緒に検索されやすい言葉。</div>
+      <div class="simple-box"><b>再検索キーワード</b>検索したあと、さらに調べられる言葉。</div>
+      <div class="simple-box"><b>質問</b>「よくある質問」から悩みを拾う。</div>
+      <div class="simple-box"><b>競合見出し</b>上位記事のH2/H3を比較する。</div>
+    </div>
+    <div class="day4b-note"><b>大事：</b>競合見出しを集めるだけでは似た記事になりやすい。ペルソナ、検索意図、自分の体験や数字も足して独自性を作ります。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「ツールは文章を真似するためじゃない。読者の疑問を見つけるために使うんだよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「検索されている言葉の“周り”を見ると、悩みが具体的になるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-03">
+    <span class="day4b-tag">Day4後半③</span>
+    <h3>「検索される・競合が弱い・意図が明確」を狙う</h3>
+    <figure class="split-figure"><img src="day4_11_winnable_keywords.png" alt="勝てるSEOキーワードの探し方"><figcaption>Day4後半③ 勝てるキーワードを探す</figcaption></figure>
+    <p class="plain">前半で覚えた「勝てるキーワード」を、実際のデータで探します。<b>弱めの個人ブログでも上位にいる言葉は、候補として観察する価値があります。</b></p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>検索ボリューム</b>実際に検索されている？</div>
+      <div class="simple-box"><b>競合</b>大企業だらけではない？</div>
+      <div class="simple-box"><b>検索意図</b>何を知りたい人か分かる？</div>
+      <div class="simple-box"><b>独自性</b>自分の経験や具体例を足せる？</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「強い相手が並んでる場所に、わざわざ突っ込む必要はねぇ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「勝てる場所を選ぶ。SEOらしく現実的だね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-04">
+    <span class="day4b-tag">Day4後半④</span>
+    <h3>SEOツールは「役割分担」で使う</h3>
+    <figure class="split-figure"><img src="day4_12_seo_data_tools.png" alt="SEO分析ツールの役割分担"><figcaption>Day4後半④ SEO分析ツールを組み合わせる</figcaption></figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>Search Console</b>検索語・表示回数・CTR・順位。</div>
+      <div class="simple-box"><b>Google Trends</b>人気の動き・季節性・関連語。</div>
+      <div class="simple-box"><b>ラッコキーワード</b>関連語・質問・競合見出し。</div>
+      <div class="simple-box"><b>Ubersuggest / Ahrefs</b>競合キーワードや難易度の判断材料。</div>
+      <div class="simple-box"><b>Analytics</b>記事に来た後の行動を見る。</div>
+      <div class="simple-box"><b>ChatGPT / Gemini</b>材料整理・構成・下書きの補助。</div>
+    </div>
+    <p><b>ツールが答えを決めるわけではありません。</b> 数字の裏にいる読者を想像し、「次に何を書くか」「何を直すか」を人が判断します。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「道具が増えても、考える人が要らなくなるわけではないよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「データを集めるのはツール、意味を考えるのは人なんですね。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">16</span><h3>Google Trends → Gemini → Googleドキュメントで実習</h3></div>
+
+  <article class="lesson-card" id="day4b-05">
+    <span class="day4b-tag">Day4後半⑤ / 実習①</span>
+    <h3>Google Trendsで記事テーマ候補を3〜5個出す</h3>
+    <figure class="split-figure"><img src="day4_13_trends_practice.png" alt="Google Trends実習"><figcaption>Day4後半⑤ Trends実習</figcaption></figure>
+    <div class="workflow">
+      <div class="step"><i>1</i><b>開く</b>Trends</div>
+      <div class="step"><i>2</i><b>入力</b>軸キーワード</div>
+      <div class="step"><i>3</i><b>見る</b>伸び・関連語</div>
+      <div class="step"><i>4</i><b>残す</b>候補3〜5個</div>
+    </div>
+    <div class="practice-box"><strong>最初から1個に決めなくてOK。</strong><br>候補をいくつか並べてから、検索意図と競合を見て絞ります。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「正解のキーワードを一発で当てなくていいんですね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「候補を出して比べりゃいい。そこを怖がる必要はねぇ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-06">
+    <span class="day4b-tag">Day4後半⑥ / 実習②</span>
+    <h3>候補を「検索意図・競合・自分の強み」で絞る</h3>
+    <figure class="split-figure"><img src="day4_14_keyword_selection_tips.png" alt="キーワード選定の実習ポイント"><figcaption>Day4後半⑥ キーワード候補を絞る</figcaption></figure>
+    <ul class="rule-list">
+      <li>検索されているか</li>
+      <li>競合が強すぎないか</li>
+      <li>誰のどんな悩みか説明できるか</li>
+      <li>自分の経験・数字・具体例を足せるか</li>
+      <li>既存記事と同じキーワードを奪い合わないか</li>
+    </ul>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「検索数だけで決めないこと。読者の顔が見える言葉を選ぶんだよ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「数字と人間、両方を見るわけだね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-07">
+    <span class="day4b-tag">Day4後半⑦ / 実習③</span>
+    <h3>Geminiに材料を渡して「記事テーマ案」を出してもらう</h3>
+    <figure class="split-figure"><img src="day4_15_gemini_theme_ideas.png" alt="Geminiで記事テーマ案を作る実習"><figcaption>Day4後半⑦ Geminiでテーマ案を作る</figcaption></figure>
+    <p class="plain"><b>キーワードだけ渡すより、「誰向け」「どんな悩み」まで一緒に伝える。</b></p>
+    <div class="goodbad">
+      <div class="bad"><b>△</b><br><code>「このキーワードで記事案を考えて」</code></div>
+      <div class="good"><b>◎</b><br><code>「候補KWは○○。対象は初心者。検索意図を整理し、記事テーマを5案。各案に狙う読者と理由も付けて」</code></div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「AIは整理役として便利だ。でも“本当に誰へ届けるか”を決めるのは君だよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「前半で集めた材料が、ここでAIへの指示になるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day4b-08">
+    <span class="day4b-tag">Day4後半⑧ / 実習④</span>
+    <h3>決定したテーマをGoogleドキュメントへ保存する</h3>
+    <figure class="split-figure"><img src="day4_16_blog_growth_workflow.png" alt="SEO記事テーマ決定から保存までのワークフロー"><figcaption>Day4後半⑧ 調査結果を保存して次へ</figcaption></figure>
+    <div class="day4b-doc"><b>残しておく項目：</b><br>選んだキーワード／関連語／検索意図／想定読者／競合で気づいたこと／Geminiの案／最終テーマ／そのテーマを選んだ理由。</div>
+    <p>ここまで残せば、次回「なんでこのテーマにしたんだっけ？」になりません。<b>調べる → 選ぶ → AIで整理 → 保存</b>までが今回のワークフローです。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「調べ終わったらブラウザを閉じて満足……」</div>
+      <div class="talk"><span class="speaker">中也</span>「それが一番もったいねぇ。採用理由まで残せ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「保存しておけば、次の記事構成にそのままつなげられますね。」</div>
+    </div>
+    <div class="day4b-memory">
+      Day4後半のゴール：<br>
+      検索ニーズを調べて「何について書くか」を決める。<br>
+      Google Trends・ラッコキーワードで候補を探し、Geminiで整理し、Googleドキュメントへ保存できれば完了です。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day4-back-reference">
+    <h3>参考動画（Day4 後半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=NnfC3ovylCk&amp;list=PLQonZM0fPokU&amp;index=1" target="_blank" rel="noopener">ラッコキーワードで高品質記事</a>
+      <a href="https://www.youtube.com/watch?v=dQORbFeNdsQ&amp;list=PLQonZM0fPokU&amp;index=2" target="_blank" rel="noopener">お宝キーワードの探し方</a>
+      <a href="https://www.youtube.com/watch?v=h1_TcBfXEts&amp;list=PLQonZM0fPokU&amp;index=3" target="_blank" rel="noopener">データ分析とSEOツール活用</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day5-half" id="day5-front">
+  <section class="day5-lead">
+    <div class="eyebrow">DAY5 前半 / 記事構成案 × SEOタイトル × PREP法</div>
+    <h3>本文を書く前に設計し、<br>タイトルで価値を伝える。</h3>
+    <p>検索意図を調べ、読者の悩みと自分の経験を整理し、その情報をAIへ渡して「SEOを意識したタイトル」と「PREP法に沿った目次構成」を作る流れを学びます。</p>
+  </section>
+
+  <div class="day5-memory">
+    タイトルは、重要キーワードを前半に置き、30文字前後を目安に、数字・ターゲット・メリットなどを自然に入れるのが基本。<br>
+    ただし、クリック狙いで盛りすぎず、本文内容と一致していて、読者に一目で価値が伝わることが最重要です。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">17</span><h3>本文を書く前に「記事の設計図」を作る</h3></div>
+
+  <article class="lesson-card" id="day5-01">
+    <span class="day5-tag">Day5前半①</span>
+    <h3>記事構成案ってなに？</h3>
+    <figure class="split-figure"><img src="day5_01_article_outline_basics.png" alt="記事構成案の基本"><figcaption>Day5前半① 記事構成案はブログの設計図</figcaption></figure>
+    <p class="plain"><b>記事構成案は、本文を書く前に作る「設計図」。</b> いきなり本文を書き始めると、話が散らかる・同じ説明を繰り返す・検索意図からズレる、といった事故が起こりやすくなります。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🏗️ 軸がブレにくい</b>「誰に、何を、どの順番で伝えるか」が見える。</div>
+      <div class="simple-box"><b>✂️ ムダを削れる</b>読者に必要ない情報を本文前に落とせる。</div>
+      <div class="simple-box"><b>⏱️ 修正時間を減らせる</b>後から大きく直す回数が減る。</div>
+      <div class="simple-box"><b>🧭 書く順番が見える</b>手が止まりにくくなり、本文作成が楽になる。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「思いついた順に書く方が自由でいいんじゃない？」</div>
+      <div class="talk"><span class="speaker">敦</span>「でも途中で“何の話でしたっけ？”になりそうです……。」</div>
+      <div class="talk"><span class="speaker">中也</span>「だから先に骨組みを作るんだよ。本文はその後だ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5-02">
+    <span class="day5-tag">Day5前半②</span>
+    <h3>検索意図を先にリサーチする</h3>
+    <figure class="split-figure"><img src="day5_02_search_intent_research.png" alt="検索意図リサーチの基本"><figcaption>Day5前半② 検索意図リサーチ</figcaption></figure>
+    <p class="plain">上位10サイトのタイトル・導入文・H2/H3を確認すると、読者がそのキーワードで何を求めているか見えやすくなります。シークレットモードを使えば、自分の検索履歴の影響も減らせます。</p>
+    <div class="day5-flow">
+      <div class="step"><i>1</i><b>検索</b>シークレットモード</div>
+      <div class="step"><i>2</i><b>上位記事</b>導入・見出し</div>
+      <div class="step"><i>3</i><b>Q&amp;A</b>リアルな悩み</div>
+      <div class="step"><i>4</i><b>メモ</b>必要情報を整理</div>
+    </div>
+    <p>Yahoo!知恵袋などのQ&amp;Aサイトを見ると、競合記事では拾いにくい「本音」「不安」「具体的な状況」も見つけられます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「検索意図を外したら、どれだけ丁寧でも“欲しかった答えじゃない記事”になるよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「上位記事だけじゃなく、実際の悩みも見るんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5-03">
+    <span class="day5-tag">Day5前半③</span>
+    <h3>一般論に「自分の経験」を足す</h3>
+    <figure class="split-figure"><img src="day5_03_reader_specific_examples.png" alt="読者に刺さる具体例の作り方"><figcaption>Day5前半③ 具体例と独自性</figcaption></figure>
+    <p class="plain"><b>一般論だけでは、他の記事と同じになりやすい。</b> 自分の経験・実績・失敗談・成功例・数字を入れると、「誰が書いた記事か」が見えるようになります。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>💬 経験談</b>実際にやったこと・困ったこと。</div>
+      <div class="simple-box"><b>📊 数字</b>期間・回数・成果などの具体性。</div>
+      <div class="simple-box"><b>⚠️ 失敗談</b>何がダメで、どう直したか。</div>
+      <div class="simple-box"><b>🏆 実績・専門性</b>なぜ自分が語れるのか。</div>
+    </div>
+    <p>記事全体は、アクセスを集める集客記事を多めにし、商品・サービスにつなぐキラーページへ自然に誘導する考え方もあります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「AIに一般論をきれいに書かせれば完成じゃない？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「それだけなら誰でも作れる。自分の経験を足して初めて“その人の記事”になる。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5-04">
+    <span class="day5-tag">Day5前半④</span>
+    <h3>H2・H3とPREP法で文章を組み立てる</h3>
+    <figure class="split-figure"><img src="day5_04_h2_h3_prep.png" alt="H2 H3とPREP法の文章設計"><figcaption>Day5前半④ H2・H3とPREP法</figcaption></figure>
+    <p class="plain">H2は大きな章、H3はその章の中を細かく分ける見出し。<b>目次だけ読んでも流れが分かる</b>くらいに整理すると、本文が書きやすくなります。</p>
+    <div class="prep-row">
+      <div><b>P：Point</b>最初に結論。</div>
+      <div><b>R：Reason</b>なぜそう言えるのか。</div>
+      <div><b>E：Example</b>具体例・体験・数字。</div>
+      <div><b>P：Point</b>最後にもう一度まとめ。</div>
+    </div>
+    <p><b>導入文は本文の後に書く</b>のも有効です。本文が完成してから書けば、入口と中身のズレを減らせます。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「最初に結論を言え。理由と例はその後だ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「PREPなら“何が言いたいのか分からない文章”を防ぎやすいですね。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">18</span><h3>検索結果で伝わる「SEOタイトル」を作る</h3></div>
+
+  <article class="lesson-card" id="day5-05">
+    <span class="day5-tag">Day5前半⑤</span>
+    <h3>SEOタイトルの基本</h3>
+    <figure class="split-figure"><img src="day5_05_seo_title_basics.png" alt="SEOタイトルの基本"><figcaption>Day5前半⑤ SEOタイトルの基本</figcaption></figure>
+    <p class="plain"><b>タイトルはGoogleへの説明と、読者への看板の2役。</b> 重要キーワードを前半に置き、30文字前後を目安に、本文内容と一致する自然なタイトルを作ります。</p>
+    <div class="day5-title-grid">
+      <div><b>🔑 重要KWを前半</b>何の記事か早く伝える。</div>
+      <div><b>📏 30文字前後</b>長すぎて切れにくい目安。</div>
+      <div><b>🎯 内容と一致</b>タイトルで約束したことを本文で答える。</div>
+      <div><b>👀 一目で価値</b>読む理由が分かる表現にする。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「タイトルだけ派手にしてクリックさせるのは？」</div>
+      <div class="talk"><span class="speaker">中也</span>「本文と違ったら釣りだろ。短期でクリックされても信用を失う。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5-06">
+    <span class="day5-tag">Day5前半⑥</span>
+    <h3>数字・ターゲット・メリットを自然に入れる</h3>
+    <figure class="split-figure"><img src="day5_06_clickable_titles.png" alt="クリックされる題名のコツ"><figcaption>Day5前半⑥ クリックされる題名のコツ</figcaption></figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>🔢 数字</b>「5つのコツ」「2026年版」など具体性を出す。</div>
+      <div class="simple-box"><b>👤 ターゲット</b>「初心者向け」など誰向けか示す。</div>
+      <div class="simple-box"><b>🎁 メリット</b>「5分で分かる」など読む価値を示す。</div>
+      <div class="simple-box"><b>❓ 疑問形</b>「〜とは？」「なぜ？」で好奇心を刺激する。</div>
+    </div>
+    <p>パワーワードは便利ですが、<b>1〜2個程度に抑え、盛りすぎない</b>方が自然です。年号を入れたら更新も忘れないようにします。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「全部入れれば強い、じゃない。読者が一瞬で理解できることの方が大事だよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「“初心者向け”“5つのコツ”くらいなら自然に使えそうです。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5-07">
+    <span class="day5-tag">Day5前半⑦</span>
+    <h3>タイトルのNGと注意点</h3>
+    <figure class="split-figure"><img src="day5_07_title_ng_points.png" alt="タイトルのNGと注意点"><figcaption>Day5前半⑦ タイトルNGと注意点</figcaption></figure>
+    <ul class="rule-list">
+      <li>キーワードを不自然に詰め込みすぎない</li>
+      <li>本文にない内容をタイトルで約束しない</li>
+      <li>同じテンプレをサイト内で使い回しすぎない</li>
+      <li>重要キーワードは前半に置くが、不自然な語順にしない</li>
+      <li>数字や記号は使いすぎない</li>
+    </ul>
+    <div class="goodbad">
+      <div class="bad"><b>△ 詰め込み</b><br><code>「副業 始め方 初心者 稼ぐ 方法 2026 簡単 在宅」</code></div>
+      <div class="good"><b>◎ 自然</b><br><code>「副業の始め方｜初心者が失敗しにくい5つの手順」</code></div>
+    </div>
+    <p>GoogleはタイトルタグだけでなくH1や本文などから表示タイトルを書き換えることがあります。小手先より、<b>読者に自然に伝わり、本文と一致しているタイトル</b>を優先します。</p>
+  </article>
+
+  <article class="lesson-card" id="day5-08">
+    <span class="day5-tag">Day5前半⑧ / 実習</span>
+    <h3>AIへ指示し、SEOタイトルとPREP目次を作る</h3>
+    <figure class="split-figure"><img src="day5_08_practice_workflow.png" alt="AIでタイトルと目次を作る実習ワークフロー"><figcaption>Day5前半⑧ AI実習ワークフロー</figcaption></figure>
+    <p class="plain">調べた情報を材料にしてAIへ指示し、<b>SEOを意識したタイトルと、PREP法（結論→理由→具体例→まとめ）に沿った目次構成</b>を作ります。</p>
+    <div class="day5-flow">
+      <div class="step"><i>1</i><b>調査</b>検索意図・競合</div>
+      <div class="step"><i>2</i><b>材料</b>悩み・経験・数字</div>
+      <div class="step"><i>3</i><b>AI</b>条件つきで指示</div>
+      <div class="step"><i>4</i><b>修正</b>自分で仕上げる</div>
+    </div>
+    <div class="day5-note"><b>AIへの指示例：</b><br>「キーワードは○○。対象は初心者。重要キーワードを前半に置き、30文字前後でタイトルを5案。数字・ターゲット・メリットは自然に使う。次に、検索意図に答えるH2/H3構成をPREP法の流れで作って。」</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「“いい感じのタイトルと目次を作って”じゃダメ？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「Day1からやってるだろ。材料と条件を渡す。そうすればAIの仕事も安定する。」</div>
+      <div class="talk"><span class="speaker">敦</span>「検索意図を調べた内容が、そのままAIへの材料になるんですね。」</div>
+    </div>
+    <div class="day5-memory">
+      Day5前半のゴール：<br>
+      検索意図を調べ、記事構成案を作り、重要キーワードを前半に置いた自然なSEOタイトルを作る。<br>
+      その情報をAIへ渡し、PREP法に沿ったH2/H3目次構成まで作れれば完了です。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day5-reference-videos">
+    <h3>参考動画（Day5 前半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=eoCvFf5PHtc&amp;list=PLF-M5ZVsvlLI&amp;index=1" target="_blank" rel="noopener">記事構成案の作り方</a>
+      <a href="https://www.youtube.com/watch?v=C54-bMjqPdQ&amp;list=PLF-M5ZVsvlLI&amp;index=2" target="_blank" rel="noopener">SEOに強い記事タイトル</a>
+      <a href="https://www.youtube.com/watch?v=zxbpDG3yPZM&amp;list=PLF-M5ZVsvlLI&amp;index=3" target="_blank" rel="noopener">タイトル品質とSEOの考え方</a>
+    </div>
+  </section>
+</section>
+
+
+<section class="day5-back" id="day5-back">
+  <section class="day5-back-lead">
+    <div class="eyebrow">DAY5 後半 / タイトル × 見出し × AI検索</div>
+    <h3>タイトルで人に選ばれ、<br>見出しで検索エンジンとAIに伝える。</h3>
+    <p>これからの記事づくりでは、SEOだけを意識して言葉を詰め込むのではなく、人が「読みたい」と思うタイトルと、検索エンジンやAIが「何について書かれているか」を理解しやすい見出しを別々の役割として設計します。</p>
+  </section>
+
+  <div class="day5b-memory">
+    これからの記事づくりでは、<b>タイトルは人にクリックされるため、見出しは検索エンジンやAIに内容を正しく伝えるため</b>に設計することが重要。<br>
+    タイトルは「誰向けか・何が得られるか・どんな状況の人向けか」を具体的に。見出しは1見出し1テーマで、読者が実際に検索しそうな問いに近づけ、直下ですぐ答えを示します。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">20</span><h3>タイトルと見出しの役割を分ける</h3></div>
+
+  <article class="lesson-card" id="day5b-01">
+    <span class="day5b-tag">Day5後半①</span>
+    <h3>タイトルと見出しは「同じもの」じゃない</h3>
+    <figure class="split-figure"><img src="day5_09_title_heading_roles.png" alt="タイトルと見出しの役割の違い"><figcaption>Day5後半① タイトルと見出しの役割</figcaption></figure>
+    <div class="day5b-role-grid">
+      <div><b>🚪 タイトル</b>検索結果やnote一覧で「読んでみよう」と思ってもらう入口。</div>
+      <div><b>🗺️ 見出し</b>記事の流れを示し、読者が欲しい場所へ迷わず進める地図。</div>
+      <div><b>🤖 AI・検索向け</b>何について、どんな順番で答えている記事かを理解してもらう構造。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「タイトルと見出しって、どっちも目立つ文字だから同じ役割だと思ってました。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「タイトルは店の看板、見出しは店内の案内板。両方雑だと迷子が増えるね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「まず役割を分けろ。タイトルで呼び込み、見出しで答えまで連れていく。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-02">
+    <span class="day5b-tag">Day5後半②</span>
+    <h3>売れる・読まれるタイトルは「センス」より設計</h3>
+    <figure class="split-figure"><img src="day5_10_title_design.png" alt="読まれるタイトルを設計する方法"><figcaption>Day5後半② タイトルは設計で作る</figcaption></figure>
+    <p class="plain">「初心者向け」「徹底解説」「完全版」だけでは、似たタイトルに埋もれやすくなります。<b>誰に、どんな価値を、どんな内容で、どう伝えるか</b>を決めると、タイトルは感覚ではなく設計できます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>👤 誰に？</b>「初心者」より「1本も納品したことがない人」のように具体化。</div>
+      <div class="simple-box"><b>🎁 何が得られる？</b>方法だけでなく、読んだ後の結果を見せる。</div>
+      <div class="simple-box"><b>📌 どんな内容？</b>何の記事か一目で分かる具体性を持たせる。</div>
+      <div class="simple-box"><b>🗣️ どう伝える？</b>数字や最新性は使いすぎず、一番強い要素を軸にする。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「“完全版！徹底解説！知らないと損！”で全部盛りは？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「胡散臭くなるね。必要なのは大声じゃなく、“自分向けだ”と分かる具体性だよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-03">
+    <span class="day5b-tag">Day5後半③</span>
+    <h3>見出しは本の目次と同じ。階層を守る</h3>
+    <figure class="split-figure"><img src="day5_11_heading_structure.png" alt="H2 H3 H4の正しい見出し構造"><figcaption>Day5後半③ 見出しは記事の設計図</figcaption></figure>
+    <p class="plain"><b>H2は大きなテーマ、H3はその中の小テーマ、H4はさらに細かい項目。</b> デザインの見た目だけでタグを選ばず、親子関係を守ります。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>H2＝大きな島</b>記事の主要テーマを分ける。</div>
+      <div class="simple-box"><b>H3＝島の中の場所</b>H2を具体的な項目へ分解する。</div>
+      <div class="simple-box"><b>結論を先に</b>最初のH2で検索した答えを素直に示す。</div>
+      <div class="simple-box"><b>長すぎない</b>見出し自体を本文のような長文にしない。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「H2の下にいきなりH4を置くのは、2階から4階へ階段なしで飛ぶようなものだね。」</div>
+      <div class="talk"><span class="speaker">敦</span>「見た目の大きさじゃなく、“話の親子関係”で決めるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-04">
+    <span class="day5b-tag">Day5後半④</span>
+    <h3>AIに引用されやすい見出しは「問い → すぐ答え」</h3>
+    <figure class="split-figure"><img src="day5_12_ai_citation_headings.png" alt="AI検索に引用されやすい見出し構成"><figcaption>Day5後半④ AIに引用される見出し</figcaption></figure>
+    <p class="plain">AI検索も意識するなら、<b>人が実際に入力しそうな質問を見出しに近づけ、その直下で前置きせず結論を書く</b>と、答えの位置が分かりやすくなります。</p>
+    <div class="day5b-qa">
+      <div><b>△ ふわっとした見出し</b>「効率化のポイント」<br>→ 何の効率化か分かりにくい。</div>
+      <div><b>◎ 問いが具体的</b>「AIで記事制作を効率化するには？」<br>→ 直下に「3つの手順でできます」と答える。</div>
+    </div>
+    <ul class="rule-list">
+      <li>1見出し1テーマ・1つの問いにする</li>
+      <li>見出しの直下で、まず結論を示す</li>
+      <li>「やり方・注意点・失敗例」は必要なら別見出しに分ける</li>
+      <li>具体的な数字や結果があるなら本文で示す</li>
+    </ul>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「“メリット・デメリット”だけじゃ雑だ。読者が実際に聞きそうな言葉にしろ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「質問されたら、最初に答える。会話と同じだね。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">21</span><h3>古い型を、具体的で引用されやすい形に直す実習</h3></div>
+
+  <article class="lesson-card" id="day5b-05">
+    <span class="day5b-tag">Day5後半⑤ / 実習①</span>
+    <h3>曖昧なタイトルを「読者の状況」まで具体化する</h3>
+    <figure class="split-figure"><img src="day5_13_title_specificity_rewrite.png" alt="弱いタイトルを具体的なタイトルへ修正する例"><figcaption>Day5後半⑤ 曖昧タイトルを具体化</figcaption></figure>
+    <div class="goodbad">
+      <div class="bad"><b>△ 曖昧</b><br>「ブログ初心者向け｜記事の書き方を徹底解説」</div>
+      <div class="good"><b>◎ 状況が見える</b><br>「初めての記事が書き終わらない人へ｜迷わず構成を作る4ステップ」</div>
+    </div>
+    <p><b>「初心者向け」を全部禁止するわけではありません。</b> それだけに頼らず、「夜1時間しかない」「1本も納品したことがない」など、その人の今の状況まで言えると自分ごと化されやすくなります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「“初心者”だけだと範囲が広いんですね。」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「そう。どんな初心者なのか、今どこで困っているのかまで言えると強いよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-06">
+    <span class="day5b-tag">Day5後半⑥ / 実習②</span>
+    <h3>方法より「得られる結果」を前に出す</h3>
+    <figure class="split-figure"><img src="day5_14_title_value_design.png" alt="読者のメリットが伝わるタイトル設計"><figcaption>Day5後半⑥ 読者の状況とメリット</figcaption></figure>
+    <div class="simple-grid">
+      <div class="simple-box"><b>方法だけ</b>「ChatGPTを使ってみた」では、読む理由が弱い。</div>
+      <div class="simple-box"><b>結果を示す</b>「ChatGPTで記事構成の時間を30分→10分にした手順」なら変化が分かる。</div>
+      <div class="simple-box"><b>数字はリアルに</b>根拠のない「9割が損」より、自分の具体的な数字を使う。</div>
+      <div class="simple-box"><b>煽らない</b>「絶対」「必ず」ではなく、できる範囲と条件を正直に示す。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「“絶対に10倍速くなる！”の方が目立つよ？」</div>
+      <div class="talk"><span class="speaker">中也</span>「目立って信用なくしてどうすんだ。実際に出た数字だけ使え。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-07">
+    <span class="day5b-tag">Day5後半⑦ / 実習③</span>
+    <h3>見出しを「1見出し1テーマ」の質問形式へ直す</h3>
+    <figure class="split-figure"><img src="day5_15_one_heading_one_theme.png" alt="1見出し1テーマの見出し修正"><figcaption>Day5後半⑦ 1見出し1テーマ</figcaption></figure>
+    <div class="goodbad">
+      <div class="bad"><b>△ 詰め込み</b><br>H2「AI記事制作のやり方・メリット・注意点・おすすめツール」</div>
+      <div class="good"><b>◎ 分ける</b><br>H2「AIで記事制作を効率化するには？」<br>H2「AI記事制作で注意すべきことは？」</div>
+    </div>
+    <div class="day5b-ai"><b>AI検索を意識するなら：</b><br>最初のH2で記事全体の結論を示し、その後のH2/H3で「なぜ？」「どうやる？」「注意点は？」と1つずつ答えます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「1つの引き出しに全部を突っ込むより、ラベルを付けて分けた方が探しやすいだろう？」</div>
+      <div class="talk"><span class="speaker">敦</span>「見出しも同じで、答えを1個ずつ分けるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day5b-08">
+    <span class="day5b-tag">Day5後半⑧ / 実習④</span>
+    <h3>タイトルは人、見出しは人＋検索＋AIを意識して仕上げる</h3>
+    <figure class="split-figure"><img src="day5_16_practice_workflow.png" alt="タイトルと見出しをAIで改善する実践ワークフロー"><figcaption>Day5後半⑧ 実践ワークフロー</figcaption></figure>
+    <div class="day5b-flow">
+      <div class="step"><i>1</i><b>材料</b>KW・読者・悩み</div>
+      <div class="step"><i>2</i><b>タイトル</b>AIで複数案</div>
+      <div class="step"><i>3</i><b>見出し</b>質問形式で整理</div>
+      <div class="step"><i>4</i><b>結論</b>各見出し直下へ</div>
+      <div class="step"><i>5</i><b>人が仕上げ</b>良い部分を統合</div>
+    </div>
+    <div class="day5b-check"><b>AIへの指示例：</b><br>「テーマ：○○、キーワード：○○、想定読者：○○。まず、曖昧な定番ワードや煽りを避け、読者の具体的な状況と得られる結果が伝わるタイトルを5案。次に、1見出し1テーマで、読者が検索しそうな質問形式のH2/H3を作り、最初のH2で結論を示してください。」</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「AIが出した5案から1個をそのまま採用？」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「A案の具体性、B案の読みやすさ、C案の言葉遣い。良いところを組み合わせて自分で仕上げる。」</div>
+      <div class="talk"><span class="speaker">中也</span>「タイトルで人を呼び、見出しで人とAIに道を示し、本文で信用させる。そこまでが記事設計だ。」</div>
+    </div>
+    <div class="day5b-memory">
+      Day5後半のゴール：<br>
+      タイトルは「誰向け・何が得られる・今どんな状況か」を具体的にして、人に選ばれる入口へ直す。<br>
+      見出しは1見出し1テーマの質問に近づけ、直下で結論を示し、検索エンジンやAIにも内容が伝わる構造へ整える。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day5b-reference-videos">
+    <h3>参考動画（Day5 後半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=ic8kh9DwCoI&amp;list=PLYcfxuWZKg3A&amp;index=1" target="_blank" rel="noopener">SEO見出しの作り方</a>
+      <a href="https://www.youtube.com/watch?v=luLcWNOcFDk&amp;list=PLYcfxuWZKg3A&amp;index=2" target="_blank" rel="noopener">noteで読まれるタイトル設計</a>
+      <a href="https://www.youtube.com/watch?v=sqWlTbbFHh4&amp;list=PLYcfxuWZKg3A&amp;index=3" target="_blank" rel="noopener">AI検索時代のタイトル・見出し</a>
     </div>
   </section>
 </section>
