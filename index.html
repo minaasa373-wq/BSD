@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day1〜Day5 AI・Canva・SEO・note・Notion・ブログ集客</title>
+<title>文豪デザイン講義｜Day1〜Day6 AI・Canva・SEO・note・Notion・ブログ集客</title>
 <style>
 :root{
   --paper:#f3efe6;
@@ -883,6 +883,65 @@ details.day[open] summary{
 @media(max-width:820px){.day5b-role-grid,.day5b-qa{grid-template-columns:1fr}.day5b-flow{grid-template-columns:1fr 1fr}}
 @media(max-width:460px){.day5b-flow{grid-template-columns:1fr}}
 
+
+
+/* ===== Day6 前半：リサーチ手法・一次情報・信頼できる情報収集 ===== */
+.day6-half{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #0f4f7d}
+.day6-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#eff7fc,#fffaf2);border:2px solid #0f4f7d;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day6-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#0f4f7d;font-weight:900}
+.day6-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#123c61}
+.day6-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #8a2e32;background:#fff2ee;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.day6-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#0f4f7d;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day6-three-a{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day6-three-a>div{padding:15px;background:#f7fbfe;border-top:5px solid #0f4f7d}
+.day6-three-a b{display:block;margin-bottom:6px;color:#123c61}
+.day6-info-types{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day6-info-types>div{padding:15px;background:#fffaf4;border:1px solid #d6c8b9}
+.day6-info-types b{display:block;margin-bottom:6px;color:#7a242b}
+.day6-search-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}
+.day6-search-grid>div{padding:13px 10px;background:#fffaf4;border:1px solid #d7c8b7;text-align:center;font-size:12px}
+.day6-search-grid code{display:block;margin:6px 0;padding:6px;background:#f3f5f8;border:1px solid #d1d6dd;white-space:normal;font-family:var(--sans);font-weight:800;color:#123c61}
+.day6-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}
+.day6-flow .step{padding:13px 9px;background:#fffaf3;border:1px solid #d8c7b7;text-align:center;font-size:12px}
+.day6-flow .step i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#0f4f7d;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.day6-note{margin:15px 0;padding:15px 17px;border-left:6px solid #0f4f7d;background:#f0f7fb}
+.day6-warning{margin:15px 0;padding:15px 17px;border-left:6px solid #8a2e32;background:#fff2ee}
+.day6-doc{margin:15px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+.day6-query{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day6-query>div{padding:14px;background:#fff;border:1px solid #d0c5b6}
+.day6-query b{display:block;margin-bottom:5px;color:#123c61}
+@media(max-width:860px){.day6-three-a,.day6-info-types,.day6-query{grid-template-columns:1fr}.day6-search-grid,.day6-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.day6-search-grid,.day6-flow{grid-template-columns:1fr}}
+
+
+
+/* ===== Day6 後半：ハルシネーション・ファクトチェック・具体化 ===== */
+.day6-back{max-width:1040px;margin:60px auto 0;padding-top:10px;border-top:8px solid #7b2730}
+.day6-back-lead{margin:0 0 24px;padding:24px;background:linear-gradient(135deg,#fff4ef,#eef6fb);border:2px solid #7b2730;box-shadow:0 12px 28px rgba(20,18,15,.10)}
+.day6-back-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#7b2730;font-weight:900}
+.day6-back-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#4f1e24}
+.day6b-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#7b2730;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day6b-memory{margin:18px 0 28px;padding:18px 20px;border-left:7px solid #0f4f7d;background:#eef6fb;font-size:clamp(16px,1.5vw,20px);font-weight:800}
+.day6b-check-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0 20px}
+.day6b-check-grid>div{padding:12px 9px;background:#fffaf4;border:1px solid #d7c8b7;text-align:center;font-size:12px}
+.day6b-check-grid b{display:block;color:#7b2730;margin-bottom:5px}
+.day6b-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day6b-three>div{padding:15px;background:#fffaf4;border-top:5px solid #7b2730}
+.day6b-three b{display:block;margin-bottom:6px;color:#4f1e24}
+.day6b-flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:18px 0}
+.day6b-flow .step{padding:13px 9px;background:#fffaf3;border:1px solid #d8c7b7;text-align:center;font-size:12px}
+.day6b-flow .step i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#7b2730;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.day6b-warning{margin:15px 0;padding:15px 17px;border-left:6px solid #a33b3f;background:#fff0ee}
+.day6b-official{margin:15px 0;padding:15px 17px;border-left:6px solid #0f4f7d;background:#eef6fb}
+.day6b-practice{margin:15px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+.day6b-before-after{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 20px}
+.day6b-before-after>div{padding:15px;background:#fff;border:1px solid #d0c5b6}
+.day6b-before-after .before{border-top:5px solid #777}
+.day6b-before-after .after{border-top:5px solid #b9903c}
+.day6b-before-after b{display:block;margin-bottom:6px}
+@media(max-width:860px){.day6b-check-grid{grid-template-columns:1fr 1fr}.day6b-three{grid-template-columns:1fr}.day6b-flow{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.day6b-check-grid,.day6b-flow,.day6b-before-after{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -1035,6 +1094,35 @@ details.day[open] summary{
           <a href="#day5b-08">⑧ 実践ワークフロー</a>
         </div>
       </details>
+      <details class="day">
+        <summary>Day6 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day6-01">① AI時代のコンテンツSEO</a>
+          <a href="#day6-02">② 3つのAと一次情報</a>
+          <a href="#day6-03">③ 一次情報はどう集める？</a>
+          <a href="#day6-04">④ リサーチ力が差をつくる</a>
+          <a href="#day6-05">⑤ 4つの検索テクニック</a>
+          <a href="#day6-06">⑥ 自分のテーマで材料集め</a>
+          <a href="#day6-07">⑦ 一次情報を1つ用意</a>
+          <a href="#day6-08">⑧ リサーチメモを保存</a>
+        </div>
+      </details>
+
+      <details class="day">
+        <summary>Day6 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day6b-01">① ハルシネーションとは？</a>
+          <a href="#day6b-02">② 公開前の5チェック</a>
+          <a href="#day6b-03">③ AIをファクトチェック補助に使う</a>
+          <a href="#day6b-04">④ AIっぽい文章を具体化</a>
+          <a href="#day6b-05">⑤ 見出し1つ分を書く</a>
+          <a href="#day6b-06">⑥ 名前・数字・日付・URLを確認</a>
+          <a href="#day6b-07">⑦ 抽象表現を具体化</a>
+          <a href="#day6b-08">⑧ 根拠のある文章に仕上げる</a>
+        </div>
+      </details>
+
+
 
 
 
@@ -2861,6 +2949,401 @@ details.day[open] summary{
     </div>
   </section>
 </section>
+
+
+<section class="day6-half" id="day6-front">
+  <section class="day6-lead">
+    <div class="eyebrow">DAY6 前半 / 2026-09-10 / リサーチ手法と信頼できる情報収集</div>
+    <h3>AIに書かせる前に、<br>AIが持っていない「材料」を集める。</h3>
+    <p>今回のテーマはリサーチです。第5回で作った記事の設計図を見ながら、Google検索の使い方を覚え、数字・出典URL・現場の声・自分の体験などを集めます。難しい専門知識より「必要な情報に早くたどり着く」「やっていないことを作らない」の2つを大切にします。</p>
+  </section>
+
+  <div class="day6-memory">
+    生成AI時代のコンテンツSEOでは、AIで文章を書くこと自体よりも、AIには作れない「一次情報・体験・写真・データ・独自の意見」を入れることが重要です。<br>
+    これからは「AIに書かせる力」より、「AIが持っていない情報を集め、初心者にも分かる言葉で発信する力」が大きな差になります。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">21</span><h3>AI時代は「書く前の材料集め」が勝負</h3></div>
+
+  <article class="lesson-card" id="day6-01">
+    <span class="day6-tag">Day6前半①</span>
+    <h3>コンテンツSEOってなに？ AI時代は「量」より「中身」</h3>
+    <figure class="split-figure">
+      <img src="day6_01_content_seo_basics.png" alt="AI時代のコンテンツSEOを説明する初心者向けカード">
+      <figcaption>Day6前半① AI時代のコンテンツSEO</figcaption>
+    </figure>
+    <p class="plain"><b>AIで記事を書くこと自体が悪いわけではありません。</b> 問題は、AIの文章を確かめずに大量に出したり、どこにでもある説明だけで終わったりすることです。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>「○○とは」だけは弱くなりやすい</b>一般的な説明は検索画面やAI回答だけで完結しやすく、記事まで来てもらいにくい。</div>
+      <div class="simple-box"><b>AIは下書き助手</b>整理・言い換え・構成には使える。ただし事実確認と独自情報は人が担当する。</div>
+      <div class="simple-box"><b>Do・Know・Goを意識</b>行動したい、知りたい、特定の場所へ行きたい。検索の目的で記事の役割は変わる。</div>
+      <div class="simple-box"><b>細かい悩みも価値になる</b>検索数が小さく見えても、現場で実際に聞かれる細かい疑問は強いテーマになりうる。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「AIに100本書かせれば、100倍強くなる？」</div>
+      <div class="talk"><span class="speaker">中也</span>「薄い記事を100本並べても薄いままだ。数より“そこにしかない情報”を入れろ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「AIを使うのはOK。でも、材料までAI任せにしないんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-02">
+    <span class="day6-tag">Day6前半②</span>
+    <h3>「3つのA」で記事に本物らしさを足す</h3>
+    <figure class="split-figure">
+      <img src="day6_02_three_a_primary_info.png" alt="AI Authenticity Artworkの3つのAと一次情報を説明するカード">
+      <figcaption>Day6前半② AI・Authenticity・Artwork</figcaption>
+    </figure>
+    <div class="day6-three-a">
+      <div><b>🤖 AI</b>構成、整理、下書き、言い換えを速くする。</div>
+      <div><b>🧍 Authenticity</b>実際に見た・使った・失敗したなど、当事者としての手触りを入れる。</div>
+      <div><b>📸 Artwork</b>写真、図、比較表、グラフなど、文章以外でも分かるようにする。</div>
+    </div>
+    <p class="plain"><b>一番の差になるのは「当事者性」。</b> スマホで撮った写真、実際にかかった金額、測った時間、「正直ここは微妙だった」という感想まで、AIには勝手に作れない価値です。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「“使ってみたらここが困った”みたいな話は、きれいな一般論より役に立つことがあるよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「写真や数字も、その人が本当に調べた証拠になるんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-03">
+    <span class="day6-tag">Day6前半③</span>
+    <h3>一次情報は「観察・実験・調査」の3つで考える</h3>
+    <figure class="split-figure">
+      <img src="day6_03_primary_info_gathering.png" alt="一次情報の集め方を説明するカード">
+      <figcaption>Day6前半③ 一次情報はどう集める？</figcaption>
+    </figure>
+    <div class="day6-info-types">
+      <div><b>👀 観察型</b>現場を見た、使っている人の声を聞いた、画面や行動を記録した。</div>
+      <div><b>🧪 実験型</b>条件を変えて試した、A/Bで比較した、プロンプトを変えて結果を比べた。</div>
+      <div><b>📊 調査型</b>アンケート、ヒアリング、統計などで複数の人やデータから傾向を調べた。</div>
+    </div>
+    <p class="plain">観察では<b>「起きた事実」と「自分の解釈」を分ける</b>。実験ではなるべく変える条件を1つに絞る。調査では「誰に聞いたか」を明確にする。これだけで情報の信頼性が上がります。</p>
+    <div class="day6-warning"><b>絶対にやらない：</b>やっていないことを「やった」、見ていないことを「見た」と書く。AIに架空の体験談を作らせるのもNGです。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「“お客様がこう言った”が事実。“つまり原因はこれだ”は解釈。ここを混ぜないだけでも信頼しやすくなる。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「事実と推理を別々に置く。探偵向きの話だね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-04">
+    <span class="day6-tag">Day6前半④</span>
+    <h3>リサーチ力が、記事の質と速さを決める</h3>
+    <figure class="split-figure">
+      <img src="day6_04_research_power.png" alt="リサーチ力が記事の質を変えることを説明するカード">
+      <figcaption>Day6前半④ AIに書かせる前に材料を集める</figcaption>
+    </figure>
+    <p class="plain">記事づくりは「文章を書く仕事」だけではなく、<b>必要な情報を探し、信頼できる材料を選ぶ仕事</b>でもあります。SNS、Q&amp;A、現場で聞かれた質問、公式情報、過去の事例などを組み合わせます。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>SNS・Q&amp;A</b>今困っていること、よく聞かれる疑問、使われている生の言葉を拾う。</div>
+      <div class="simple-box"><b>公式・公的情報</b>数字、制度、安全、ルールなどは出典を確認する。</div>
+      <div class="simple-box"><b>ページ内検索</b>長いページはWindowsならCtrl+F、MacならCommand+Fで必要な語を探す。</div>
+      <div class="simple-box"><b>内部リンク候補</b>同じサイト内の関連記事を探し、読者が次に読む道を作る。</div>
+    </div>
+    <p class="plain">難しい専門知識を集めても、読者に伝わらなければ意味がありません。<b>中学生でも追える言葉まで噛み砕く</b>ことを意識します。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「難しいことを難しく書く方が賢そうに見えない？」</div>
+      <div class="talk"><span class="speaker">中也</span>「読めなきゃ意味ねぇだろ。難しい話を簡単にする方が腕が要るんだよ。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">22</span><h3>第6回前半 実習：第5回の目次を「材料」で埋める</h3></div>
+
+  <article class="lesson-card" id="day6-05">
+    <span class="day6-tag">Day6前半⑤ / 実習①</span>
+    <h3>まず4つの検索テクニックを1回ずつ試す</h3>
+    <figure class="split-figure">
+      <img src="day6_05_search_techniques.png" alt="Googleの4つの検索テクニックを説明するカード">
+      <figcaption>Day6前半⑤ 4つの検索テクニック</figcaption>
+    </figure>
+    <div class="day6-search-grid">
+      <div><b>① 除外検索（-）</b><code>キャンプ 初心者 -グランピング</code>いらない言葉を検索結果から外す。</div>
+      <div><b>② 期間指定</b><code>ツール → 期間指定 → 1年以内</code>古い情報を減らして新しさを確認する。</div>
+      <div><b>③ サイト内検索</b><code>site:go.jp キャンプ 事故</code>指定したサイトやドメインの中だけを探す。</div>
+      <div><b>④ 完全一致検索</b><code>"キャンプ場のマナー"</code>その言葉がそのまま入っているページを探す。</div>
+    </div>
+    <div class="day6-note"><b>今日の目的は暗記ではなく「1回使う」こと。</b> 手で試して「こんな時に使うんだ」が分かれば十分です。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「検索にもコマンドがあるんだね。ちょっと必殺技っぽい。」</div>
+      <div class="talk"><span class="speaker">中也</span>「名前はどうでもいい。使って結果が絞れりゃ勝ちだ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-06">
+    <span class="day6-tag">Day6前半⑥ / 実習②</span>
+    <h3>第5回で作った目次を見ながら、自分のテーマで材料を集める</h3>
+    <figure class="split-figure">
+      <img src="day6_06_material_research.png" alt="自分の記事テーマで材料を集める流れを説明するカード">
+      <figcaption>Day6前半⑥ 見出しごとに材料を集める</figcaption>
+    </figure>
+    <div class="day6-flow">
+      <div class="step"><i>1</i><b>目次を開く</b>第5回の「9月9日記事の設計図」</div>
+      <div class="step"><i>2</i><b>見出しを検索</b>欲しい答えを探す</div>
+      <div class="step"><i>3</i><b>新しさ・公的情報</b>期間指定やsite:を使う</div>
+      <div class="step"><i>4</i><b>メモ</b>数字・URL・意外だった点</div>
+    </div>
+    <div class="simple-grid">
+      <div class="simple-box"><b>分かったこと</b>見出しごとに短くメモする。</div>
+      <div class="simple-box"><b>数字＋URL</b>数字を使うなら、どこに書いてあったか必ず残す。</div>
+      <div class="simple-box"><b>意外だったこと</b>自分の予想と違った点は、記事の良い材料になる。</div>
+      <div class="simple-box"><b>公的サイトも確認</b>例としてsite:go.jp、site:lg.jpなどで探してみる。</div>
+    </div>
+    <div class="day6-warning"><b>URLは後半で使うので必ずメモ。</b> 「数字だけ覚えたけど出典が分からない」を防ぎます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「目次を1個ずつ検索すれば、何を調べるか迷いにくいですね。」</div>
+      <div class="talk"><span class="speaker">与謝野</span>「そう。それと数字は出典のURLとセット。後で自分を助けるメモになるよ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-07">
+    <span class="day6-tag">Day6前半⑦ / 実習③</span>
+    <h3>一次情報を1つ用意する。体験がなくても「調べた結果」は書ける</h3>
+    <figure class="split-figure">
+      <img src="day6_07_primary_info_practice.png" alt="実習で一次情報を1つ用意する方法を説明するカード">
+      <figcaption>Day6前半⑦ 一次情報を1つ用意する</figcaption>
+    </figure>
+    <div class="goodbad">
+      <div class="good"><b>体験があるとき</b><br>やってみた結果／失敗した話／自分で撮った写真／測った数字／実際にかかった金額。</div>
+      <div class="good"><b>体験がないとき</b><br>調べて意外だったこと／思っていたこととの違い／調べても分からなかったこと。</div>
+    </div>
+    <p class="plain">たとえば「キャンプ場の消灯時間は22時だと思っていたが、調べると場所によって20時のところもあった」のように、<b>“調べたら分かったこと”も正直に書けば独自材料</b>になります。</p>
+    <div class="day6-warning"><b>NG：</b>やっていないことを、やったように書く。写真を撮っていないのに「自分で撮った」と書く。数字や事例をAIに作らせる。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「体験がねぇなら、無理に盛るな。“調べたらこうだった”でいい。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「正直な“知らなかった”も記事になる。意外と強いね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6-08">
+    <span class="day6-tag">Day6前半⑧ / 実習④</span>
+    <h3>集めた材料を「9月10日リサーチメモ」に保存する</h3>
+    <figure class="split-figure">
+      <img src="day6_08_research_memo_docs.png" alt="Googleドキュメントにリサーチメモを保存する流れを説明するカード">
+      <figcaption>Day6前半⑧ Googleドキュメントにリサーチメモを保存</figcaption>
+    </figure>
+    <div class="day6-flow">
+      <div class="step"><i>1</i><b>Docsを開く</b>docs.google.com/document/</div>
+      <div class="step"><i>2</i><b>空白を選ぶ</b>新しいドキュメント</div>
+      <div class="step"><i>3</i><b>名前変更</b>「9月10日リサーチメモ」</div>
+      <div class="step"><i>4</i><b>内容を書く</b>調べたこと・数字・URL・一次情報</div>
+    </div>
+    <div class="day6-doc"><b>Googleドキュメントに書くもの：</b><br>①見出しごとに調べて分かったこと　②数字とそのURL　③自分の一次情報　④意外だったこと・まだ分からないこと。<br>Googleドキュメントは自動保存なので、基本的に保存ボタンを探す必要はありません。</div>
+    <p class="plain"><a href="https://docs.google.com/document/" target="_blank" rel="noopener"><b>Googleドキュメントを開く →</b></a></p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「見出しごとに材料とURLをまとめておけば、後半で本文を書きやすそうです。」</div>
+      <div class="talk"><span class="speaker">森</span>「その通り。AIに渡す時も、“材料の束”が整理されているほど迷いにくい。」</div>
+    </div>
+    <div class="day6-memory">
+      Day6前半のゴール：<br>
+      4つのGoogle検索テクニックを使い、第5回で作った目次を埋める材料を集める。<br>
+      数字と出典URLを残し、自分だけの一次情報を最低1つ用意して、「9月10日リサーチメモ」に保存できれば完了です。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day6-reference-videos">
+    <h3>参考動画（Day6 前半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=wTNlTA74wF0&amp;list=PLW49t29IG2m8&amp;index=1" target="_blank" rel="noopener">生成AI時代のコンテンツSEO</a>
+      <a href="https://www.youtube.com/watch?v=g62HnVoxpF0&amp;list=PLW49t29IG2m8&amp;index=2" target="_blank" rel="noopener">AI時代の一次情報</a>
+      <a href="https://www.youtube.com/watch?v=_p7ogIKF5Kk&amp;list=PLW49t29IG2m8&amp;index=3" target="_blank" rel="noopener">Webライターの検索・リサーチ術</a>
+    </div>
+  </section>
+</section>
+
+<section class="day6-back" id="day6-back">
+  <section class="day6-back-lead">
+    <div class="eyebrow">DAY6 後半 / ハルシネーション × ファクトチェック × 具体化</div>
+    <h3>AIが書いた文章を、<br>「疑って、確かめて、具体的にする」。</h3>
+    <p>後半は、前半で集めたリサーチ材料を使って見出し1つ分の本文を書き、公開前に誤りがないか確認する実習です。AIの文章をそのまま信じず、名前・数字・日付・URL・出典・強い断定を重点的に確認します。</p>
+  </section>
+
+  <div class="day6b-memory">
+    AIで作った文章には、もっともらしい誤情報＝ハルシネーションが混ざることがあります。<br>
+    AIは「怪しい場所を見つける補助」に使い、最後は公式サイトや一次情報で確認する。<br>
+    そして、抽象語を具体的な数字や固有名詞に変え、本当の体験や一次情報を足し、主張を1つに絞る。これがDay6後半の基本です。
+  </div>
+
+  <div class="lesson-part-title"><span class="num">23</span><h3>まず「AIは間違える」を前提にする</h3></div>
+
+  <article class="lesson-card" id="day6b-01">
+    <span class="day6b-tag">Day6後半①</span>
+    <h3>ハルシネーション＝「自然に見える誤情報」</h3>
+    <figure class="split-figure">
+      <img src="day6_09_hallucination_basics.png" alt="AIのハルシネーションを初心者向けに説明するカード">
+      <figcaption>Day6後半① AIは自然な文章でも間違えることがある</figcaption>
+    </figure>
+    <p class="plain"><b>AIは、存在しない会社名・サービス名・人物名・数字・URLを、普通の文章の中に混ぜることがあります。</b>文章が上手いほど間違いが目立ちにくいので、「自然に読める＝正しい」とは限りません。</p>
+    <div class="simple-grid">
+      <div class="simple-box"><b>実在しない名前</b>会社・サービス・大学・人物・肩書き。</div>
+      <div class="simple-box"><b>もっともらしい数字</b>割合・市場規模・順位・効果。</div>
+      <div class="simple-box"><b>架空のURL</b>ありそうに見えて、開くと存在しない。</div>
+      <div class="simple-box"><b>時系列の混同</b>開始日・終了日・制度変更日がズレる。</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「文章が自然だと、つい正しいと思ってしまいます……。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「そこが厄介なんだよ。上手な嘘ほど、見た目では分かりにくい。」</div>
+      <div class="talk"><span class="speaker">中也</span>「だから公開前に確認する。AIを疑うのは失礼じゃねぇ、作業だ。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-02">
+    <span class="day6b-tag">Day6後半②</span>
+    <h3>公開前は「5つ」だけ重点チェックする</h3>
+    <figure class="split-figure">
+      <img src="day6_10_factcheck_five_points.png" alt="AI文章を公開する前の5つのファクトチェック項目">
+      <figcaption>Day6後半② 名前・数字・日付・出典・断定表現を確認</figcaption>
+    </figure>
+    <div class="day6b-check-grid">
+      <div><b>① 固有名詞</b>本当に実在する？</div>
+      <div><b>② 数字</b>根拠と調査条件は？</div>
+      <div><b>③ 日付</b>いつ時点の情報？</div>
+      <div><b>④ 出典</b>本文と同じ内容？</div>
+      <div><b>⑤ 断定</b>「必ず」「唯一」は本当？</div>
+    </div>
+    <p class="plain">全部を同じ重さで確認するより、<b>間違いやすい場所から先に見る</b>と効率的です。URLが書かれている場合は、実際に開いてページが存在するかまで確認します。</p>
+    <div class="day6b-warning"><b>出典があるだけでは安心しない。</b>リンク先を開き、本文の主張と本当に一致しているか確認します。根拠が取れない情報は、削るか、断定を弱めます。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「“出典付き”と“正しい引用”は別物だよ。リンクの中身まで見な。」</div>
+      <div class="talk"><span class="speaker">敦</span>「数字だけじゃなく、誰の調査で、いつの数字かも見るんですね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-03">
+    <span class="day6b-tag">Day6後半③</span>
+    <h3>AIは「怪しい場所を探す係」にすると便利</h3>
+    <figure class="split-figure">
+      <img src="day6_11_ai_factcheck_support.png" alt="AIをファクトチェックの補助として使う方法">
+      <figcaption>Day6後半③ AIで怪しい箇所を洗い出し、人が確認する</figcaption>
+    </figure>
+    <p class="plain">長い文章を1行ずつ自分だけで確認するのは大変です。そこでAIやファクトチェック機能に、<b>「固有名詞・数字・日付・出典・断定表現の怪しい場所を列挙して」</b>と頼み、確認箇所を絞ります。</p>
+    <div class="day6b-flow">
+      <div class="step"><i>1</i><b>AIに読ませる</b>怪しい箇所を洗い出す</div>
+      <div class="step"><i>2</i><b>人が検索</b>公式ページを探す</div>
+      <div class="step"><i>3</i><b>一次情報で照合</b>数字・日付・内容を確認</div>
+      <div class="step"><i>4</i><b>直す</b>根拠がなければ削る</div>
+    </div>
+    <div class="day6b-official"><b>AIのチェック結果も100％ではありません。</b> Deep Researchなどは調査を効率化する補助として使い、最後は公式サイト・公的資料・元データなどで確認します。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">中也</span>「AIにAIを監査させて終わり、じゃねぇぞ。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「AIに“怪しい場所”を指さしてもらって、証拠を見に行くのは人間。役割分担だね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-04">
+    <span class="day6b-tag">Day6後半④</span>
+    <h3>AIっぽい薄い文章は「3箇所」具体化する</h3>
+    <figure class="split-figure">
+      <img src="day6_12_make_ai_writing_concrete.png" alt="AIっぽい文章を具体的にする3つのポイント">
+      <figcaption>Day6後半④ 数字・一次情報・主張で文章を濃くする</figcaption>
+    </figure>
+    <div class="day6b-three">
+      <div><b>① 抽象語を具体化</b>「多くの」「大きな」「重要」を数字・固有名詞・具体的な状況へ。</div>
+      <div><b>② 一次情報を1つ入れる</b>実際に見た・聞いた・やった・測ったことを入れる。</div>
+      <div><b>③ 主張を1つに絞る</b>無難なまとめではなく、この記事で一番伝えたいことを明確にする。</div>
+    </div>
+    <div class="day6b-warning"><b>創作の体験談はNG。</b>AIに「それっぽい経験」を作らせず、自分が本当に持っている材料だけを使います。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「AIは一般論を整えるのが得意だ。だから、人にしか持てない具体情報を足すと文章が変わる。」</div>
+      <div class="talk"><span class="speaker">敦</span>「文章力を飾るより、情報の密度を上げるんですね。」</div>
+    </div>
+  </article>
+
+  <div class="lesson-part-title"><span class="num">24</span><h3>第6回後半 実習：1見出しを書いて、確かめて、仕上げる</h3></div>
+
+  <article class="lesson-card" id="day6b-05">
+    <span class="day6b-tag">Day6後半⑤ / 実習①</span>
+    <h3>リサーチメモから「見出し1つ分」だけ本文を書く</h3>
+    <figure class="split-figure">
+      <img src="day6_13_write_one_heading.png" alt="リサーチメモをもとに見出し1つ分を書く実習">
+      <figcaption>Day6後半⑤ 全文ではなく、まず1見出しだけ書く</figcaption>
+    </figure>
+    <p class="plain">第5回で作った記事の設計図と、前半で作った「9月10日リサーチメモ」を見ながら、<b>目次の中から1つの見出しを選んで本文を書きます。</b>最初から記事全部を完成させる必要はありません。</p>
+    <div class="day6b-flow">
+      <div class="step"><i>1</i><b>見出しを選ぶ</b>書きやすいH2/H3</div>
+      <div class="step"><i>2</i><b>材料を見る</b>リサーチメモ</div>
+      <div class="step"><i>3</i><b>本文を書く</b>結論から短く</div>
+      <div class="step"><i>4</i><b>いったん止める</b>次に事実確認</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">敦</span>「全文じゃなくて、見出し1つだけなら取りかかりやすいです。」</div>
+      <div class="talk"><span class="speaker">太宰</span>「完成させる前に、まず“正しい1ブロック”を作る。今日はそこが目的だね。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-06">
+    <span class="day6b-tag">Day6後半⑥ / 実習②</span>
+    <h3>名前・数字・日付・URL・強い言い切りをチェックする</h3>
+    <figure class="split-figure">
+      <img src="day6_14_verify_names_numbers_dates_urls.png" alt="文章内の固有名詞や数字などを確認する実習">
+      <figcaption>Day6後半⑥ 間違いやすい情報を重点確認</figcaption>
+    </figure>
+    <ul class="rule-list">
+      <li>会社名・サービス名・人物名などは実在するか</li>
+      <li>数字はリサーチメモに残したURLと一致するか</li>
+      <li>日付・制度開始日・「最新」などの時点は正しいか</li>
+      <li>URLを実際に開いてページが存在するか</li>
+      <li>「必ず」「一番」「唯一」などに根拠があるか</li>
+    </ul>
+    <div class="day6b-practice"><b>確証が取れなかったら：</b><br>①その情報を削る　②より弱い表現に変える　③別の確かな情報に置き換える。分からないのに残す、が一番危険です。</div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">与謝野</span>「“多分合ってる”は公開理由にならないよ。確かめられないなら削る。」</div>
+      <div class="talk"><span class="speaker">中也</span>「数字は特に証拠とセットだ。URLまで残した意味がここで出る。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-07">
+    <span class="day6b-tag">Day6後半⑦ / 実習③</span>
+    <h3>「多くの・様々な・重要」を具体的な言葉へ直す</h3>
+    <figure class="split-figure">
+      <img src="day6_15_make_vague_words_specific.png" alt="抽象表現を具体的な言葉に直す実習">
+      <figcaption>Day6後半⑦ AIっぽい抽象語を具体化する</figcaption>
+    </figure>
+    <div class="day6b-before-after">
+      <div class="before"><b>ぼんやり</b>「多くの人が利用しています」<br>「様々な効果があります」<br>「大きな課題です」</div>
+      <div class="after"><b>具体化</b>確認できた人数・期間・固有名詞を入れる。<br>自分が確認した変化を書く。<br>何が、誰に、どう困るのかを書く。</div>
+    </div>
+    <p class="plain">数字にできない場所は、無理に数字を作らなくてOKです。<b>「誰が」「どんな場面で」「何が起きたか」</b>まで書くだけでも文章は具体的になります。</p>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">太宰</span>「“多くの人に重要です”って便利だけど、何も見えないね。」</div>
+      <div class="talk"><span class="speaker">敦</span>「具体的な事実に置き換えると、読者が状況を想像できます。」</div>
+    </div>
+  </article>
+
+  <article class="lesson-card" id="day6b-08">
+    <span class="day6b-tag">Day6後半⑧ / 実習④</span>
+    <h3>短く・分かりやすく・根拠のある文章に仕上げる</h3>
+    <figure class="split-figure">
+      <img src="day6_16_finish_clear_evidence_based.png" alt="事実確認した文章を短く分かりやすく仕上げる実習">
+      <figcaption>Day6後半⑧ 疑う → 確認 → 具体化 → 仕上げ</figcaption>
+    </figure>
+    <p class="plain">最後に、文章をもう一度読みます。<b>1つの段落で伝えたいことを1つに絞り、余計な前置きを削り、根拠のある具体情報だけ残します。</b></p>
+    <div class="day6b-flow">
+      <div class="step"><i>1</i><b>書く</b>見出し1つ分</div>
+      <div class="step"><i>2</i><b>疑う</b>怪しい情報を探す</div>
+      <div class="step"><i>3</i><b>確かめる</b>公式・一次情報</div>
+      <div class="step"><i>4</i><b>仕上げる</b>具体的に短く</div>
+    </div>
+    <div class="dialogue">
+      <div class="talk"><span class="speaker">森</span>「AI時代に必要なのは、文章を増やす力だけではない。間違いを落とし、必要な情報を残す力だよ。」</div>
+      <div class="talk"><span class="speaker">敦</span>「“書く力＋疑う力＋具体化する力”ですね。」</div>
+      <div class="talk"><span class="speaker">中也</span>「それでいい。派手さより、読者に嘘をつかねぇ文章を作れ。」</div>
+    </div>
+    <div class="day6b-memory">
+      Day6後半のゴール：<br>
+      リサーチした情報で見出し1つ分を書き、名前・数字・日付・URL・出典・断定表現を確認する。<br>
+      確証がない情報を削り、抽象表現を具体化して、短く・分かりやすく・根拠のある文章に仕上げられれば完了です。
+    </div>
+  </article>
+
+  <section class="lesson-card" id="day6b-reference-videos">
+    <h3>参考動画（Day6 後半）</h3>
+    <div class="video-links">
+      <a href="https://www.youtube.com/watch?v=SgyCT906QyE&amp;list=PLA5ganqyabQw&amp;index=1" target="_blank" rel="noopener">AIハルシネーションの見抜き方</a>
+      <a href="https://www.youtube.com/watch?v=jJ9xBLOzF1A&amp;list=PLA5ganqyabQw&amp;index=2" target="_blank" rel="noopener">AI記事のファクトチェック</a>
+      <a href="https://www.youtube.com/watch?v=P0vkD7FDLdc&amp;list=PLA5ganqyabQw&amp;index=3" target="_blank" rel="noopener">AIっぽい文章を具体化する方法</a>
+    </div>
+  </section>
+</section>
+
 
       </div>
     </section>
