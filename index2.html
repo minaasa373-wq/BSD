@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day7〜Day8 リード文・論理構成・読みやすさ実習</title>
+<title>文豪デザイン講義｜Day7〜Day9 Webライティング・SEO実習</title>
 <style>
 
 :root{
@@ -1608,6 +1608,317 @@ details.day[open] summary{
   .day8b-flow,.day8b-four,.day8b-check{grid-template-columns:1fr}
 }
 
+
+/* ===== Day9 前半：テクニカルSEO・記事完成実習 ===== */
+.day9-front{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #1d516b;
+}
+.day9-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#eef6fb,#fffaf3);
+  border:2px solid #1d516b;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day9-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#1d516b;
+  font-weight:900;
+}
+.day9-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#17394b;
+}
+.day9-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #8a2e32;
+  background:#fff2ee;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day9-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#1d516b;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day9-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day9-three>div{
+  padding:15px;
+  background:#f4f9fc;
+  border-top:5px solid #1d516b;
+}
+.day9-three b{
+  display:block;
+  margin-bottom:6px;
+  color:#17394b;
+}
+.day9-core-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day9-core-grid>div{
+  padding:14px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+}
+.day9-core-grid b{
+  display:block;
+  color:#17394b;
+  margin-bottom:5px;
+}
+.day9-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.day9-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.day9-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#1d516b;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day9-flow .step b{display:block;margin-bottom:4px}
+.day9-priority{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a2e32;
+  background:#fff2ee;
+}
+.day9-official{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #1d516b;
+  background:#eef6fb;
+}
+.day9-practice{
+  margin:15px 0;
+  padding:15px 17px;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.day9-check{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day9-check>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day9-check b{
+  display:block;
+  color:#7b2730;
+  margin-bottom:5px;
+}
+.day9-prep{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day9-prep>div{
+  padding:14px;
+  border-top:5px solid #1d516b;
+  background:#f4f9fc;
+}
+.day9-prep b{
+  display:block;
+  margin-bottom:6px;
+  color:#17394b;
+}
+.day9-video-links{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin:12px 0 0;
+}
+.day9-video-links a{
+  display:block;
+  padding:11px 12px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+.day9-video-links a:hover{background:#f5f6f9;text-decoration:underline}
+@media(max-width:860px){
+  .day9-three,.day9-core-grid{grid-template-columns:1fr}
+  .day9-flow,.day9-check,.day9-prep{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .day9-flow,.day9-check,.day9-prep{grid-template-columns:1fr}
+}
+
+
+/* ===== Day9 後半：見出し・リンク・完成実習 ===== */
+.day9-back{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #6a222c;
+}
+.day9b-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#fff6f2,#fffaf3);
+  border:2px solid #6a222c;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day9b-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#6a222c;
+  font-weight:900;
+}
+.day9b-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.1vw,42px);
+  line-height:1.4;
+  color:#17394b;
+}
+.day9b-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #1d516b;
+  background:#eef6fb;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day9b-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#6a222c;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day9b-grid3{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day9b-grid3>div{
+  padding:14px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+}
+.day9b-grid3 b{display:block;color:#17394b;margin-bottom:6px}
+.day9b-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.day9b-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.day9b-flow .step i{
+  display:grid;place-items:center;
+  width:32px;height:32px;border-radius:50%;
+  background:#6a222c;color:#fff;
+  margin:0 auto 7px;font-style:normal;font-weight:900;
+}
+.day9b-flow .step b{display:block;margin-bottom:4px}
+.day9b-check{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day9b-check>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day9b-check b{display:block;color:#7b2730;margin-bottom:5px}
+.day9b-priority{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a2e32;
+  background:#fff2ee;
+}
+.day9b-info{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #1d516b;
+  background:#eef6fb;
+}
+.day9b-example{
+  margin:15px 0;
+  padding:15px 17px;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.day9b-video-links{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin:12px 0 0;
+}
+.day9b-video-links a{
+  display:block;
+  padding:11px 12px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+.day9b-video-links a:hover{background:#f5f6f9;text-decoration:underline}
+@media(max-width:860px){
+  .day9b-grid3{grid-template-columns:1fr}
+  .day9b-flow,.day9b-check{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .day9b-flow,.day9b-check{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
@@ -1618,10 +1929,10 @@ details.day[open] summary{
       <div class="brand-mark">文</div>
       <div>
         <h1>文豪デザイン講義</h1>
-        <small>BUNGO STYLE / DAY7-8 TEMPLATE</small>
+        <small>BUNGO STYLE / DAY7-9 TEMPLATE</small>
       </div>
     </div>
-    <div class="top-ornament">DETECTIVE FILE / 07-08</div>
+    <div class="top-ornament">DETECTIVE FILE / 07-09</div>
   </div>
 </header>
 
@@ -1690,15 +2001,47 @@ details.day[open] summary{
         </div>
       </details>
 
+
+      <details class="day">
+        <summary>Day9 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day9-01">① テクニカルSEOってなに？</a>
+          <a href="#day9-02">② クロール→インデックス→表示</a>
+          <a href="#day9-03">③ まず押さえる基本対策</a>
+          <a href="#day9-04">④ タイトル・Hタグ・内部リンク・URL</a>
+          <a href="#day9-05">⑤ 実習1：残りの見出しを確認</a>
+          <a href="#day9-06">⑥ 実習2：PREPで本文を完成</a>
+          <a href="#day9-07">⑦ 実習3：800〜1000文字へ整える</a>
+          <a href="#day9-08">⑧ 実習4：リード文とのズレを確認</a>
+        </div>
+      </details>
+
+
+      <details class="day">
+        <summary>Day9 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day9b-01">① 見出しは読者とSEOの道しるべ</a>
+          <a href="#day9b-02">② 見出し設計 5つの鉄則</a>
+          <a href="#day9b-03">③ リンクは3種類を使い分ける</a>
+          <a href="#day9b-04">④ 内部リンクとAI活用のコツ</a>
+          <a href="#day9b-05">⑤ 実習1：Day9後半の全体像</a>
+          <a href="#day9b-06">⑥ 実習2：見出しを点検する</a>
+          <a href="#day9b-07">⑦ 実習3：参考リンクと内部リンク</a>
+          <a href="#day9b-08">⑧ 実習4：最終仕上げで完成</a>
+        </div>
+      </details>
+
+
+
     </div>
   </aside>
 
   <main class="main">
     <section class="hero">
       <div class="hero-copy">
-        <div class="hero-kicker">DAY 7 / LEAD WRITING</div>
-        <h2>読者を本文へ<br>連れていく文章</h2>
-        <p>リード文は、読者に「これは自分のための記事だ」「この先を読む価値がある」と思ってもらう入口。前半で基本を学び、後半でAIの下書きを自分の言葉へ仕上げます。</p>
+        <div class="hero-kicker">DAY 7-9 / WEB WRITING & SEO</div>
+        <h2>読まれる記事を作り<br>検索に届ける</h2>
+        <p>Day7〜Day8で「読まれる文章」を作り、Day9ではGoogleが見つけやすく理解しやすい形へ整えます。文章の中身とサイト内部の基本を、順番に身につけます。</p>
         <div class="hero-rule"></div>
       </div>
     </section>
@@ -2472,6 +2815,383 @@ details.day[open] summary{
               <a href="https://www.youtube.com/watch?v=laT0jxwtBs0&amp;list=PLPgqaPQbik90&amp;index=1" target="_blank" rel="noopener">参考動画① note向け読みやすい記事</a>
               <a href="https://www.youtube.com/watch?v=NCfoHtvjZCM&amp;list=PLPgqaPQbik90&amp;index=2" target="_blank" rel="noopener">参考動画② Webライティング講座</a>
               <a href="https://www.youtube.com/watch?v=wCbHgH74TBw&amp;list=PLPgqaPQbik90&amp;index=3" target="_blank" rel="noopener">参考動画③ 見た目を整えるテクニック</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day9-front" id="day9-front">
+          <div class="day9-lead">
+            <div class="eyebrow">DAY9 前半 / テクニカルSEO＋本文完成</div>
+            <h3>Googleが「見つける・理解する・表示する」ための土台を知ろう</h3>
+            <p>テクニカルSEOは、難しい裏技ではありません。Googleがページを見つけやすく、内容を理解しやすく、検索結果へ出しやすいように、サイト内部の基本を整える考え方です。</p>
+          </div>
+
+          <div class="day9-memory">
+            今日いちばん覚えること：<br>
+            <b>クロール → インデックス → 表示。</b><br>
+            そして、細かい設定より「検索意図に合った良い記事」を優先する。
+          </div>
+
+          <div class="day9-flow">
+            <div class="step"><i>1</i><b>見つける</b>クロール</div>
+            <div class="step"><i>2</i><b>理解する</b>インデックス</div>
+            <div class="step"><i>3</i><b>表示する</b>検索結果</div>
+            <div class="step"><i>4</i><b>本文完成</b>PREPで書く</div>
+            <div class="step"><i>5</i><b>ズレ確認</b>リード文と本文</div>
+          </div>
+
+          <article class="lesson-card" id="day9-01">
+            <span class="day9-tag">Day9前半①</span>
+            <h3>テクニカルSEOは「Googleに伝わる土台づくり」</h3>
+            <figure class="split-figure">
+              <img src="day9_01_technical_seo_basics.png" alt="テクニカルSEOの基本を説明する教材画像">
+              <figcaption>まずはGoogleがページをどう処理するかを知る。</figcaption>
+            </figure>
+            <p class="plain">どれだけ良い記事でも、Googleがページを見つけられず、内容を理解できなければ検索結果には出にくくなります。テクニカルSEOは、その「伝わるための土台」を整える作業です。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「難しい設定を全部覚えるより、まず仕組みを理解するんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「そう。全部を完璧にやる必要はない。重要なところから順に押さえればいいよ。」</div>
+            </div>
+            <div class="day9-priority"><b>最優先はコンテンツ。</b> テクニカルSEOは「良い記事を正しく届けるための土台」です。</div>
+          </article>
+
+          <article class="lesson-card" id="day9-02">
+            <span class="day9-tag">Day9前半②</span>
+            <h3>Googleの基本は「クロール → インデックス → 表示」</h3>
+            <figure class="split-figure">
+              <img src="day9_05_crawl_index_display.png" alt="Googleのクロール、インデックス、表示の流れ">
+              <figcaption>ページが検索結果へ出るまでの3ステップ。</figcaption>
+            </figure>
+            <div class="day9-three">
+              <div><b>① クロール</b>GoogleのロボットがURLを見つけ、ページを読む。</div>
+              <div><b>② インデックス</b>内容を理解し、検索用のデータベースに登録する。</div>
+              <div><b>③ 表示</b>検索した人に合うページを検索結果へ出す。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「まず見つけてもらい、次に理解してもらう。順番を飛ばすな。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「内部リンクやURLも、見つけてもらう助けになるんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9-03">
+            <span class="day9-tag">Day9前半③</span>
+            <h3>テクニカルSEOの主要ポイントを、全部ではなく「重要順」で覚える</h3>
+            <figure class="split-figure">
+              <img src="day9_02_major_seo_measures.png" alt="テクニカルSEOの主要施策を説明する教材画像">
+              <figcaption>まずはタイトル・見出し・内部リンク・URL・表示速度から。</figcaption>
+            </figure>
+            <div class="day9-core-grid">
+              <div><b>タイトルタグ</b>検索結果で見えるタイトル。キーワードを自然に入れる。</div>
+              <div><b>メタディスクリプション</b>検索結果の説明文。必要なら設定する。</div>
+              <div><b>Hタグ</b>H1・H2などで記事の構造を伝える。</div>
+              <div><b>内部リンク</b>関連ページへ案内し、ページを見つけやすくする。</div>
+              <div><b>URL・正規化</b>シンプルで意味が分かるURLにする。</div>
+              <div><b>構造化データ・表示速度</b>検索結果の見え方や使いやすさを改善する。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「細かい設定にハマる前に、基本をちゃんとやれ。それで十分強い。」</div>
+              <div class="talk"><span class="speaker">泉 鏡花</span>「読者に分かりやすい構造は、Googleにも分かりやすいです。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9-04">
+            <span class="day9-tag">Day9前半④</span>
+            <h3>まず整えるのは「タイトル・Hタグ・内部リンク・URL・スマホ表示」</h3>
+            <figure class="split-figure">
+              <img src="day9_06_core_technical_seo.png" alt="重要なテクニカルSEO対策を整理した教材画像">
+              <figcaption>初心者は、重要度の高い基本からでOK。</figcaption>
+            </figure>
+            <div class="day9-check">
+              <div><b>タイトル</b>内容が分かる？キーワードは自然？</div>
+              <div><b>H1・H2</b>記事構造が見える？</div>
+              <div><b>内部リンク</b>リンク先が言葉で分かる？</div>
+              <div><b>URL</b>短く意味が通る？</div>
+              <div><b>スマホ表示</b>遅くない？崩れてない？</div>
+              <div><b>構造化データ</b>必要なページだけ正しく使う</div>
+              <div><b>重複URL</b>必要ならcanonical等で整理</div>
+              <div><b>コンテンツ</b>検索意図にちゃんと答えている？</div>
+            </div>
+            <div class="day9-official"><b>迷ったら：</b> 細かいテクニックより、Google公式のSEOガイドやベストプラクティスを基準に考えます。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「“全部やる”じゃなく、“必要なところを正しくやる”。それで十分だよ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「まずタイトル・H1・URL・内部リンク・表示速度ですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9-05">
+            <span class="day9-tag">Day9前半⑤ / 実習1</span>
+            <h3>まだ書いていない見出しを確認しよう</h3>
+            <figure class="split-figure">
+              <img src="day9_03_article_completion_practice.png" alt="残りの本文を完成させる実習の教材画像">
+              <figcaption>今日は「記事を完成させる」ための続きの実習。</figcaption>
+            </figure>
+            <p class="plain">第8回までに書いた記事を開き、まだ本文がないH2・H3を確認します。材料がある見出しから書き、材料が不足している見出しは無理に残さなくて大丈夫です。</p>
+            <ul class="rule-list">
+              <li>調べた材料がある見出しを優先する</li>
+              <li>1見出し200〜250文字を目安にする</li>
+              <li>具体例が足りない見出しは、調べ直すか削る</li>
+            </ul>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「材料がない見出しを無理に書くと、薄い文章になります。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「書かない判断も、記事を整える作業なんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9-06">
+            <span class="day9-tag">Day9前半⑥ / 実習2</span>
+            <h3>PREP法で、残りの本文を書き進める</h3>
+            <figure class="split-figure">
+              <img src="day9_07_prep_remaining_body.png" alt="PREP法で残りの本文を書く実習画像">
+              <figcaption>結論 → 理由 → 具体例 → 結論。具体例を厚くする。</figcaption>
+            </figure>
+            <div class="day9-prep">
+              <div><b>P 結論</b>この見出しの答え</div>
+              <div><b>R 理由</b>なぜそう言える？</div>
+              <div><b>E 具体例</b>数字・体験・調査結果</div>
+              <div><b>P 結論</b>最後に短くまとめる</div>
+            </div>
+            <p class="plain">第8回前半と同じ型でOKです。特にE（具体例）に、リサーチメモの数字・体験・実際に調べた内容を入れます。</p>
+            <div class="day9-practice"><b>目安：</b> 1見出し200〜250文字。PとRは短く、Eをいちばん具体的に。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「型はもう覚えたはずだ。今度は最後まで完成させることに集中しろ。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「Eが薄ければ“具体的には？”と自分に聞けばいい。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9-07">
+            <span class="day9-tag">Day9前半⑦ / 実習3</span>
+            <h3>記事全体を800〜1000文字の目安に整える</h3>
+            <figure class="split-figure">
+              <img src="day9_04_final_checklist.png" alt="記事全体を整える仕上げチェックリスト">
+              <figcaption>長さより、必要な情報がそろっているかを優先する。</figcaption>
+            </figure>
+            <div class="day9-check">
+              <div><b>文字数</b>全体800〜1000文字が目安</div>
+              <div><b>見出し</b>H2・H3が自然に並ぶ？</div>
+              <div><b>具体例</b>Eが薄くない？</div>
+              <div><b>重複</b>同じ話を繰り返してない？</div>
+            </div>
+            <p class="plain">800〜1000文字は「絶対のノルマ」ではありません。検索した人の疑問に答えるために必要な内容がそろっていればOKです。不要な見出しを増やして水増ししないようにします。</p>
+            <div class="day9-priority"><b>大事：</b> 文字数を増やすために、根拠のない説明や同じ話を足さない。</div>
+          </article>
+
+          <article class="lesson-card" id="day9-08">
+            <span class="day9-tag">Day9前半⑧ / 実習4</span>
+            <h3>最後に「リード文の約束」と本文が合っているか確認する</h3>
+            <figure class="split-figure">
+              <img src="day9_08_finish_and_review.png" alt="リード文と本文のズレを確認して記事を完成させるワークフロー画像">
+              <figcaption>リード文で約束したことを、本文でちゃんと答えているかを見る。</figcaption>
+            </figure>
+            <p class="plain">記事を書き進めると、最初に作ったリード文と本文が少しズレることがあります。本文を無理にリード文へ合わせるのではなく、必要ならリード文を修正します。</p>
+            <div class="day9-flow">
+              <div class="step"><i>1</i><b>見出し確認</b>残りはある？</div>
+              <div class="step"><i>2</i><b>PREP</b>200〜250字</div>
+              <div class="step"><i>3</i><b>全体</b>800〜1000字</div>
+              <div class="step"><i>4</i><b>ズレ確認</b>リード文と本文</div>
+              <div class="step"><i>5</i><b>保存</b>記事完成</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「本文が変わったなら、リード文も変えればいい。最初の文章に縛られるな。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「記事全体を読んで、最初の約束と中身が合っていれば完成ですね。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「そう。SEOの設定より先に、“読者の疑問に答え切ったか”を確認しよう。」</div>
+            </div>
+
+            <div class="day9-memory">
+              Day9前半のゴール：<br>
+              <b>H2・H3で構造を整え、残りの本文をPREPで書き、800〜1000文字を目安に記事を完成。最後にリード文とのズレを直す。</b>
+            </div>
+
+            <div class="day9-video-links">
+              <a href="https://www.youtube.com/watch?v=r83MlhIhor0&amp;list=PLFul6KRmjjnk&amp;index=1" target="_blank" rel="noopener">参考動画：テクニカルSEOの基礎から実践まで</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day9-back" id="day9-back">
+          <div class="day9b-lead">
+            <div class="eyebrow">DAY9 後半 / 見出し・内部リンク・仕上げ</div>
+            <h3>見出しとリンクを整えて、記事を「読まれる形」に仕上げよう</h3>
+            <p>Day9後半では、記事のまとめを書き、見出し・参考リンク・内部リンク・文章全体を点検して完成させます。難しく考えすぎず、「読者にとって分かりやすいか」を軸に整えていけば大丈夫です。</p>
+          </div>
+
+          <div class="day9b-memory">
+            今日いちばん覚えること：<br>
+            <b>見出しは記事の地図、内部リンクは次の道案内。</b><br>
+            AIは案出し役。最後の判断は、人間が「自然で分かりやすいか」で決める。
+          </div>
+
+          <div class="day9b-flow">
+            <div class="step"><i>1</i><b>見出し</b>中身が伝わる</div>
+            <div class="step"><i>2</i><b>リンク</b>役割で使い分ける</div>
+            <div class="step"><i>3</i><b>内部リンク</b>関連ページをつなぐ</div>
+            <div class="step"><i>4</i><b>AI活用</b>候補を出してもらう</div>
+            <div class="step"><i>5</i><b>仕上げ</b>全体を整えて完成</div>
+          </div>
+
+          <article class="lesson-card" id="day9b-01">
+            <span class="day9b-tag">Day9後半①</span>
+            <h3>見出しは、読者にもGoogleにも必要な「道しるべ」</h3>
+            <figure class="split-figure">
+              <img src="day9b_01_heading_reader_seo.png" alt="見出しが読者とSEOの道しるべであることを説明する教材画像">
+              <figcaption>見出しは飾りではなく、内容を先に伝える大事な案内板。</figcaption>
+            </figure>
+            <p class="plain">読者は、見出しを流し読みしながら「この先を読む価値があるか」を判断します。検索エンジンも、H2・H3などの見出しを見て記事の構造を理解します。だから見出しは、本文と同じくらい大切です。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「見出しだけでも、大体の中身が分かるようにしておくんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「そう。読者には結論を、Googleには構造を渡す。見出しはそのための入口だよ。」</div>
+            </div>
+            <div class="day9b-priority"><b>基本：</b> 見出しは「内容が分かる」「自然な日本語」「流れが見える」の3つを意識します。</div>
+          </article>
+
+          <article class="lesson-card" id="day9b-02">
+            <span class="day9b-tag">Day9後半②</span>
+            <h3>見出し設計 5つの鉄則をやさしく押さえる</h3>
+            <figure class="split-figure">
+              <img src="day9b_02_heading_five_rules.png" alt="見出し設計5つの鉄則を説明する教材画像">
+              <figcaption>階層・自然さ・キーワード配置。この3点が崩れると見出しは弱くなる。</figcaption>
+            </figure>
+            <div class="day9b-grid3">
+              <div><b>① 階層を守る</b>H2の下にH3を置き、順番を飛ばしません。</div>
+              <div><b>② キーワードを入れる</b>無理のない範囲で、検索される言葉を含めます。</div>
+              <div><b>③ 見出しだけで分かる</b>抽象語だけで終わらず、結論が伝わる形にします。</div>
+              <div><b>④ 左に寄せる</b>大事な語や結論は、できるだけ前に置きます。</div>
+              <div><b>⑤ 本文より先に構成</b>いきなり本文ではなく、先に見出しを作ります。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「順番・階層・自然さ。この3つを崩すな。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「見出しを先に作れば、本文もぶれにくくなるんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9b-03">
+            <span class="day9b-tag">Day9後半③</span>
+            <h3>リンクは全部同じにしない。役割で使い分ける</h3>
+            <figure class="split-figure">
+              <img src="day9b_03_link_three_types.png" alt="テキストリンク、ブログカード、ボタンリンクの使い分け画像">
+              <figcaption>精読率とクリック率を両立させるには、リンクの役割分担が大切。</figcaption>
+            </figure>
+            <div class="day9b-grid3">
+              <div><b>テキストリンク</b>基本形。本文になじみ、流れを壊しにくい。青色が分かりやすい。</div>
+              <div><b>ブログカード</b>目立たせたい内部リンク向け。使いすぎると読みづらくなるので注意。</div>
+              <div><b>ボタンリンク</b>申し込みや外部誘導向け。記事下に置くと行動してもらいやすい。</div>
+            </div>
+            <div class="day9b-example"><b>覚え方：</b> 普段はテキストリンク、目立たせたい内部リンクはブログカード、行動してほしい外部リンクはボタンリンク。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「基本は青いテキストリンクで、特別な場所だけカードやボタンを使うんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「うん。全部を派手にすると、逆にどこが大事か分からなくなるからね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9b-04">
+            <span class="day9b-tag">Day9後半④</span>
+            <h3>内部リンクとAI活用のコツを、初心者向けに整理する</h3>
+            <figure class="split-figure">
+              <img src="day9b_04_internal_links_ai.png" alt="内部リンクとAI活用のコツを説明する教材画像">
+              <figcaption>関連ページをつなぎ、重要ページへ評価を集める。AIは案出し役。</figcaption>
+            </figure>
+            <ul class="rule-list">
+              <li>関連性の高いページ同士をつなぐ</li>
+              <li>「詳細はこちら」ではなく、内容が分かる言葉でリンクする</li>
+              <li>重要なページへ、意図的に内部リンクを集める</li>
+              <li>AIにはCSV・URL・スクショを渡し、候補を出してもらう</li>
+              <li>最終判断は「読者に自然で分かりやすいか」で人間が決める</li>
+            </ul>
+            <div class="day9b-info"><b>AI活用のコツ：</b> まず人間が「どのページを強くしたいか」を決めてから、AIに相談します。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「AIは案出し役。重要ページを決めるのは人間の仕事だ。」</div>
+              <div class="talk"><span class="speaker">国木田 独歩</span>「判断基準は、SEOだけでなく読者の分かりやすさだな。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9b-05">
+            <span class="day9b-tag">Day9後半⑤ / 実習1</span>
+            <h3>Day9後半の実習は「まとめ・見出し・リンク・全体確認」の4本柱</h3>
+            <figure class="split-figure">
+              <img src="day9b_05_practice_overview.png" alt="Day9後半の実習全体像を示す画像">
+              <figcaption>今日は足すより整える。最後の仕上げを順番に進める。</figcaption>
+            </figure>
+            <div class="day9b-flow">
+              <div class="step"><i>1</i><b>まとめ</b>要点を整理</div>
+              <div class="step"><i>2</i><b>見出し</b>構造を確認</div>
+              <div class="step"><i>3</i><b>リンク</b>参考リンク確認</div>
+              <div class="step"><i>4</i><b>全体</b>読みにくさ修正</div>
+              <div class="step"><i>5</i><b>保存</b>完成させる</div>
+            </div>
+            <p class="plain">第9回後半は、記事のまとめを書き、見出し・参考リンク・文章全体を点検して完成させる実習です。800〜1000文字を目安にしつつ、必要な内容がそろっているかを優先して見ます。</p>
+          </article>
+
+          <article class="lesson-card" id="day9b-06">
+            <span class="day9b-tag">Day9後半⑥ / 実習2</span>
+            <h3>見出しを点検するときは「4チェック」で十分</h3>
+            <figure class="split-figure">
+              <img src="day9b_06_heading_four_checks.png" alt="見出しを整える4チェックの画像">
+              <figcaption>見出しだけ読んでも中身が伝わるかを確認する。</figcaption>
+            </figure>
+            <div class="day9b-check">
+              <div><b>階層OK</b>H2の下にH3を置けている？</div>
+              <div><b>結論が見える</b>抽象語だけで終わっていない？</div>
+              <div><b>左にキーワード</b>大事な語が前にある？</div>
+              <div><b>重複なし</b>似た見出しが並びすぎていない？</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「見出しだけ読んでも、何が書いてあるか分かる形にしよう。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「“SEOとは？”より“SEOとは検索エンジン最適化のこと”の方が親切ですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9b-07">
+            <span class="day9b-tag">Day9後半⑦ / 実習3</span>
+            <h3>参考リンクと内部リンクは「自然に次の情報へ導く」ために使う</h3>
+            <figure class="split-figure">
+              <img src="day9b_07_review_reference_internal_links.png" alt="参考リンクと内部リンクを見直す教材画像">
+              <figcaption>リンクは、読者を迷わせず次の一歩へ導く。</figcaption>
+            </figure>
+            <ul class="rule-list">
+              <li>リンク切れがないか確認する</li>
+              <li>信頼できる情報源を選ぶ</li>
+              <li>関連性の高い記事同士をつなぐ</li>
+              <li>「詳細はこちら」より、リンク先の内容が分かる言葉にする</li>
+            </ul>
+            <div class="day9b-example"><b>例：</b> 「詳細はこちら」より「SEO見出しの作り方」の方が、読者にもGoogleにも伝わりやすい。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「リンク先の内容が分かる言葉でつなげ。」</div>
+              <div class="talk"><span class="speaker">坂口 安吾</span>「記事が増えたら、関連ページを内部リンクでつなぐのがSEOにも効いてくる。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day9b-08">
+            <span class="day9b-tag">Day9後半⑧ / 実習4</span>
+            <h3>最後は重複・読みにくさ・文字数を確認して完成</h3>
+            <figure class="split-figure">
+              <img src="day9b_08_final_finish.png" alt="最終仕上げのチェックリスト画像">
+              <figcaption>完成前のひと手間が、記事の質を大きく変える。</figcaption>
+            </figure>
+            <div class="day9b-check">
+              <div><b>まとめ</b>記事の要点が整理されている？</div>
+              <div><b>見出し</b>見出しだけで内容が分かる？</div>
+              <div><b>リンク</b>参考リンク・内部リンクは自然？</div>
+              <div><b>重複</b>同じ話が繰り返されていない？</div>
+              <div><b>読みにくさ</b>一文が長すぎない？</div>
+              <div><b>文字数</b>800〜1000文字を目安に調整した？</div>
+              <div><b>自然さ</b>読者目線で分かりやすい？</div>
+              <div><b>保存</b>最後に記事を保存して完成</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「最後は、読者にとって自然で読みやすいかを基準に決めましょう。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「見出し、リンク、全体、保存。順に見れば仕上げやすいです。」</div>
+            </div>
+            <div class="day9b-memory">
+              Day9後半のゴール：<br>
+              <b>記事のまとめを書き、見出し・参考リンク・内部リンク・文章全体を整えて完成させる。</b><br>
+              記事が増えたら、関連する記事同士を内部リンクでつなぐことがSEOにも有効です。
+            </div>
+            <div class="day9b-video-links">
+              <a href="https://www.youtube.com/watch?v=SHI3IRuEVPI&amp;list=PLWO3wnVVAASk&amp;index=1" target="_blank" rel="noopener">参考動画① SEOと読者に好かれる見出しの書き方</a>
+              <a href="https://www.youtube.com/watch?v=44Fjj0tX2Jo&amp;list=PLWO3wnVVAASk&amp;index=2" target="_blank" rel="noopener">参考動画② クリック率と精読率を最大化するリンクの使い分け</a>
+              <a href="https://www.youtube.com/watch?v=YyKl8fhp7ZA&amp;list=PLWO3wnVVAASk&amp;index=3" target="_blank" rel="noopener">参考動画③ SEOに強い内部リンクの使い方</a>
+              <a href="https://www.youtube.com/watch?v=bmlZTbwmeEc&amp;list=PLWO3wnVVAASk&amp;index=4" target="_blank" rel="noopener">参考動画④ 内部リンクを生成AIで改善してみよう</a>
             </div>
           </article>
         </section>
