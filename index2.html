@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day7 リード文・AI仕上げ実習</title>
+<title>文豪デザイン講義｜Day7〜Day8 リード文・論理構成・読みやすさ実習</title>
 <style>
 
 :root{
@@ -1154,6 +1154,460 @@ details.day[open] summary{
   .day7-front-flow,.day7-back-flow,.day7-pastor,.day7-check-grid{grid-template-columns:1fr}
 }
 
+
+/* ===== Day8 前半：論理構成・PREP・SDS ===== */
+.day8-front{
+  max-width:1040px;
+  margin:64px auto 0;
+  padding-top:10px;
+  border-top:8px solid #1e5a43;
+}
+.day8-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f0f8f4,#fffdf8);
+  border:2px solid #1e5a43;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day8-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#1e5a43;
+  font-weight:900;
+}
+.day8-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#173d31;
+}
+.day8-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #8a2e32;
+  background:#fff2ee;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day8-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#1e5a43;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day8-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.day8-flow .step{
+  padding:13px 9px;
+  background:#f7fbf8;
+  border:1px solid #bfd1c8;
+  text-align:center;
+  font-size:12px;
+}
+.day8-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#1e5a43;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day8-flow .step b{display:block;margin-bottom:4px}
+.day8-prep{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day8-prep>div{
+  padding:15px;
+  border-top:5px solid #1e5a43;
+  background:#f4faf7;
+}
+.day8-prep b{
+  display:block;
+  margin-bottom:6px;
+  color:#173d31;
+}
+.day8-five{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:8px;
+  margin:16px 0 20px;
+}
+.day8-five>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day8-five b{
+  display:block;
+  margin-bottom:5px;
+  color:#7b2730;
+}
+.day8-sds{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day8-sds>div{
+  padding:15px;
+  background:#f7fbf8;
+  border:1px solid #bfd1c8;
+}
+.day8-sds b{
+  display:block;
+  margin-bottom:6px;
+  color:#173d31;
+}
+.day8-files{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:16px 0 20px;
+}
+.day8-files>div{
+  padding:15px 17px;
+  border:1px solid #d0c5b6;
+  background:#fffdf7;
+}
+.day8-files b{
+  display:block;
+  margin-bottom:6px;
+  color:#173866;
+}
+.day8-prompt{
+  margin:16px 0;
+  padding:0;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.day8-prompt .prompt-title{
+  padding:10px 14px;
+  background:#f2e3b8;
+  font-weight:900;
+  color:#4f3d16;
+}
+.day8-prompt pre{
+  margin:0;
+  padding:16px;
+  white-space:pre-wrap;
+  overflow:auto;
+  font-family:var(--sans);
+  font-size:13px;
+  line-height:1.75;
+  background:#fffdf8;
+}
+.day8-check{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day8-check>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day8-check b{
+  display:block;
+  color:#7b2730;
+  margin-bottom:5px;
+}
+.day8-connectors{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  margin:16px 0;
+}
+.day8-connectors>div{
+  padding:13px 10px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  text-align:center;
+  font-size:12px;
+}
+.day8-connectors b{
+  display:block;
+  margin-bottom:5px;
+  color:#173866;
+}
+.day8-warning{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a2e32;
+  background:#fff2ee;
+}
+.day8-note{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #1e5a43;
+  background:#eef7f2;
+}
+.day8-video-links{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:12px 0 0;
+}
+.day8-video-links a{
+  display:block;
+  padding:11px 12px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+.day8-video-links a:hover{background:#f5f6f9;text-decoration:underline}
+
+@media(max-width:900px){
+  .day8-flow,.day8-five{grid-template-columns:1fr 1fr}
+  .day8-prep,.day8-sds,.day8-check{grid-template-columns:1fr 1fr}
+  .day8-files{grid-template-columns:1fr}
+  .day8-connectors{grid-template-columns:1fr 1fr}
+  .day8-video-links{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .day8-flow,.day8-five,.day8-prep,.day8-sds,.day8-check,.day8-connectors{grid-template-columns:1fr}
+}
+
+
+/* ===== 右側 CHARACTER FILE 常時表示 修正 ===== */
+@media(max-width:1180px){
+  .layout{
+    grid-template-columns:220px minmax(0,1fr) 240px;
+    gap:12px;
+  }
+  .right{
+    display:block;
+    position:sticky;
+    top:96px;
+    max-height:calc(100vh - 118px);
+    overflow:auto;
+  }
+  .cast-card{
+    grid-template-columns:60px 1fr;
+    gap:8px;
+    padding:6px;
+  }
+  .cast-card img{
+    width:60px;
+    height:60px;
+  }
+  .cast-meta b{font-size:15px}
+  .cast-meta span{font-size:8px}
+}
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .left,.right{
+    position:relative;
+    top:auto;
+    max-height:none;
+    overflow:visible;
+  }
+  .right{display:block}
+  .cast-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:8px;
+  }
+  .cast-card{margin-bottom:0}
+}
+@media(max-width:560px){
+  .cast-list{grid-template-columns:1fr}
+}
+
+
+/* ===== Day8 後半：読みやすさ・視覚設計・推敲 ===== */
+.day8-back{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #7b2730;
+}
+.day8b-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#fff5ef,#eef6fb);
+  border:2px solid #7b2730;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day8b-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#7b2730;
+  font-weight:900;
+}
+.day8b-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#4f1e24;
+}
+.day8b-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #173866;
+  background:#eef6fb;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day8b-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#7b2730;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day8b-flow{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:8px;
+  margin:18px 0;
+}
+.day8b-flow .step{
+  padding:12px 8px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.day8b-flow .step i{
+  display:grid;
+  place-items:center;
+  width:31px;height:31px;
+  border-radius:50%;
+  background:#7b2730;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day8b-flow .step b{display:block;margin-bottom:4px}
+.day8b-four{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day8b-four>div{
+  padding:14px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+}
+.day8b-four b{
+  display:block;
+  color:#7b2730;
+  margin-bottom:5px;
+}
+.day8b-six{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day8b-six>div{
+  padding:14px;
+  background:#f7f9fc;
+  border-top:5px solid #173866;
+}
+.day8b-six b{
+  display:block;
+  color:#173866;
+  margin-bottom:5px;
+}
+.day8b-check{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day8b-check>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day8b-check b{
+  display:block;
+  color:#7b2730;
+  margin-bottom:5px;
+}
+.day8b-note{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #173866;
+  background:#eef6fb;
+}
+.day8b-warning{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #7b2730;
+  background:#fff2ee;
+}
+.day8b-toolbox{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day8b-toolbox>div{
+  padding:14px;
+  background:#fffdf7;
+  border:1px solid #d3c7b8;
+}
+.day8b-toolbox b{
+  display:block;
+  color:#173866;
+  margin-bottom:6px;
+}
+.day8b-video-links{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin:12px 0 0;
+}
+.day8b-video-links a{
+  display:block;
+  padding:11px 12px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+.day8b-video-links a:hover{background:#f5f6f9;text-decoration:underline}
+@media(max-width:900px){
+  .day8b-flow,.day8b-four,.day8b-check{grid-template-columns:1fr 1fr}
+  .day8b-six,.day8b-toolbox{grid-template-columns:1fr}
+  .day8b-video-links{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .day8b-flow,.day8b-four,.day8b-check{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
@@ -1164,10 +1618,10 @@ details.day[open] summary{
       <div class="brand-mark">文</div>
       <div>
         <h1>文豪デザイン講義</h1>
-        <small>BUNGO STYLE / DAY7 TEMPLATE</small>
+        <small>BUNGO STYLE / DAY7-8 TEMPLATE</small>
       </div>
     </div>
-    <div class="top-ornament">DETECTIVE FILE / 07</div>
+    <div class="top-ornament">DETECTIVE FILE / 07-08</div>
   </div>
 </header>
 
@@ -1205,6 +1659,37 @@ details.day[open] summary{
           <a href="#day7b-09">⑨ 後半ワークフロー</a>
         </div>
       </details>
+
+
+      <details class="day">
+        <summary>Day8 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day8-01">① 伝わる文章は順番で決まる</a>
+          <a href="#day8-02">② 論理を強くする5つの方法</a>
+          <a href="#day8-03">③ PREP法の基本</a>
+          <a href="#day8-04">④ SDS法＋3ポイント法</a>
+          <a href="#day8-05">⑤ 実習前に材料をそろえる</a>
+          <a href="#day8-06">⑥ 書く見出しを1つ選ぶ</a>
+          <a href="#day8-07">⑦ PREPで200〜250文字を書く</a>
+          <a href="#day8-08">⑧ 確認して保存する</a>
+        </div>
+      </details>
+
+
+      <details class="day">
+        <summary>Day8 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day8b-01">① 読みやすさは「見た目」から</a>
+          <a href="#day8b-02">② 4つの基本ルール</a>
+          <a href="#day8b-03">③ 流し読みでも伝わる6つの武器</a>
+          <a href="#day8b-04">④ 書く前の準備＋最後の推敲</a>
+          <a href="#day8b-05">⑤ 実習1：文章を見直す</a>
+          <a href="#day8b-06">⑥ 実習2：4基準で整える</a>
+          <a href="#day8b-07">⑦ 実習3：見た目を整える</a>
+          <a href="#day8b-08">⑧ 実習4：音読・スマホ確認・保存</a>
+        </div>
+      </details>
+
     </div>
   </aside>
 
@@ -1557,6 +2042,436 @@ details.day[open] summary{
             <div class="day7-video-links back">
               <a href="https://www.youtube.com/watch?v=DV69Wj1EXXg&amp;list=PLbNP7tvvgXfI&amp;index=1" target="_blank" rel="noopener">参考動画① リード文</a>
               <a href="https://www.youtube.com/watch?v=QCM7U8MODTg&amp;list=PLbNP7tvvgXfI&amp;index=2" target="_blank" rel="noopener">参考動画② セールスライティング</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day8-front" id="day8-front">
+          <div class="day8-lead">
+            <div class="eyebrow">DAY8 前半 / 2026.09.16 / 論理構成</div>
+            <h3>「何を伝えたいか」を先に決め、相手の疑問に順番に答える</h3>
+            <p>伝わる文章や話し方は、センスではなく<b>順番</b>でかなり改善できます。結論・理由・具体例を整理し、根拠を示して、読者が途中で迷わない道を作ります。</p>
+          </div>
+
+          <div class="day8-memory">
+            今日いちばん覚えること：<br>
+            <b>PREP法＝結論 → 理由 → 具体例 → 結論。</b><br>
+            特にE（具体例）を薄くせず、数字・体験・実際の場面を入れる。
+          </div>
+
+          <div class="day8-flow">
+            <div class="step"><i>1</i><b>何を伝える？</b>結論を決める</div>
+            <div class="step"><i>2</i><b>なぜ？</b>理由・根拠</div>
+            <div class="step"><i>3</i><b>具体的には？</b>例・数字・体験</div>
+            <div class="step"><i>4</i><b>ズレ確認</b>最初と最後</div>
+            <div class="step"><i>5</i><b>保存</b>本文を増やす</div>
+          </div>
+
+          <article class="lesson-card" id="day8-01">
+            <span class="day8-tag">Day8前半①</span>
+            <h3>伝わる文章は「順番」で決まる</h3>
+            <figure class="split-figure">
+              <img src="day8_01_logic_order.png" alt="結論・理由・具体例の順番を説明する教材画像">
+              <figcaption>長くて伝わらない話は、情報不足より「構造不足」で起きやすい。</figcaption>
+            </figure>
+            <p class="plain">情報をたくさん持っていても、順番がバラバラだと読み手は迷います。まず「何を言いたいのか」を決め、そのあとで理由と具体例を置きます。</p>
+            <div class="day8-prep">
+              <div><b>P 結論</b>先に答えを言う</div>
+              <div><b>R 理由</b>なぜそう言える？</div>
+              <div><b>E 具体例</b>数字・体験・事実</div>
+              <div><b>P 結論</b>最後にもう一度まとめる</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「相手の頭に浮かぶ疑問を、順番に消していけばいい。話はそれだけで散らかりにくいよ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「先に“何を伝えたいか”を決めるだけでも、書きやすくなりそうです。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-02">
+            <span class="day8-tag">Day8前半②</span>
+            <h3>論理のつながりを強くする5つの方法</h3>
+            <figure class="split-figure">
+              <img src="day8_02_logic_five_methods.png" alt="論理のつながりを強くする5つの方法">
+              <figcaption>根拠・順番・確認を入れると、話の飛躍を見つけやすい。</figcaption>
+            </figure>
+            <div class="day8-five">
+              <div><b>① なぜ？</b>理由と根拠を掘る</div>
+              <div><b>② 接続詞</b>文章の道路標識</div>
+              <div><b>③ 型</b>PREPや前提→理由→結論</div>
+              <div><b>④ 読者目線</b>他人のつもりで確認</div>
+              <div><b>⑤ 図解</b>ロジックを目で見る</div>
+            </div>
+            <p class="plain">主張だけでは「なぜ？」が残ります。理由・根拠を足し、接続詞で方向を示し、型に当てはめて順番を整えます。最後に読者の目線で読み返すと、説明不足を見つけやすくなります。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田独歩</span>「“そう思うから”では根拠にならん。なぜそう言えるかまで書け。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「声に出して読む、時間を置く、他の人に見てもらうのもチェックになるんですね。」</div>
+            </div>
+            <div class="day8-note"><b>接続詞はつけすぎない。</b> 話の向きが変わる場所だけに置くと読みやすくなります。</div>
+          </article>
+
+          <article class="lesson-card" id="day8-03">
+            <span class="day8-tag">Day8前半③</span>
+            <h3>PREP法は「相手の疑問を順番に消す」型</h3>
+            <figure class="split-figure">
+              <img src="day8_03_prep_basics.png" alt="PREP法で結論・理由・具体例・結論を組み立てる教材画像">
+              <figcaption>PREPで最も厚くしたいのは、E（具体例）。</figcaption>
+            </figure>
+            <div class="day8-prep">
+              <div><b>P / Point</b>結論。「で、何が言いたい？」に答える</div>
+              <div><b>R / Reason</b>理由。「なぜ？」に答える</div>
+              <div><b>E / Example</b>具体例。「具体的には？」に答える</div>
+              <div><b>P / Point</b>結論を再確認して着地</div>
+            </div>
+            <p class="plain">PとRは短くても大丈夫です。読者が「なるほど」と納得する材料はEに置きます。実際の行動、数字、自分の体験、調べて意外だったことなどを具体的に書きます。</p>
+            <div class="goodbad">
+              <div class="bad"><b>うすいE</b><br>「マナーを守ることが大切です。」</div>
+              <div class="good"><b>あついE</b><br>「実際の場所・時間・数字・案内内容」まで書く。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「PREPはEの熱量で伝わり方が変わる。具体例を“理由の言い換え”で終わらせないこと。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「最初と最後のPも、同じ主張になっているか確認します。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-04">
+            <span class="day8-tag">Day8前半④</span>
+            <h3>SDS法＋3ポイント法で、短く話す</h3>
+            <figure class="split-figure">
+              <img src="day8_04_sds_three_points.png" alt="SDS法と3ポイント法で端的に伝える教材画像">
+              <figcaption>要点 → 詳細 → 要点。詳細は3点程度に絞る。</figcaption>
+            </figure>
+            <div class="day8-sds">
+              <div><b>最初のS / Summary</b>何の話かを先に示す。聞き手の心構えを作る。</div>
+              <div><b>D / Detail</b>理由や判断材料。3つ程度に整理する。</div>
+              <div><b>最後のS / Summary</b>結論を着地させ、必要なら次の行動を促す。</div>
+            </div>
+            <p class="plain">詳細を3つにする場合は、<b>種類と抽象度をそろえる</b>のがコツです。「メリット2つ＋具体例1つ」のように混ぜると、聞き手が整理しにくくなります。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田独歩</span>「3点並べるなら、同じ種類・同じ目線の高さで統一しろ。」</div>
+              <div class="talk"><span class="speaker">坂口 安吾</span>「型を守ること自体が目的じゃない。相手に伝わるために使うんだ。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-05">
+            <span class="day8-tag">Day8前半⑤ / 実習準備</span>
+            <h3>実習の前に、材料をそろえよう</h3>
+            <figure class="split-figure">
+              <img src="day8_05_prepare_materials.png" alt="PREP実習の前に材料をそろえる教材画像">
+              <figcaption>2026/9/16：今日は「見出し1つ分の本文」を完成させる。</figcaption>
+            </figure>
+            <div class="day8-files">
+              <div><b>9月9日記事の設計図</b>タイトルと目次を確認。まだ書いていない見出しを探す。</div>
+              <div><b>9月10日リサーチメモ</b>調べたこと・数字・自分の体験・前回書いた本文を確認。</div>
+            </div>
+            <p class="plain">第6回でも本文を1つ書いています。今日はその続きです。ゼロからテーマを作るのではなく、すでに集めた材料を使って次の見出しを書きます。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「先に材料を確認すると、本文で止まりにくいです。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「今日のゴールは記事全部ではなく、“見出し1つ分”なんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-06">
+            <span class="day8-tag">Day8前半⑥ / 実習1</span>
+            <h3>今日書く見出しを、1つ決めよう</h3>
+            <figure class="split-figure">
+              <img src="day8_06_choose_heading.png" alt="材料がそろっている見出しを1つ選ぶ実習画像">
+              <figcaption>材料がある見出しほど、書きやすく・具体的になりやすい。</figcaption>
+            </figure>
+            <p class="plain">「9月9日記事の設計図」の目次を開き、まだ書いていない見出しから1つ選びます。迷ったら、9月10日リサーチメモを見て材料が多いものを選びます。</p>
+            <ul class="rule-list">
+              <li>調べて分かったことがある</li>
+              <li>出典を確認できる数字やデータがある</li>
+              <li>自分の体験、または調べて意外だったことがある</li>
+            </ul>
+            <div class="day8-warning"><b>材料が少ない見出しは後回しでOK。</b> 書きやすい見出しから本文を増やします。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「まだ書いていない中から、“書ける材料があるもの”を選べばいいんですね。」</div>
+              <div class="talk"><span class="speaker">泉 鏡花</span>「材料がないのに無理に書くと、薄い一般論になりやすいです。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-07">
+            <span class="day8-tag">Day8前半⑦ / 実習2</span>
+            <h3>PREPの順番で、200〜250文字の本文を書く</h3>
+            <figure class="split-figure">
+              <img src="day8_07_write_prep.png" alt="PREPの順番で見出し1つ分を書く実習画像">
+              <figcaption>P・R・E・P。E（具体例）をいちばん厚くする。</figcaption>
+            </figure>
+            <div class="day8-prep">
+              <div><b>P 結論</b>見出しの答えを1〜2文</div>
+              <div><b>R 理由</b>なぜそう言えるのか</div>
+              <div><b>E 具体例</b>例・数字・体験を厚く</div>
+              <div><b>P 結論</b>最初と同じ主張で短くまとめる</div>
+            </div>
+            <div class="day8-prompt">
+              <div class="prompt-title">AIに下書きを頼むときのプロンプト</div>
+              <pre>記事の見出しを1つ分だけ書いてください。全文は書かなくて大丈夫です。
+
+・記事のタイトル：〔タイトル〕
+・読者：〔ペルソナ〕
+・今回書く見出し：〔見出し〕
+・調べて分かったこと：〔リサーチメモから貼る〕
+・自分の体験、または調べて意外だったこと：〔リサーチメモから貼る〕
+
+条件
+・200〜250文字くらい
+・PREP法の順番で書く
+　（結論 → 理由 → 具体例 → 結論）
+・「具体例」の部分を一番厚く書く
+・上に書いた「調べて分かったこと」「自分の体験」を必ず使う
+・最初の結論と最後の結論は、同じことを言う
+・前置きや導入は書かない
+・一文は短く、むずかしい言葉は使わない
+・書かれていない事実、数字、体験を創作しない
+・事実があいまいな部分は、断定せず〈要確認〉と書く
+
+出力
+・記事に載せる文章はコードブロックに入れる
+・説明を書く場合はコードブロックの外に書く</pre>
+            </div>
+            <div class="beginner-note"><b>コードブロック</b>＝AIの回答に出る四角い枠。記事に使う文章だけをコピーしやすくするために使います。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田独歩</span>「AIに渡していない数字や体験を作らせるな。曖昧なら〈要確認〉で止めろ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「Eには、リサーチメモの具体的な材料を入れるんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8-08">
+            <span class="day8-tag">Day8前半⑧ / 実習3・4</span>
+            <h3>最初と最後のPを確認して、保存しよう</h3>
+            <figure class="split-figure">
+              <img src="day8_08_check_save.png" alt="最初と最後の結論、接続詞、読みやすさを確認して保存する実習画像">
+              <figcaption>書く → 確認 → 保存。時間があれば次の見出しへ。</figcaption>
+            </figure>
+            <div class="day8-check">
+              <div><b>① Pのズレ</b>最初と最後が同じ主張？</div>
+              <div><b>② Eの厚さ</b>具体的な場面や数字がある？</div>
+              <div><b>③ 読みやすさ</b>一文が長すぎない？</div>
+              <div><b>④ 保存</b>リサーチメモへ追加</div>
+            </div>
+            <p class="plain">PREPの最初と最後で違うことを言うと、「結局何が言いたいの？」となります。最後に結論のズレを確認し、「9月10日リサーチメモ」の本文の続きを保存します。</p>
+            <div class="day8-connectors">
+              <div><b>だから・したがって</b>結論へ</div>
+              <div><b>しかし・ところが</b>逆方向へ</div>
+              <div><b>たとえば・実際に</b>具体例へ</div>
+              <div><b>なぜなら</b>理由へ</div>
+            </div>
+            <div class="day8-note"><b>接続詞は全部の文につけない。</b> 話の方向が変わるところだけ使います。時間があれば、次の見出しでも同じ手順を繰り返します。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「書いた本人は頭の中で補完しちまう。最後は読者になったつもりで疑え。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「結論、理由、具体例が自然につながっていれば完成ですね。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「そう。文章を長くするんじゃない。“疑問を順番に消す”んだ。」</div>
+            </div>
+
+            <div class="day8-memory">
+              Day8前半のゴール：<br>
+              <b>材料がある見出しを1つ選び、PREP法で200〜250文字を書き、具体例を厚くして保存する。</b>
+            </div>
+
+            <div class="day8-video-links">
+              <a href="https://www.youtube.com/watch?v=-AaQjCC2vqk&amp;list=PLZqp4G8lZj_A&amp;index=1" target="_blank" rel="noopener">参考動画① 論理のつながり</a>
+              <a href="https://www.youtube.com/watch?v=P9oxbh2OjZ4&amp;list=PLZqp4G8lZj_A&amp;index=2" target="_blank" rel="noopener">参考動画② PREP法</a>
+              <a href="https://www.youtube.com/watch?v=65SujceE_98&amp;list=PLZqp4G8lZj_A&amp;index=3" target="_blank" rel="noopener">参考動画③ SDS法</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day8-back" id="day8-back">
+          <div class="day8b-lead">
+            <div class="eyebrow">DAY8 後半 / 読みやすさ・見た目・推敲</div>
+            <h3>「良い内容」だけでは足りない。読者が読みやすい形に整えて届ける</h3>
+            <p>Webの読者は、最初から一字一句じっくり読むとは限りません。だからこそ、<b>短い文・短い段落・結論ファースト・流し読みしやすい見た目</b>を意識して整えます。</p>
+          </div>
+
+          <div class="day8b-memory">
+            今日いちばん覚えること：<br>
+            <b>1文60文字以内・1段落150文字以内・同じ文末は2回まで・漢字3割／ひらがな7割。</b><br>
+            最後に音読とスマホ表示でチェックする。
+          </div>
+
+          <div class="day8b-flow">
+            <div class="step"><i>1</i><b>短くする</b>1文60字</div>
+            <div class="step"><i>2</i><b>区切る</b>1段落150字</div>
+            <div class="step"><i>3</i><b>リズム</b>文末2回まで</div>
+            <div class="step"><i>4</i><b>見た目</b>文字だけにしない</div>
+            <div class="step"><i>5</i><b>音読</b>耳で確認</div>
+            <div class="step"><i>6</i><b>スマホ</b>画面で確認</div>
+          </div>
+
+          <article class="lesson-card" id="day8b-01">
+            <span class="day8b-tag">Day8後半①</span>
+            <h3>読みやすいWeb記事は「見た目」から始まる</h3>
+            <figure class="split-figure">
+              <img src="day8b_01_readability_basics.png" alt="読みやすいWeb記事の基本を説明する教材画像">
+              <figcaption>どれだけ良い内容でも、読まれなければ届かない。</figcaption>
+            </figure>
+            <p class="plain">Web記事は、紙の本のように最初から最後まで読まれるとは限りません。多くの読者は流し読みをしながら、必要な情報だけを拾います。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「内容が良くても、文字がぎっしりだと読む前に疲れてしまうんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「そう。まず“読めそう”と思わせる。中身を届ける前に、入口を軽くするんだ。」</div>
+            </div>
+            <div class="day8b-note"><b>初心者はまず：</b> 長い文を切る・長い段落を分ける・見出しや箇条書きを入れる。この3つからでOK。</div>
+          </article>
+
+          <article class="lesson-card" id="day8b-02">
+            <span class="day8b-tag">Day8後半②</span>
+            <h3>読みやすさを作る4つの基本ルール</h3>
+            <figure class="split-figure">
+              <img src="day8b_02_scan_visual_design.png" alt="読みやすい記事の4つの基本ルール">
+              <figcaption>文章の中身だけでなく、画面の「重さ」も減らす。</figcaption>
+            </figure>
+            <div class="day8b-four">
+              <div><b>① 1文60文字以内</b>1文1メッセージ</div>
+              <div><b>② 1段落150文字以内</b>2〜3文で区切る</div>
+              <div><b>③ 同じ文末は2回まで</b>リズムを変える</div>
+              <div><b>④ 漢字3：ひらがな7</b>黒い画面を避ける</div>
+            </div>
+            <p class="plain">これは絶対的な法律ではなく、読みやすくするための目安です。数字に縛られすぎて書けなくなるより、まず完成させて最後に直します。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「1文に情報を詰め込みすぎるな。長ければ句点で切れ。」</div>
+              <div class="talk"><span class="speaker">坂口 安吾</span>「“です。です。です。”が続くと機械っぽくなる。語尾にも呼吸を入れろ。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-03">
+            <span class="day8b-tag">Day8後半③</span>
+            <h3>流し読みでも伝わる「6つの視覚パーツ」</h3>
+            <figure class="split-figure">
+              <img src="day8b_03_plan_before_writing.png" alt="流し読みでも要点が伝わる見せ方の教材画像">
+              <figcaption>文字だけが続かないように、情報を「見える形」にする。</figcaption>
+            </figure>
+            <div class="day8b-six">
+              <div><b>見出し</b>何の話か一瞬で分かる</div>
+              <div><b>箇条書き</b>3つ以上の情報を整理</div>
+              <div><b>表</b>比較や横並びを短く見せる</div>
+              <div><b>吹き出し</b>重要な補足を50文字程度で</div>
+              <div><b>画像・図解</b>文字では分かりにくい情報を視覚化</div>
+              <div><b>太字・枠</b>重要な場所だけ目立たせる</div>
+            </div>
+            <div class="day8b-warning"><b>装飾しすぎもNG。</b> 色やマーカーを増やしすぎると、どこが重要なのか逆に分からなくなります。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「スマホで見たとき、画面全部が文字だと重く見えます。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「見出しや箇条書きがあるだけでも、どこを読めばいいか分かりやすいですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-04">
+            <span class="day8b-tag">Day8後半④</span>
+            <h3>本文を書く前に骨組み、書いた後に音読・推敲</h3>
+            <figure class="split-figure">
+              <img src="day8b_04_read_aloud_finish.png" alt="本文を書く前の準備と音読推敲を説明する教材画像">
+              <figcaption>準備 → 執筆 → 見た目 → 音読 → スマホ確認。</figcaption>
+            </figure>
+            <p class="plain">いきなり本文を書き始めるより、先に箇条書きで「何を・どの順で・どの具体例を使うか」を決めます。書き終わったら、声に出して読んで不自然な場所を探します。</p>
+            <div class="day8b-toolbox">
+              <div><b>結論ファースト</b>先に答えを見せる</div>
+              <div><b>先読みライティング</b>次の疑問を先回りする</div>
+              <div><b>推敲</b>書いたあとに何度も直す</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「書く前に骨組みを作れ。推敲は手抜きではなく、完成させる作業だ。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「声に出すと、長い文や変なリズムはすぐバレるよ。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-05">
+            <span class="day8b-tag">Day8後半⑤ / 実習1</span>
+            <h3>これまで書いた本文を、まず1つ選んで見直す</h3>
+            <figure class="split-figure">
+              <img src="day8b_05_practice_overview.png" alt="これまで書いた文章を読みやすく直す実習の導入画像">
+              <figcaption>新しく書く実習ではなく、「すでに書いた文章」を整える。</figcaption>
+            </figure>
+            <p class="plain">第8回前半までに書いた見出し1つ分の本文を開きます。今日は内容を増やすより、読者が読みやすい形に直すことが目的です。</p>
+            <div class="day8b-check">
+              <div><b>1文</b>長すぎない？</div>
+              <div><b>1段落</b>文字の塊になってない？</div>
+              <div><b>文末</b>同じ語尾が続いてない？</div>
+              <div><b>漢字</b>黒く見えすぎない？</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「新しい文章を書くのではなく、前に書いた文章を直すんですね。」</div>
+              <div class="talk"><span class="speaker">泉 鏡花</span>「直す練習も、書く力です。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-06">
+            <span class="day8b-tag">Day8後半⑥ / 実習2</span>
+            <h3>4つの基準で、文章を短く・軽くする</h3>
+            <figure class="split-figure">
+              <img src="day8b_06_four_rules.png" alt="1文60文字、1段落150文字、文末、漢字割合を確認する実習画像">
+              <figcaption>数字は「目安」。読みづらい場所を見つけるために使う。</figcaption>
+            </figure>
+            <ul class="rule-list">
+              <li>1文が長ければ、読点ではなく句点で分ける</li>
+              <li>1段落が長ければ、2〜3文ごとに区切る</li>
+              <li>「です」「ます」が3回続いたら、語尾を変える</li>
+              <li>「事・為・全て」などを「こと・ため・すべて」に開く</li>
+            </ul>
+            <div class="day8b-note"><b>完璧に数えなくてもOK。</b> 画面を見て「重い」「長い」と感じた場所から直します。</div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「ルールのために文章を書くな。読者が楽になるために使え。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「数字は採点ではなく、直す場所を見つける目安なんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-07">
+            <span class="day8b-tag">Day8後半⑦ / 実習3</span>
+            <h3>note・Notionで「文字だけの画面」を壊す</h3>
+            <figure class="split-figure">
+              <img src="day8b_07_six_visual_tools.png" alt="見出し、箇条書き、表、吹き出し、画像、装飾で読みやすくする実習画像">
+              <figcaption>スマホ1画面が文字だけで埋まらないようにする。</figcaption>
+            </figure>
+            <div class="day8b-six">
+              <div><b>見出し</b>話題の区切りを作る</div>
+              <div><b>箇条書き</b>複数情報をまとめる</div>
+              <div><b>表</b>比較を一目で見せる</div>
+              <div><b>吹き出し</b>短い補足・会話</div>
+              <div><b>画像・図解</b>視線を止める</div>
+              <div><b>太字・背景</b>重要部だけ強調</div>
+            </div>
+            <p class="plain">noteやNotionの装飾は、派手にするためではなく、情報の塊を分けるために使います。見出し直下に図解を置くなど、読む場所を分かりやすくします。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「流し読みされるなら、流し読みでも要点が拾える形にすればいい。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「文章を読まなくても、見出しや図解だけで全体が分かるのが理想ですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day8b-08">
+            <span class="day8b-tag">Day8後半⑧ / 仕上げ</span>
+            <h3>音読 → スマホ表示 → 最後に保存</h3>
+            <figure class="split-figure">
+              <img src="day8b_08_practice_workflow.png" alt="音読とスマホ表示で読みやすさを確認する最終ワークフロー画像">
+              <figcaption>書きっぱなしにせず、耳と画面で仕上げる。</figcaption>
+            </figure>
+            <div class="day8b-flow">
+              <div class="step"><i>1</i><b>文章を開く</b>前回の本文</div>
+              <div class="step"><i>2</i><b>短くする</b>文・段落</div>
+              <div class="step"><i>3</i><b>整える</b>語尾・漢字</div>
+              <div class="step"><i>4</i><b>装飾</b>見出し・図解</div>
+              <div class="step"><i>5</i><b>音読</b>耳で確認</div>
+              <div class="step"><i>6</i><b>スマホ</b>表示確認</div>
+            </div>
+            <div class="day8b-warning">
+              <b>最後の確認：</b><br>
+              声に出して息継ぎしづらい文は長すぎる可能性があります。スマホで「文字だけの画面」が続くなら、見出し・箇条書き・画像・図解などで区切ります。
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「公開前に音読しろ。目で気づけない違和感を、耳が拾う。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「最後はスマホで見て、読みやすければ保存して完成ですね。」</div>
+              <div class="talk"><span class="speaker">江戸川乱歩</span>「完璧を待たない。まず形にして、直して、届ける。それが一番早いよ。」</div>
+            </div>
+
+            <div class="day8b-memory">
+              Day8後半のゴール：<br>
+              <b>これまで書いた文章を、短い文・短い段落・読みやすい見た目に整え、音読とスマホ表示で確認して保存する。</b>
+            </div>
+
+            <div class="day8b-video-links">
+              <a href="https://www.youtube.com/watch?v=laT0jxwtBs0&amp;list=PLPgqaPQbik90&amp;index=1" target="_blank" rel="noopener">参考動画① note向け読みやすい記事</a>
+              <a href="https://www.youtube.com/watch?v=NCfoHtvjZCM&amp;list=PLPgqaPQbik90&amp;index=2" target="_blank" rel="noopener">参考動画② Webライティング講座</a>
+              <a href="https://www.youtube.com/watch?v=wCbHgH74TBw&amp;list=PLPgqaPQbik90&amp;index=3" target="_blank" rel="noopener">参考動画③ 見た目を整えるテクニック</a>
             </div>
           </article>
         </section>
