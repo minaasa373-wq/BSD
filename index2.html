@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day7〜Day10 Webライティング・SEO実習</title>
+<title>文豪デザイン講義｜Day7〜Day11前半・後半 Webライティング・SEO・AI画像・図解実習</title>
 <style>
 
 :root{
@@ -1919,6 +1919,290 @@ details.day[open] summary{
   .day9b-flow,.day9b-check{grid-template-columns:1fr}
 }
 
+
+/* ===== Day11 前半：AI画像・図解・動画・記事改善 ===== */
+.day11-front{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #5b2b70;
+}
+.day11-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f8f2fb,#eef6fb);
+  border:2px solid #5b2b70;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day11-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#5b2b70;
+  font-weight:900;
+}
+.day11-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#3d1d4e;
+}
+.day11-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #173866;
+  background:#eef6fb;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day11-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#5b2b70;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day11-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.day11-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.day11-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#5b2b70;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day11-flow .step b{display:block;margin-bottom:4px}
+.day11-three{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day11-three>div{
+  padding:15px;
+  background:#fffaf4;
+  border-top:5px solid #5b2b70;
+}
+.day11-three b{display:block;margin-bottom:6px;color:#3d1d4e}
+.day11-tool-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day11-tool-grid>div{
+  padding:15px;
+  background:#f7f8fb;
+  border:1px solid #d0c7d7;
+}
+.day11-tool-grid b{display:block;margin-bottom:6px;color:#3d1d4e}
+.day11-note{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #5b2b70;
+  background:#f7f1fa;
+}
+.day11-warning{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a2e32;
+  background:#fff2ee;
+}
+.day11-practice{
+  margin:15px 0;
+  padding:15px 17px;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.day11-checks{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day11-checks>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day11-checks b{display:block;color:#5b2b70;margin-bottom:5px}
+@media(max-width:860px){
+  .day11-three,.day11-tool-grid{grid-template-columns:1fr}
+  .day11-flow,.day11-checks{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .day11-flow,.day11-checks{grid-template-columns:1fr}
+}
+
+
+/* ===== Day11 後半：図解・情報構造化・AIツール活用 ===== */
+.day11-back{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #8a2130;
+}
+.day11b-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#fff4ef,#f2f7fc);
+  border:2px solid #8a2130;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day11b-lead .eyebrow{
+  font-size:11px;
+  letter-spacing:.22em;
+  color:#8a2130;
+  font-weight:900;
+}
+.day11b-lead h3{
+  margin:.25em 0 .35em;
+  font-size:clamp(26px,3.2vw,42px);
+  line-height:1.4;
+  color:#571924;
+}
+.day11b-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #173866;
+  background:#eef6fb;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day11b-tag{
+  display:inline-block;
+  margin-bottom:7px;
+  padding:4px 9px;
+  background:#8a2130;
+  color:#fff;
+  font-size:11px;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+.day11b-flow{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:9px;
+  margin:18px 0;
+}
+.day11b-flow .step{
+  padding:13px 9px;
+  background:#fffaf3;
+  border:1px solid #d8c7b7;
+  text-align:center;
+  font-size:12px;
+}
+.day11b-flow .step i{
+  display:grid;
+  place-items:center;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#8a2130;
+  color:#fff;
+  margin:0 auto 7px;
+  font-style:normal;
+  font-weight:900;
+}
+.day11b-flow .step b{display:block;margin-bottom:4px}
+.day11b-structure{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day11b-structure>div{
+  padding:14px;
+  background:#fffaf4;
+  border-top:5px solid #8a2130;
+}
+.day11b-structure b{display:block;margin-bottom:6px;color:#571924}
+.day11b-tool-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin:16px 0 20px;
+}
+.day11b-tool-grid>div{
+  padding:15px;
+  background:#f7f8fb;
+  border:1px solid #c9cfda;
+}
+.day11b-tool-grid b{display:block;margin-bottom:6px;color:#173866}
+.day11b-note{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #173866;
+  background:#eef6fb;
+}
+.day11b-warning{
+  margin:15px 0;
+  padding:15px 17px;
+  border-left:6px solid #8a2130;
+  background:#fff2ee;
+}
+.day11b-practice{
+  margin:15px 0;
+  padding:15px 17px;
+  border:2px dashed #b9903c;
+  background:#fff9e9;
+}
+.day11b-checks{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:9px;
+  margin:16px 0 20px;
+}
+.day11b-checks>div{
+  padding:13px 10px;
+  background:#fffaf4;
+  border:1px solid #d7c8b7;
+  text-align:center;
+  font-size:12px;
+}
+.day11b-checks b{display:block;color:#8a2130;margin-bottom:5px}
+.day11b-video-links{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin:12px 0 0;
+}
+.day11b-video-links a{
+  display:block;
+  padding:11px 12px;
+  border:1px solid #c9bdad;
+  background:#fff;
+  color:var(--navy);
+  text-decoration:none;
+  font-weight:700;
+}
+.day11b-video-links a:hover{background:#f5f6f9;text-decoration:underline}
+@media(max-width:860px){
+  .day11b-structure,.day11b-tool-grid{grid-template-columns:1fr}
+  .day11b-flow,.day11b-checks{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .day11b-flow,.day11b-checks{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 
@@ -1929,10 +2213,10 @@ details.day[open] summary{
       <div class="brand-mark">文</div>
       <div>
         <h1>文豪デザイン講義</h1>
-        <small>BUNGO STYLE / DAY7-9 TEMPLATE</small>
+        <small>BUNGO STYLE / DAY7-11 TEMPLATE</small>
       </div>
     </div>
-    <div class="top-ornament">DETECTIVE FILE / 07-09</div>
+    <div class="top-ornament">DETECTIVE FILE / 07-11</div>
   </div>
 </header>
 
@@ -2061,6 +2345,36 @@ details.day[open] summary{
       </details>
 
 
+      <details class="day">
+        <summary>Day11 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day11-01">① 画像・動画はSEOに重要？</a>
+          <a href="#day11-02">② 画像の正しい設定と軽量化</a>
+          <a href="#day11-03">③ AIで挿絵を作る基本</a>
+          <a href="#day11-04">④ ChatGPT・Gemini・Claudeの使い分け</a>
+          <a href="#day11-05">⑤ 失敗しやすいポイントと対策</a>
+          <a href="#day11-06">⑥ 実習1：挿絵を2案作る</a>
+          <a href="#day11-07">⑦ 実習2：記事へ挿入・ALT・キャプション</a>
+          <a href="#day11-08">⑧ 実習3：公開ページで最終確認</a>
+        </div>
+      </details>
+
+      <details class="day">
+        <summary>Day11 後半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day11b-01">① 図解はセンスより構造</a>
+          <a href="#day11b-02">② 図解を作る4ステップ</a>
+          <a href="#day11b-03">③ AI図解ツールを使い分ける</a>
+          <a href="#day11b-04">④ Canvaは型を活かして整える</a>
+          <a href="#day11b-05">⑤ 実習1：文章を構造へ直す</a>
+          <a href="#day11b-06">⑥ 実習2：図解向きの内容を選ぶ</a>
+          <a href="#day11b-07">⑦ 実習3：構造化してAIへ渡す</a>
+          <a href="#day11b-08">⑧ 実習4：図解を記事へ入れて確認</a>
+        </div>
+      </details>
+
+
+
 
 
     </div>
@@ -2069,9 +2383,9 @@ details.day[open] summary{
   <main class="main">
     <section class="hero">
       <div class="hero-copy">
-        <div class="hero-kicker">DAY 7-10 / WEB WRITING & SEO</div>
-        <h2>読まれる記事を作り<br>検索結果とAI検索へ届ける</h2>
-        <p>Day7〜Day8で「読まれる文章」を作り、Day9でGoogleが理解しやすい形へ整え、Day10では検索結果の見え方とAI検索時代の公開まで仕上げます。</p>
+        <div class="hero-kicker">DAY 7-11 / WEB WRITING・SEO・AI VISUAL・DIAGRAM</div>
+        <h2>読まれる記事を作り<br>画像とAIでさらに伝わりやすく</h2>
+        <p>Day7〜Day10で文章・SEO・公開まで仕上げ、Day11前半ではAI画像で記事を読みやすくし、Day11後半では文章をいったん「構造」に整理してから図解へ変える方法を学びます。</p>
         <div class="hero-rule"></div>
       </div>
     </section>
@@ -3552,6 +3866,338 @@ details.day[open] summary{
             </div>
             <div class="day9-video-links">
               <a href="https://www.youtube.com/watch?v=uvtUhmQz1tk" target="_blank" rel="noopener">参考動画：Google検索の大刷新とSEO・AI検索対策</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day11-front" id="day11-front">
+          <div class="day11-lead">
+            <div class="eyebrow">DAY11 前半 / AI画像・図解・動画で記事を読みやすく</div>
+            <h3>文字だけの記事から卒業して、「見て分かるコンテンツ」にしよう</h3>
+            <p>画像・動画は、記事を読みやすくし、独自性や滞在時間を高める重要な要素です。AI画像生成を使えば、文章の内容に合った挿絵や図解を初心者でも作りやすくなります。</p>
+          </div>
+
+          <div class="day11-memory">
+            今日いちばん覚えること：<br>
+            <b>画像は飾りではなく「説明を助ける道具」。本文と関係のあるオリジナル画像を、軽く・分かりやすく使う。</b>
+          </div>
+
+          <div class="day11-flow">
+            <div class="step"><i>1</i><b>場所を決める</b>文字が続く所</div>
+            <div class="step"><i>2</i><b>本文を渡す</b>AIへ文脈共有</div>
+            <div class="step"><i>3</i><b>2案作る</b>別画像で生成</div>
+            <div class="step"><i>4</i><b>記事へ入れる</b>ALTも書く</div>
+            <div class="step"><i>5</i><b>確認する</b>公開画面を見る</div>
+          </div>
+
+          <article class="lesson-card" id="day11-01">
+            <span class="day11-tag">Day11前半①</span>
+            <h3>画像・動画は、記事を「読みやすいコンテンツ」に変える</h3>
+            <figure class="split-figure">
+              <img src="day11_01_images_video_seo.png" alt="画像と動画が記事の読みやすさやSEOに役立つことを説明する教材画像">
+              <figcaption>文字だけより、図解・写真・動画を組み合わせた方が理解しやすい。</figcaption>
+            </figure>
+            <p class="plain">文章だけが長く続くと、読者は疲れやすくなります。内容に合った図解やオリジナル画像があると、難しい説明を目で理解しやすくなり、記事を読む時間も伸びやすくなります。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「画像って、ただ記事を派手にするためじゃないんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「そう。文章だけで伝わりにくい所を、画像に手伝ってもらうんだ。」</div>
+            </div>
+            <div class="day11-note"><b>初心者向けの考え方：</b> 「ここ、文字だけだと分かりにくいな」と感じる場所に画像を置けばOKです。</div>
+          </article>
+
+          <article class="lesson-card" id="day11-02">
+            <span class="day11-tag">Day11前半②</span>
+            <h3>画像は「ファイル名・ALT・軽量化」の3つを忘れない</h3>
+            <figure class="split-figure">
+              <img src="day11_02_image_optimization.png" alt="画像のファイル名、ALT、圧縮を説明する教材画像">
+              <figcaption>画像の中身が分かる名前を付け、説明文を書き、重くしすぎない。</figcaption>
+            </figure>
+            <div class="day11-three">
+              <div><b>ファイル名</b>「IMG_1234.jpg」ではなく「camp-manner-guide.png」のように中身が分かる名前へ。</div>
+              <div><b>ALT</b>画像が見えない場合にも内容が伝わるよう、短い説明を書く。</div>
+              <div><b>軽量化</b>大容量画像をそのまま使わず、表示が重くならないよう圧縮する。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「画像は貼って終わりではない。名前・説明・容量まで管理しろ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「難しそうに見えますけど、確認するのは3つだけですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11-03">
+            <span class="day11-tag">Day11前半③</span>
+            <h3>AI画像は、記事本文をそのまま渡すと作りやすい</h3>
+            <figure class="split-figure">
+              <img src="day11_03_ai_image_generation.png" alt="記事本文からAIで挿絵を作る方法を説明する教材画像">
+              <figcaption>ゼロから長いプロンプトを考えなくても、本文を渡せば文脈を使える。</figcaption>
+            </figure>
+            <ul class="rule-list">
+              <li>挿絵を入れたい見出しと本文をAIへ渡す</li>
+              <li>水彩・フラット・漫画風など、スタイルを指定する</li>
+              <li>明るい・落ち着いた等、トーンを指定する</li>
+              <li>横長・縦長など、用途に合う比率を指定する</li>
+              <li>2案以上作り、気に入ったものを選ぶ</li>
+            </ul>
+            <div class="day11-warning"><b>重要：</b> 「複数案は1枚にまとめず、別々の画像ファイルで出す」「記事本文を画像内にそのまま書かない」と最初に指定します。</div>
+          </article>
+
+          <article class="lesson-card" id="day11-04">
+            <span class="day11-tag">Day11前半④</span>
+            <h3>AIは目的によって使い分ける。全部を1つに任せなくていい</h3>
+            <figure class="split-figure">
+              <img src="day11_04_ai_tool_selection.png" alt="ChatGPT、Gemini、Claudeの使い分けを説明する教材画像">
+              <figcaption>アイキャッチ、写真風、ビジネス図解など、得意分野で使い分ける。</figcaption>
+            </figure>
+            <div class="day11-tool-grid">
+              <div><b>ChatGPT</b>アイキャッチ、図解、比較表、手順説明など幅広く使いやすい。</div>
+              <div><b>Gemini</b>写真風・イラスト風など、雰囲気のあるビジュアル候補を作りたいとき。</div>
+              <div><b>Claude</b>シンプルなビジネス資料・ロードマップ・マトリクスなどの整理に向く。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「道具は信仰するものじゃない。用途に合わせて選べ。」</div>
+              <div class="talk"><span class="speaker">泉 鏡花</span>「記事の雰囲気や読者に合う画像を選ぶことの方が大切です。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11-05">
+            <span class="day11-tag">Day11前半⑤</span>
+            <h3>AI画像で失敗しやすい所を、先に知っておく</h3>
+            <figure class="split-figure">
+              <img src="day11_05_common_failures.png" alt="AI画像生成で失敗しやすいポイントを説明する教材画像">
+              <figcaption>複数絵を1枚にまとめる、本文を画像に書く、重すぎる――この3つは避ける。</figcaption>
+            </figure>
+            <div class="day11-checks">
+              <div><b>1枚1案</b>複数の絵を1枚に詰め込まない</div>
+              <div><b>本文は入れない</b>長文を画像へコピーしない</div>
+              <div><b>記事に合わせる</b>量産型の見た目にしない</div>
+              <div><b>重くしない</b>保存後に容量も確認する</div>
+            </div>
+            <div class="day11-practice"><b>判断基準：</b> 「きれいか」より、「この画像があると本文を理解しやすいか」で選びます。</div>
+          </article>
+
+          <article class="lesson-card" id="day11-06">
+            <span class="day11-tag">Day11前半⑥ / 実習1</span>
+            <h3>文字だけで読みにくい場所を1つ決め、挿絵を2案作る</h3>
+            <figure class="split-figure">
+              <img src="day11_06_practice_workflow.png" alt="第11回前半のAI挿絵実習ワークフロー画像">
+              <figcaption>見出し＋本文を渡し、2案を別ファイルで生成する。</figcaption>
+            </figure>
+            <p class="plain">自分の記事を開き、文字が長く続いている場所を1つ選びます。その見出しと本文をAIへ渡して、内容に合う挿絵を2案作ってください。</p>
+            <div class="day11-practice">
+              <b>AIへの指示例：</b><br>
+              「この見出しと本文の内容を説明する挿絵を2案作ってください。2案は別々の画像にしてください。本文の文章は画像内に入れないでください。初心者にも意味が伝わるシンプルな図解・イラストにしてください。」
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11-07">
+            <span class="day11-tag">Day11前半⑦ / 実習2</span>
+            <h3>気に入った画像を保存し、記事へ入れてALTとキャプションを書く</h3>
+            <figure class="split-figure">
+              <img src="day11_07_insert_alt_caption.png" alt="AI画像を記事へ挿入しALTとキャプションを書く手順画像">
+              <figcaption>画像を入れただけで終わらず、読者と検索エンジンに意味を伝える。</figcaption>
+            </figure>
+            <div class="day11-flow">
+              <div class="step"><i>1</i><b>選ぶ</b>2案から1枚</div>
+              <div class="step"><i>2</i><b>保存</b>分かる名前</div>
+              <div class="step"><i>3</i><b>挿入</b>note / Notion</div>
+              <div class="step"><i>4</i><b>ALT</b>画像の説明</div>
+              <div class="step"><i>5</i><b>補足</b>キャプション</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「画像名を“スクショ1”で終わらせるな。中身が分かる名前にしろ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「ALTは、画像を見られない人にも内容が伝わる短い説明ですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11-08">
+            <span class="day11-tag">Day11前半⑧ / 実習3</span>
+            <h3>最後は公開ページで「読みやすくなったか」を確認する</h3>
+            <figure class="split-figure">
+              <img src="day11_08_final_review.png" alt="AI画像を使った記事改善の最終確認画像">
+              <figcaption>画像を入れた結果、文章の理解が早くなったかを確かめる。</figcaption>
+            </figure>
+            <div class="day11-checks">
+              <div><b>位置</b>本文の内容と合う場所にある？</div>
+              <div><b>見え方</b>スマホでも大きすぎない？</div>
+              <div><b>説明</b>ALT・キャプションはある？</div>
+              <div><b>効果</b>文字だけより分かりやすい？</div>
+            </div>
+            <div class="day11-memory">
+              Day11前半のゴール：<br>
+              <b>記事本文の一部をAIへ渡して挿絵を2案作り、1枚を記事へ入れ、ALT・キャプション・公開画面まで確認する。</b><br>
+              文字ばかりの記事を、AIで「見て分かる記事」へ改善できれば完成です。
+            </div>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=dY6X13xDLAA&amp;list=PLKThfnGwPJBk&amp;index=1" target="_blank" rel="noopener">参考動画① 画像や動画もSEOに重要？効率的な使い方</a>
+              <a href="https://www.youtube.com/watch?v=i9z745lCHcw&amp;list=PLKThfnGwPJBk&amp;index=2" target="_blank" rel="noopener">参考動画② ChatGPT画像生成でnote・ブログの挿絵を作るコツ</a>
+              <a href="https://www.youtube.com/watch?v=ltyW-jng5xI&amp;list=PLKThfnGwPJBk&amp;index=3" target="_blank" rel="noopener">参考動画③ ChatGPT・Gemini・Claudeの画像使い分け</a>
+            </div>
+          </article>
+        </section>
+
+
+        <section class="day11-back" id="day11-back">
+          <div class="day11b-lead">
+            <div class="eyebrow">DAY11 後半 / 情報を「構造」に直してから図解する</div>
+            <h3>図解は絵のうまさではなく、「何を並べ、どう関係づけるか」で決まる</h3>
+            <p>図解は、デザインセンスより<b>情報の構造を整理すること</b>が重要です。まず要素を並べ、関係性を整理し、「結局何を伝えたいのか」という主張を文字で示してから、色やアイコンを整えます。</p>
+          </div>
+
+          <div class="day11b-memory">
+            後半で覚えること：<br>
+            <b>文章 → 構造化 → 図解化。</b><br>
+            AIにも文章を丸投げせず、先に3〜5個程度の要素へ整理してから渡すと、分かりやすい図になりやすくなります。
+          </div>
+
+          <div class="day11b-flow">
+            <div class="step"><i>1</i><b>選ぶ</b>図に向く部分</div>
+            <div class="step"><i>2</i><b>分ける</b>3〜5要素</div>
+            <div class="step"><i>3</i><b>整える</b>順番・関係</div>
+            <div class="step"><i>4</i><b>図にする</b>矢印・区切り</div>
+            <div class="step"><i>5</i><b>確認</b>記事へ挿入</div>
+          </div>
+
+          <article class="lesson-card" id="day11b-01">
+            <span class="day11b-tag">Day11後半①</span>
+            <h3>図解は「おしゃれな絵」ではなく、情報を整理した図</h3>
+            <figure class="split-figure">
+              <img src="day11b_01_structure_first.png" alt="図解はデザインセンスより情報構造が重要だと説明する教材画像">
+              <figcaption>色やアイコンより先に、何を並べ、どう分けるかを決める。</figcaption>
+            </figure>
+            <p class="plain">図解は、絵心の勝負ではありません。まず「同じ種類の情報」を並べ、「どこが同じで、どこが違うのか」を分けます。そのうえで、最後に読者へ伝えたい結論を文字で書けば、図の土台ができます。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「図解って、絵がうまい人しか作れないと思っていました。」</div>
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「逆だよ。まず情報を整理する。見た目はそのあとでいいんだ。」</div>
+            </div>
+            <div class="day11b-note"><b>超初心者向け：</b> ノートに「何が3つある？」「何と何を比べる？」と書き出すだけでも、図解の準備になります。</div>
+          </article>
+
+          <article class="lesson-card" id="day11b-02">
+            <span class="day11b-tag">Day11後半②</span>
+            <h3>図解は「並べる → 関係を整理 → つなぐ → 主張を書く」の4ステップ</h3>
+            <figure class="split-figure">
+              <img src="day11b_02_four_steps.png" alt="図解を作る4ステップを説明する教材画像">
+              <figcaption>複雑な図も、まずは表のように整理して考える。</figcaption>
+            </figure>
+            <div class="day11b-structure">
+              <div><b>① 要素を並べる</b>同じレベルの情報をそろえる。</div>
+              <div><b>② 関係を整理</b>比較・分類・流れなどを決める。</div>
+              <div><b>③ 記号でつなぐ</b>矢印・＋・＝・区切りを使う。</div>
+              <div><b>④ 主張を書く</b>「だから何？」を一言で示す。</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">国木田 独歩</span>「情報の種類を混ぜるな。同じ段には同じ粒度の情報を置け。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「表に整理してから図にすると、迷子になりにくいんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11b-03">
+            <span class="day11b-tag">Day11後半③</span>
+            <h3>AI図解ツールは「何を作りたいか」で使い分ける</h3>
+            <figure class="split-figure">
+              <img src="day11b_03_ai_tools.png" alt="Napkin AI、v0、Canvaの使い分けを説明する教材画像">
+              <figcaption>シンプル図・比較表・テンプレ編集で、向いている道具が違う。</figcaption>
+            </figure>
+            <div class="day11b-tool-grid">
+              <div><b>Napkin AI</b>シンプルな比較、流れ、相関図など。文章を箇条書きにしてから渡すと使いやすい。</div>
+              <div><b>v0</b>項目が多い比較表やグラフなど、構造がはっきりしたデータ系に向く。</div>
+              <div><b>Canva</b>既存テンプレートを土台に、文字・アイコン・色を整える初心者向けの仕上げ役。</div>
+            </div>
+            <div class="day11b-warning"><b>注意：</b> 何でもAIに丸投げするより、「この図は比較」「これは手順」と人間が先に決めた方が早く、失敗も減ります。</div>
+          </article>
+
+          <article class="lesson-card" id="day11b-04">
+            <span class="day11b-tag">Day11後半④</span>
+            <h3>Canvaはテンプレートの「型」を壊さず、必要な所だけ変える</h3>
+            <figure class="split-figure">
+              <img src="day11b_04_canva_summary.png" alt="Canvaテンプレートを使った図解作成のまとめ画像">
+              <figcaption>初心者ほど、レイアウトを大きく崩さず、文字・アイコン・色だけ整える。</figcaption>
+            </figure>
+            <ul class="rule-list">
+              <li>内容に近い図解テンプレートを選ぶ</li>
+              <li>自分の記事の言葉へ置き換える</li>
+              <li>アイコンを内容に合うものへ差し替える</li>
+              <li>色は増やしすぎず、記事の色に合わせる</li>
+              <li>フォントや配置を増やしすぎない</li>
+            </ul>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「全部作り直さなくても、型を借りればいいのですね。」</div>
+              <div class="talk"><span class="speaker">坂口 安吾</span>「見た目をいじり倒す前に、中身を整えろ。それで十分だ。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11b-05">
+            <span class="day11b-tag">Day11後半⑤ / 実習1</span>
+            <h3>まず「図解にしたい文章」を1つ選び、いったん文章から離れる</h3>
+            <figure class="split-figure">
+              <img src="day11b_05_practice_workflow.png" alt="第11回後半の図解実習ワークフロー画像">
+              <figcaption>文章をそのまま絵にせず、構造へ変換してから図にする。</figcaption>
+            </figure>
+            <p class="plain">自分の記事から、図解にしたい見出しと本文を1つ選びます。向いているのは、<b>手順・ポイントの数・比較・分類・時間の流れ</b>がある部分です。</p>
+            <div class="day11b-flow">
+              <div class="step"><i>1</i><b>文章を選ぶ</b>図に向く所</div>
+              <div class="step"><i>2</i><b>Geminiへ</b>3〜5要素化</div>
+              <div class="step"><i>3</i><b>確認</b>順番・抜け</div>
+              <div class="step"><i>4</i><b>画像化</b>矢印・区切り</div>
+              <div class="step"><i>5</i><b>挿入</b>記事で確認</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11b-06">
+            <span class="day11b-tag">Day11後半⑥ / 実習2</span>
+            <h3>「手順・数・比較・分類・時間の流れ」があれば図解しやすい</h3>
+            <figure class="split-figure">
+              <img src="day11b_06_choose_visualizable_content.png" alt="図解に向く内容と向きにくい内容を見分ける教材画像">
+              <figcaption>何でも図にするのではなく、構造が見える内容を選ぶ。</figcaption>
+            </figure>
+            <div class="day11b-checks">
+              <div><b>手順</b>1→2→3</div>
+              <div><b>ポイント</b>3つ・5つ</div>
+              <div><b>比較</b>AとBの違い</div>
+              <div><b>分類・時間</b>グループ・時系列</div>
+            </div>
+            <div class="day11b-warning"><b>図にしにくい例：</b> 感情だけの話、抽象的すぎる話、情報が整理されていない文章。まず文章側を整理してから図解します。</div>
+          </article>
+
+          <article class="lesson-card" id="day11b-07">
+            <span class="day11b-tag">Day11後半⑦ / 実習3</span>
+            <h3>AIには長文ではなく「3〜5要素の構造」を渡す</h3>
+            <figure class="split-figure">
+              <img src="day11b_07_structure_before_ai.png" alt="文章を構造化してからAIへ渡す方法を説明する教材画像">
+              <figcaption>AIに丸投げせず、人間が整理した骨組みを先に渡す。</figcaption>
+            </figure>
+            <div class="day11b-practice">
+              <b>Geminiへの指示例：</b><br>
+              「次の文章を図解にしたいです。内容を3〜5個の要素に分けてください。各要素は同じレベル感にそろえ、必要なら『手順』『比較』『分類』『時間の流れ』のどれに当たるかも示してください。元の文章にない情報は追加しないでください。」
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「AIに渡す前に、骨組みを作る。ここが一番大事なんだ。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「文章を短い要素に分けてからなら、図の形も考えやすいです。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day11b-08">
+            <span class="day11b-tag">Day11後半⑧ / 実習4</span>
+            <h3>図解を記事へ入れ、「一瞬で意味が伝わるか」を確認して完成</h3>
+            <figure class="split-figure">
+              <img src="day11b_08_final_flow.png" alt="文章から構造化、図解化、記事挿入までの最終ワークフロー画像">
+              <figcaption>見た目の派手さではなく、読者が本文を理解しやすくなったかを確認する。</figcaption>
+            </figure>
+            <div class="day11b-checks">
+              <div><b>整理</b>要素が3〜5個？</div>
+              <div><b>関係</b>矢印や区切りが自然？</div>
+              <div><b>主張</b>結局何が大事か見える？</div>
+              <div><b>記事</b>スマホでも読める？</div>
+            </div>
+            <div class="day11b-memory">
+              Day11後半のゴール：<br>
+              <b>記事の文章をそのまま絵にせず、いったん構造へ整理し、AIで分かりやすい図解にして記事へ入れる。</b><br>
+              図解は「絵のうまさ」より「情報の整理」が9割、と覚えておけばOKです。
+            </div>
+            <div class="day11b-video-links">
+              <a href="https://www.youtube.com/watch?v=TNlMd7PyDYo&amp;list=PLBxguBWKsMCY&amp;index=1" target="_blank" rel="noopener">参考動画① 一瞬で伝わる図解の作り方</a>
+              <a href="https://www.youtube.com/watch?v=0KRmcvEYcng&amp;list=PLBxguBWKsMCY&amp;index=2" target="_blank" rel="noopener">参考動画② Napkin AI・v0で図解を作る</a>
+              <a href="https://www.youtube.com/watch?v=VuTnVuVw-ps&amp;list=PLBxguBWKsMCY&amp;index=3" target="_blank" rel="noopener">参考動画③ Canvaテンプレートでブログ図解を作る</a>
             </div>
           </article>
         </section>
