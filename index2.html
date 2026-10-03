@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>文豪デザイン講義｜Day7〜Day11前半・後半 Webライティング・SEO・AI画像・図解実習</title>
+<title>文豪デザイン講義｜Day7〜Day12前半 Webライティング・SEO・AI画像・図解・ChatGPT活用</title>
 <style>
 
 :root{
@@ -2203,6 +2203,118 @@ details.day[open] summary{
   .day11b-flow,.day11b-checks{grid-template-columns:1fr}
 }
 
+
+
+/* ===== Day12 前半：AIライティング実践・プロンプト設計・他者記事から学ぶ ===== */
+.day12-front{
+  max-width:1040px;
+  margin:60px auto 0;
+  padding-top:10px;
+  border-top:8px solid #173866;
+}
+.day12-lead{
+  margin:0 0 24px;
+  padding:24px;
+  background:linear-gradient(135deg,#f1f6fc,#fff6ef);
+  border:2px solid #173866;
+  box-shadow:0 12px 28px rgba(20,18,15,.10);
+}
+.day12-lead .eyebrow{font-size:11px;letter-spacing:.22em;color:#173866;font-weight:900}
+.day12-lead h3{margin:.25em 0 .35em;font-size:clamp(26px,3.2vw,42px);line-height:1.4;color:#173866}
+.day12-memory{
+  margin:18px 0 28px;
+  padding:18px 20px;
+  border-left:7px solid #8a2130;
+  background:#fff2ee;
+  font-size:clamp(16px,1.5vw,20px);
+  font-weight:800;
+}
+.day12-tag{display:inline-block;margin-bottom:7px;padding:4px 9px;background:#173866;color:#fff;font-size:11px;letter-spacing:.12em;font-weight:900}
+.day12-flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:18px 0}
+.day12-flow .step{padding:13px 9px;background:#fffaf3;border:1px solid #d8c7b7;text-align:center;font-size:12px}
+.day12-flow .step i{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#173866;color:#fff;margin:0 auto 7px;font-style:normal;font-weight:900}
+.day12-flow .step b{display:block;margin-bottom:4px}
+.day12-six{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0 20px}
+.day12-six>div{padding:14px;background:#fffaf4;border-top:5px solid #173866}
+.day12-six b{display:block;margin-bottom:5px;color:#173866}
+.day12-practice{margin:15px 0;padding:15px 17px;border:2px dashed #b9903c;background:#fff9e9}
+.day12-note{margin:15px 0;padding:15px 17px;border-left:6px solid #8a2130;background:#fff2ee}
+.day12-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:16px 0}
+.day12-links a{display:block;padding:12px 13px;border:1px solid #c9bdad;background:#fff;color:#173866;text-decoration:none;font-weight:800;word-break:break-all}
+.day12-links a:hover{background:#f5f6f9;text-decoration:underline}
+.day12-checks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin:16px 0 20px}
+.day12-checks>div{padding:13px 10px;background:#fffaf4;border:1px solid #d7c8b7;text-align:center;font-size:12px}
+.day12-checks b{display:block;color:#8a2130;margin-bottom:5px}
+@media(max-width:860px){.day12-six{grid-template-columns:1fr}.day12-flow,.day12-checks,.day12-links{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.day12-flow,.day12-checks,.day12-links{grid-template-columns:1fr}}
+
+
+/* ===== Day12前半：指示出し見本テンプレート ===== */
+.day12-template{
+  margin:20px 0 4px;
+  padding:18px;
+  border:2px solid #173866;
+  background:linear-gradient(135deg,#f3f7fc,#fffaf3);
+  box-shadow:0 10px 22px rgba(20,18,15,.08);
+}
+.day12-template-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:12px;
+}
+.day12-template-head b{
+  color:#173866;
+  font-size:18px;
+  font-family:var(--serif);
+}
+.day12-template-head span{
+  font-size:11px;
+  color:#776f67;
+}
+.day12-template-note{
+  margin:0 0 12px;
+  padding:11px 13px;
+  border-left:5px solid #b9903c;
+  background:#fff8e6;
+  font-size:14px;
+}
+.day12-template-code-wrap{
+  position:relative;
+}
+.day12-template pre{
+  margin:0;
+  padding:20px;
+  overflow:auto;
+  white-space:pre-wrap;
+  word-break:break-word;
+  border:1px solid #343b49;
+  background:#171b24;
+  color:#f7f1e6;
+  font:13px/1.85 Consolas,"SFMono-Regular",Menlo,Monaco,"Noto Sans Mono CJK JP",monospace;
+}
+.day12-template-copy{
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:2;
+  appearance:none;
+  border:1px solid #d7c48b;
+  background:#fffaf0;
+  color:#173866;
+  padding:7px 10px;
+  font:700 12px var(--sans);
+  cursor:pointer;
+}
+.day12-template-copy:hover{background:#fff1c8}
+@media(max-width:560px){
+  .day12-template{padding:12px}
+  .day12-template-head{display:block}
+  .day12-template-head span{display:block;margin-top:5px}
+  .day12-template pre{padding:48px 14px 16px;font-size:12px}
+}
+
 </style>
 </head>
 
@@ -2213,10 +2325,10 @@ details.day[open] summary{
       <div class="brand-mark">文</div>
       <div>
         <h1>文豪デザイン講義</h1>
-        <small>BUNGO STYLE / DAY7-11 TEMPLATE</small>
+        <small>BUNGO STYLE / DAY7-12 TEMPLATE</small>
       </div>
     </div>
-    <div class="top-ornament">DETECTIVE FILE / 07-11</div>
+    <div class="top-ornament">DETECTIVE FILE / 07-12</div>
   </div>
 </header>
 
@@ -2373,6 +2485,20 @@ details.day[open] summary{
         </div>
       </details>
 
+      <details class="day">
+        <summary>Day12 前半</summary>
+        <div class="empty-menu front-menu">
+          <a href="#day12-01">① AIは空気を読まない相棒</a>
+          <a href="#day12-02">② プロンプトの6要素</a>
+          <a href="#day12-03">③ プロンプトはAIに作らせる</a>
+          <a href="#day12-04">④ noteは一次情報を先に出す</a>
+          <a href="#day12-05">⑤ 実習1：読む側に回る</a>
+          <a href="#day12-06">⑥ 実習2：リンクを開いて準備</a>
+          <a href="#day12-07">⑦ 実習3：気になる5本を読む</a>
+          <a href="#day12-08">⑧ 実習4：コメント・おすすめ投稿</a>
+        </div>
+      </details>
+
 
 
 
@@ -2383,9 +2509,9 @@ details.day[open] summary{
   <main class="main">
     <section class="hero">
       <div class="hero-copy">
-        <div class="hero-kicker">DAY 7-11 / WEB WRITING・SEO・AI VISUAL・DIAGRAM</div>
+        <div class="hero-kicker">DAY 7-12 / WEB WRITING・SEO・AI VISUAL・PROMPT</div>
         <h2>読まれる記事を作り<br>画像とAIでさらに伝わりやすく</h2>
-        <p>Day7〜Day10で文章・SEO・公開まで仕上げ、Day11前半ではAI画像で記事を読みやすくし、Day11後半では文章をいったん「構造」に整理してから図解へ変える方法を学びます。</p>
+        <p>Day7〜Day11で文章・SEO・画像・図解まで学び、Day12前半ではAIに「考えを丸投げ」するのではなく、自分の材料を引き出して整理する相棒としてChatGPTを使う方法を学びます。</p>
         <div class="hero-rule"></div>
       </div>
     </section>
@@ -4202,6 +4328,247 @@ details.day[open] summary{
           </article>
         </section>
 
+
+        <section class="day12-front" id="day12-front">
+          <div class="day12-lead">
+            <div class="eyebrow">DAY12 前半 / 2026.9.29 / AIライティング実践（ChatGPT活用）</div>
+            <h3>AIは「代わりに考える人」ではなく、自分の材料を引き出して形にする相棒</h3>
+            <p>AI活用では、人間がゼロから完璧なプロンプトを書くより、<b>何をしたいか・背景・条件・出力形式・理想例</b>を伝えて、AI自身にプロンプトを作らせ、対話で修正していく方が進めやすくなります。</p>
+          </div>
+
+          <div class="day12-memory">
+            今日の合言葉：<br>
+            <b>「自分の材料は人間が出す。整理・構成・言語化はAIに手伝ってもらう。」</b><br>
+            note記事でも、失敗・感情・体験などの一次情報を先に掘り出してからAIへ渡します。
+          </div>
+
+          <div class="day12-flow">
+            <div class="step"><i>1</i><b>目的</b>何をしたい？</div>
+            <div class="step"><i>2</i><b>材料</b>体験・背景</div>
+            <div class="step"><i>3</i><b>AI</b>プロンプト作成</div>
+            <div class="step"><i>4</i><b>対話</b>ズレを修正</div>
+            <div class="step"><i>5</i><b>人間</b>最後に判断</div>
+          </div>
+
+          <article class="lesson-card" id="day12-01">
+            <span class="day12-tag">Day12前半① / 超入門</span>
+            <h3>AIは「超優秀だけど、空気を読まない指示待ちの新人」と考える</h3>
+            <figure class="split-figure">
+              <img src="day12_01_ai_partner_basics.png" alt="AIは空気を読まず具体的な指示が必要だと説明する教材画像">
+              <figcaption>「いい感じに」だけではなく、目的と条件を言葉にする。</figcaption>
+            </figure>
+            <p class="plain">AIは知識が多くても、こちらの頭の中までは見えません。だから、PCが不安な人やAI初心者ほど、難しい言葉より「何をしてほしいか」を普通の言葉で具体的に伝えるのが近道です。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「僕が曖昧なまま頼むと、AIもどこへ行けばいいか分からないんですね。」</div>
+              <div class="talk"><span class="speaker">国木田 独歩</span>「その通りだ。目的・条件・完成形を渡せ。難しい呪文は要らん。」</div>
+            </div>
+            <div class="day12-note"><b>まず覚えること：</b> AIに空気を読ませようとせず、必要な情報を渡す。</div>
+          </article>
+
+          <article class="lesson-card" id="day12-02">
+            <span class="day12-tag">Day12前半② / 基本</span>
+            <h3>プロンプトは「役割・背景・指示・制約・形式・ゴール」の6つで考える</h3>
+            <figure class="split-figure">
+              <img src="day12_02_six_prompt_elements.png" alt="プロンプトの6要素を説明する教材画像">
+              <figcaption>全部を毎回完璧に書く必要はない。足りない情報を整理するための型。</figcaption>
+            </figure>
+            <div class="day12-six">
+              <div><b>① 役割</b>どんな立場で答える？</div>
+              <div><b>② 背景</b>なぜ必要？どんな状況？</div>
+              <div><b>③ 指示</b>具体的に何をする？</div>
+              <div><b>④ 制約</b>文字数・禁止事項・対象者</div>
+              <div><b>⑤ 出力形式</b>表・箇条書き・HTMLなど</div>
+              <div><b>⑥ 評価基準</b>理想例・ゴールイメージ</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「6つ全部を暗記しなくても、抜けている情報を見つけるチェック表として使えばいい。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「見出しと箇条書きで渡すと、AIも読みやすそうです。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day12-03">
+            <span class="day12-tag">Day12前半③ / いちばん楽な方法</span>
+            <h3>プロンプトを自分でゼロから書かず、AIに「最高の指示書」を作ってもらう</h3>
+            <figure class="split-figure">
+              <img src="day12_03_ai_builds_prompt.png" alt="AI自身にプロンプトを作らせる方法を説明する教材画像">
+              <figcaption>やりたいことを説明 → AIにプロンプトを作らせる → 実行 → 対話で修正。</figcaption>
+            </figure>
+            <div class="day12-practice">
+              <b>最初の頼み方はこれで十分：</b><br>
+              「〇〇をしたいです。そのために必要な最高のプロンプトを作ってください。足りない情報があれば先に質問してください。」
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「プロンプトの専門家になる必要はないよ。AIに下書きを作らせて、違う所だけ直せばいい。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「1回で100点を狙うより、“ここが違います”と話しながら近づけるんですね。」</div>
+            </div>
+
+            <div class="day12-template" id="day12-prompt-template">
+              <div class="day12-template-head">
+                <b>そのまま使える「指示出し見本テンプレート」</b>
+                <span>〇〇の部分を、自分の依頼内容に置き換えるだけでOK</span>
+              </div>
+              <p class="day12-template-note">
+                <b>使い方：</b> まずこの型をAIへ渡し、〇〇だけ埋めます。全部を最初から完璧に書く必要はありません。
+                足りない情報はAIに質問してもらい、対話しながら直していけば大丈夫です。
+              </p>
+              <div class="day12-template-code-wrap">
+                <button class="day12-template-copy" type="button" onclick="copyDay12Prompt(this)">テンプレートをコピー</button>
+                <pre><code id="day12PromptTemplate"># 役割
+
+あなたは〇〇をするAIです。
+
+## 目的
+
+あなたの目的は、
+「〇〇を達成すること」です。
+
+## やること
+
+- 〇〇
+- 〇〇
+- 〇〇
+
+## 進め方
+
+1. 依頼内容を理解する
+2. 必要な情報を整理する
+3. 最適な方法を考える
+4. 成果物を作る
+5. 内容を確認する
+6. 完成版を出す
+
+## 大切なルール
+
+- 〇〇
+- 〇〇
+- 〇〇
+- わからないことを勝手に作らない
+- 必要なら確認してから進める
+
+## 出力
+
+ユーザーがすぐ使える完成形で出力してください。
+
+必要に応じて、説明・手順・表・コード・具体例など、
+目的に一番合う形式を選んでください。
+
+## 最後の確認
+
+回答する前に、
+
+- 目的を達成できているか
+- 間違いがないか
+- 抜けている内容がないか
+- わかりやすいか
+- そのまま使えるか
+
+を確認してください。
+
+問題があれば直してから回答してください。</code></pre>
+              </div>
+              <div class="dialogue">
+                <div class="talk"><span class="speaker">江戸川 乱歩</span>「ゼロから長い指示文を考えなくていい。型を置いて、必要な所だけ埋めればいいんだよ。」</div>
+                <div class="talk"><span class="speaker">中島 敦</span>「これなら“何をどう頼めばいいか分からない”ところから始められますね。」</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day12-04">
+            <span class="day12-tag">Day12前半④ / note × 一次情報</span>
+            <h3>note記事はAIに丸投げせず、「自分だけの体験」を先に掘り出す</h3>
+            <figure class="split-figure">
+              <img src="day12_04_note_primary_experience.png" alt="note記事では自分の失敗や感情など一次情報を先に出すことを説明する教材画像">
+              <figcaption>AIは代筆者より、インタビュアーとして使う。</figcaption>
+            </figure>
+            <p class="plain">一般論だけの記事は似た内容になりやすくなります。そこで、失敗したこと、迷ったこと、当時どう感じたか、どんな順番で解決したかをAIに質問してもらい、自分の中にある材料を先に出します。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">坂口 安吾</span>「AIに“記事を書いて”で終わらせるな。“俺の体験を引き出す質問をしてくれ”と頼め。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「材料は自分、整理と構成はAI。役割を分けるんですね。」</div>
+            </div>
+            <div class="day12-note"><b>一次情報の例：</b> 失敗・葛藤・実際に試した手順・数字・当時の感情・自分なりの気づき。</div>
+          </article>
+
+          <article class="lesson-card" id="day12-05">
+            <span class="day12-tag">Day12前半⑤ / 実習1</span>
+            <h3>今日は「書く側」から「読む側」に回る。評価ではなく、良い工夫を探す</h3>
+            <figure class="split-figure">
+              <img src="day12_05_reader_mode_practice.png" alt="他の受講生の記事から良い工夫を見つける実習を説明する教材画像">
+              <figcaption>点数を付ける時間ではなく、自分の制作に持ち帰れるヒントを探す。</figcaption>
+            </figure>
+            <p class="plain">「直すところ探し」ではありません。「この書き出しは読みやすい」「この図解は分かりやすい」など、良いと思った理由を1つ言葉にしてみます。</p>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">中島 敦</span>「上手い・下手を決めるんじゃなくて、“何が良かったか”を見るんですね。」</div>
+              <div class="talk"><span class="speaker">江戸川 乱歩</span>「そう。盗むんじゃない。“使える工夫”を発見するんだ。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day12-06">
+            <span class="day12-tag">Day12前半⑥ / 実習2</span>
+            <h3>まずシェアボードとおすすめ投稿フォームを開いて準備する</h3>
+            <figure class="split-figure">
+              <img src="day12_06_links_and_preparation.png" alt="Padletとおすすめ作品投稿フォームを開く準備手順の教材画像">
+              <figcaption>先に必要なページを開いておくと迷いにくい。</figcaption>
+            </figure>
+            <div class="day12-links">
+              <a href="https://padlet.com/platinumzonedx/dx-web-s023ncb4v7iw0joern0l" target="_blank" rel="noopener">課題シェアボード（Padlet）を開く</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc7wA_ABekjaQcLlP0WG8FB2cDo4IeTc-X6pxawQFPn6KAqkQ/viewform" target="_blank" rel="noopener">おすすめ作品投稿フォームを開く</a>
+              <a href="https://canva.link/5km1sxmuqkzqvbu" target="_blank" rel="noopener">Padlet公開方法マニュアルを開く</a>
+              <a href="https://padlet.com/platinumzonedx/dx-web-s023ncb4v7iw0joern0l" target="_blank" rel="noopener">記事が未完成なら完成後に投稿</a>
+            </div>
+            <div class="day12-practice"><b>まだ記事が完成していない人：</b> まず制作を続け、完成したらPadletへ投稿すればOKです。</div>
+          </article>
+
+          <article class="lesson-card" id="day12-07">
+            <span class="day12-tag">Day12前半⑦ / 実習3</span>
+            <h3>タイトルとアイキャッチを眺めて、気になった記事を5本ほど読む</h3>
+            <figure class="split-figure">
+              <img src="day12_07_read_five_articles.png" alt="シェアボードから気になる記事を5本ほど選んで読む実習の教材画像">
+              <figcaption>全部を読む必要はない。直感で気になった記事から読む。</figcaption>
+            </figure>
+            <div class="day12-checks">
+              <div><b>タイトル</b>続きが気になる？</div>
+              <div><b>アイキャッチ</b>目が止まる？</div>
+              <div><b>本文</b>読みやすい工夫は？</div>
+              <div><b>体験・図解</b>印象に残った所は？</div>
+            </div>
+            <div class="dialogue">
+              <div class="talk"><span class="speaker">泉 鏡花</span>「5本全部を細かく分析しなくていい。まず“気になった理由”を見つける。」</div>
+              <div class="talk"><span class="speaker">中島 敦</span>「自分の記事に取り入れられそうな工夫を1つ持ち帰ればいいんですね。」</div>
+            </div>
+          </article>
+
+          <article class="lesson-card" id="day12-08">
+            <span class="day12-tag">Day12前半⑧ / 実習4・完成</span>
+            <h3>2〜3本に「良かった点」をコメントし、特に良かった1本をおすすめ投稿する</h3>
+            <figure class="split-figure">
+              <img src="day12_08_comment_and_recommend.png" alt="良かった点をコメントしおすすめ作品を投稿する実習の教材画像">
+              <figcaption>短くても、「どこが良かったか」が1つ伝われば十分。</figcaption>
+            </figure>
+            <div class="day12-practice">
+              <b>コメント例：</b><br>
+              ・書き出しの一文で、すぐ続きが読みたくなりました。<br>
+              ・見出しを読むだけで、内容が分かりやすかったです。<br>
+              ・体験談が入っていて、場面が目に浮かびました。<br>
+              ・図解のおかげで、手順がすっと頭に入りました。
+            </div>
+            <div class="day12-flow">
+              <div class="step"><i>1</i><b>読む</b>5本ほど</div>
+              <div class="step"><i>2</i><b>発見</b>良い工夫</div>
+              <div class="step"><i>3</i><b>コメント</b>2〜3本</div>
+              <div class="step"><i>4</i><b>おすすめ</b>1本を選ぶ</div>
+              <div class="step"><i>5</i><b>持ち帰る</b>自分の記事へ</div>
+            </div>
+            <div class="day12-memory">
+              Day12前半のゴール：<br>
+              <b>AIを「自分の材料を引き出して整理する相棒」として使いながら、他の受講生の記事から良い工夫を見つけ、言葉にして自分の制作へ持ち帰る。</b>
+            </div>
+            <div class="video-links">
+              <a href="https://www.youtube.com/watch?v=MaptZezjq1k&amp;list=PLImL2LwGZPdY&amp;index=1" target="_blank" rel="noopener">参考動画① プロンプトの正しい作り方</a>
+              <a href="https://www.youtube.com/watch?v=gxqNUFmZjKk&amp;list=PLImL2LwGZPdY&amp;index=2" target="_blank" rel="noopener">参考動画② AIによるnote記事の作り方</a>
+            </div>
+          </article>
+        </section>
+
       </div>
     </section>
   </main>
@@ -4239,6 +4606,29 @@ details.day[open] summary{
 </div>
 
 <div class="footer">DAY7 TEMPLATE / BUNGO-INSPIRED TAISHO MODERN UI</div>
+
+<script>
+async function copyDay12Prompt(button){
+  const code = document.getElementById('day12PromptTemplate');
+  if(!code) return;
+  const value = code.innerText;
+  try{
+    await navigator.clipboard.writeText(value);
+    const old = button.textContent;
+    button.textContent = 'コピーしました';
+    setTimeout(()=>button.textContent = old, 1600);
+  }catch(e){
+    const range = document.createRange();
+    range.selectNodeContents(code);
+    const sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    button.textContent = '選択しました';
+    setTimeout(()=>button.textContent = 'テンプレートをコピー', 1600);
+  }
+}
+</script>
+
 </body>
 
 </html>
